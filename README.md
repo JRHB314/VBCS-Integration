@@ -14,14 +14,18 @@ In the top right, hit New to create a new VBCS instance, and then give it a name
 <br>
 Open up your new VBCS instance. <br>
 [image]<br>
-<br>
+<br> </p>
+<h3> STEP TWO: Create Web App </h3>
+<p>
 On the left, hit the computer icon for Web Apps, then create new. Name it whatever you like. <br>
 [image]<br>
 <br>
 Expand flows, then main, then click on main-start. <br>
 This will show a blank page in the center, with a components bar to the left, and a customization bar on the right.<br>
 [image]<br>
-<br>
+<br></p>
+<h3> STEP Three: Customize Web App</h3>
+<p>
 Drag on an image component into the very top left corner of the page. <br>
 Click on it, then look on the right side go to the Data tab. Put in [url] for the source url. <br>
 [image showing data tab]<br>
@@ -45,8 +49,10 @@ To customize the tab bar, we will first define some style. <br>
 We will add this to our tabs, with dull being for the tab we are currently on, and bright being for the tab we are not on.<br> [Show code]<br>
 Back on the design tab, we can view the changes to the tab bar. This gives you much greater flexibility.<br>
 [image]<br>
-<br>
-  Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App heirarchy on the left and hit the plus sign next to main in order to create a new page. Name this something like second-page. <br>
+<br></p>
+<h3> STEP FOUR: Add Navigation </h3>
+<p>
+Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App heirarchy on the left and hit the plus sign next to main in order to create a new page. Name this something like second-page. <br>
 [image]<br>
 <br>
 Paste in the code from the first page, switching which tab is dull and which tab is bright. <br>
