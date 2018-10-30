@@ -1,4 +1,4 @@
-# VBCS_Integration
+# VBCS Integration
 <h2> Lab 100: Starting Your Web App </h2>
 
 <h3> STEP ONE: Create Web App </h3> 
