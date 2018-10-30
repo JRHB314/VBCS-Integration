@@ -1,0 +1,52 @@
+{
+  "results" : {
+    "0-0644-7104-7" : {
+      "title" : "The Lion the Witch and the Wardrobe",
+      "author" : "C.S. Lewis",
+      "genre" : "Fantasy",
+      "publish_date" : "11/16/1950",
+      "publisher" : "Geoffrey Bles",
+      "image_url": "https://i.imgur.com/TmDWXmW.jpg?2"
+    },
+    "0-7475-4215-5" : {
+      "title" : "Harry Potter and the Prisoner of Azkaban",
+      "author" : "J.K. Rowling",
+      "genre" : "Fantasy",
+      "publish_date" : "07/08/1999",
+      "publisher" : "Bloomsbury",
+      "image_url": "https://i.imgur.com/4hxGzzs.jpg?2"
+    },
+    "1-5465-1752-9" : {
+      "title" : "War of the Worlds",
+      "author" : "H.G. Wells",
+      "genre" : "Science Fiction",
+      "publish_date" : "1898",
+      "publisher": "Heinemann",
+      "image_url": "https://i.imgur.com/baTnpha.jpg?2"
+    },
+    "0-3303-6426-0" : {
+      "title" : "The Book Thief",
+      "author" : "Markus Zusak",
+      "genre" : "Historical Fiction",
+      "publish_date" : "2005",
+      "publisher" : "Picador",
+      "image_url": "https://i.imgur.com/vOp3N4q.jpg?1"
+    },
+    "0-5534-1802-5" : {
+      "title" : "The Martian",
+      "author" : "Andy Weir",
+      "genre" : "Science Fiction",
+      "publish_date" : "2011",
+      "publisher" : "Self-Published",
+      "image_url": "https://i.imgur.com/LINvQYC.jpg?2"
+    },
+    "0-4390-2348-3" : {
+      "title" : "The Hunger Games",
+      "author" : "Andy Weir",
+      "genre" : "Young Adult",
+      "publish_date" : "9/14/2008",
+      "publisher" : "Scholastic Press",
+      "image_url": "https://i.imgur.com/bQGn64B.jpg?2"
+    }
+  }
+}
