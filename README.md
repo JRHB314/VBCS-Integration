@@ -1,7 +1,7 @@
 # VBCS_Integration
-<h2> Lab 100: Creating Your Web App </h2>
+<h2> Lab 100: Starting Your Web App </h2>
 
-<h3> STEP ONE: Access VBCS </h3> 
+<h3> STEP ONE: Create Web App </h3> 
 <p>
 Sign in to your Cloud Account. <br>
 [image here] <br>
@@ -14,9 +14,7 @@ In the top right, hit New to create a new VBCS instance, and then give it a name
 <br>
 Open up your new VBCS instance. <br>
 [image]<br>
-<br> </p>
-<h3> STEP TWO: Create Web App </h3>
-<p>
+<br>
 On the left, hit the computer icon for Web Apps, then create new. Name it whatever you like. <br>
 [image]<br>
 <br>
@@ -24,7 +22,7 @@ Expand flows, then main, then click on main-start. <br>
 This will show a blank page in the center, with a components bar to the left, and a customization bar on the right.<br>
 [image]<br>
 <br></p>
-<h3> STEP Three: Customize Web App</h3>
+<h3> STEP TWO: Customize Web App</h3>
 <p>
 Drag on an image component into the very top left corner of the page. <br>
 Click on it, then look on the right side go to the Data tab. Put in [url] for the source url. <br>
@@ -50,7 +48,7 @@ We will add this to our tabs, with dull being for the tab we are currently on, a
 Back on the design tab, we can view the changes to the tab bar. This gives you much greater flexibility.<br>
 [image]<br>
 <br></p>
-<h3> STEP FOUR: Add Navigation </h3>
+<h3> STEP THREE: Add Navigation </h3>
 <p>
 Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App heirarchy on the left and hit the plus sign next to main in order to create a new page. Name this something like second-page. <br>
 [image]<br>
