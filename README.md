@@ -13,35 +13,35 @@ Navigate to Cloud Dashboard, then open Visual Builder Service Console. If Visual
 <br>
 At the top right of the page, hit Quick Starts. This will allow us to create the underlying infrastructure for VBCS at the same time we create the VBCS instance, rather than making them separately. Simply name the instance and then hit Create. If you don't care about configuring the database that your instance will run on, this is the way to go. <br>
 Alternatively, you can hit the Customize button on the top right. This would allow you to configure the database that is created. For the purpose of this lab, we will stick to the default QuickStart configuration.
-![](/images/5.png)<br> <!--- image 4 is skipped as it is no longer relevant -->
+![](/images/5.png)<br>
 <br>
 Now, you need to download the generated SSH key and credentials in order to continue. These allow you to access your instance.<br>
-![](/images/6.png)<br>
+![](/images/12.png)<br>
 <br>
 Your instance will take some time to provision. When it's ready, you can open the Visual Builder Home page.<br>
-![](/images/7.png)<br>
-<br>
-Now we need to create a Visual Application. From the home page, hit New in the top right. <br>
 ![](/images/8.png)<br>
 <br>
-Name it whatever you like. Description is optional. <br>
+Now we need to create a Visual Application. From the home page, hit New in the top right. <br>
 ![](/images/9.png)<br>
 <br>
-Your new Application should open automatically. On the left, hit the computer icon for Web Apps, then create new. Name it whatever you like. <br>
+Name it whatever you like. Description is optional. <br>
 ![](/images/10.png)<br>
+<br>
+Your new Application should open automatically. On the left, hit the computer icon for Web Apps, then the plus sign to create a new Web App. Name it, then hit Create. <br>
+![](/images/11.png)<br>
 <br>
 Expand flows, then main, then click on main-start. <br>
 This will show a blank page in the center, with a components bar to the left, and a customization bar on the right.<br>
-![](/images/10.png)<br>
+![](/images/14.png)<br>
 <br>
 <h3> STEP TWO: Customize Web App </h3>
 
 Click on the Design view tab in the top right. Drag on an image component into the very top left corner of the page. <br>
-Click on it, then look on the right side go to the Data tab. Put in https://png.icons8.com/color/1600/reflector-bulb.png for the source url. <br>
-![](/images/11.png)<br>
+Click on it, then look on the right side go to the Data tab. Put in https://png.icons8.com/color/1600/reflector-bulb.png for the source url. However, the image is huge, which we do not want. <br>
+![](/images/15.png)<br>
 <br>
-However, the image is huge, which we do not want. Go to the General tab and set width to 150. Much better. <br>
-![](/images/12.png)<br>
+Go to the General tab and set width to 150. Much better. <br>
+![](/images/16.png)<br>
 <br>
 Next drag on a Heading component one column to the right of the logo. In the General tab, inside the Text field put whatever you want your website to be called.<br>
 In the row below, drag a tab bar. It defaults to three tabs, but we only need two for now. Hover over Tab 3 in the General tab, then hit the trash can icon.<br>
