@@ -85,7 +85,7 @@ Go to Code view and insert on-click="[[$listeners.eventName]]" where eventName i
 [show pic where to insert code]<br>
 <br>
 Note, many components have an Events tab that allows you to create events containing an action chain all in one click, but because we want different parts of the tab bar to take us to different pages, we have to do it manually.<br>
-The event tab is very useful for things such as buttons, where you can quickly create an action for when the button is clicked.<br>
+The Events tab is very useful for things such as buttons, where you can quickly create an action for when the button is clicked.<br>
 <br>
 Finally, put in the listners for the second page, and you should be good to go! You now have a functional website.<br>
 Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
