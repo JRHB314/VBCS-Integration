@@ -42,18 +42,16 @@ Click on it, then look on the right side go to the Data tab. Put in https://png.
 However, the image is huge, which we do not want. Go to the General tab and set width to 150. Much better. <br>
 {image}<br>
 <br>
-Next drag on a Heading component one column to the right of the logo. In the General tab, put in Text [website name].<br>
-In the row below, drag a tab bar. It defaults to two tabs, which is fine for now. We will be adding more later.<br>
-Drag and drop a Heading component, and fill in Welcome to the Home Page for text.<br>
+Next drag on a Heading component one column to the right of the logo. In the General tab, inside the Text field put whatever you want your website to be called.<br>
+In the row below, drag a tab bar. It defaults to three tabs, but we only need two for now. Hover over tab 3 in the General tab, then hit the trash can icon.<br>
+Drag and drop another Heading component, and fill in "Welcome to the Home page" for text.<br>
 It should now look something like this.<br>
 [image showing all four components]<br>
 <br>
-Notice how it presses right up against the tab bar. It looks nicer to have some space between the two. <br>
-Click on the bar and go to the All tab, then expand General Attributes if it is collapsed. <br>
-Scroll down to the style box, and put in “margin-bottom: 50px;” (without the quotes). This is an easy way to customize the css for a specific component. <br>
+Let's say we want to change the color of this text. Click on the Heading and go to the All tab, then expand General Attributes and scroll down to the Style field. Enter in "color: #67aee5;" (without the quotes). The color changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
 [image]<br>
 <br>
-However, we can also edit the html and css more directly. Near the top right, hit the Code tab for the page. <br>
+However, we can also edit the HTML and CSS more directly. Near the top right, hit the Code tab for the page. <br>
 [image]<br>
 <br>
 To customize the tab bar, we will first define some style. <br>
