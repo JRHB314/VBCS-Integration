@@ -310,7 +310,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   
 VBCS requires that functions be written in a very particular way. You will see the base outline for this already here.<br>
 
-{image}<br>
+![](/images/3-14.png)<br>
 <br>
 
 The outermost function will return a PageModule object to VBCS; it sends all of the module functions we create to VBCS so we can more easily access them in other components. Each module can be treated like a separate Javascript file.<br>
@@ -463,20 +463,23 @@ Careful with your brackets here; it's easy to get one too many or one too few. <
 
 <h3>Calling the Module Function.</h3>
 We want this function to be called on page load. Go to Events for the {pageName} page.<br>
-Click Create Event Listener, then under Lifecycle Events, hit the plus by vbEnter. This will be an event that runs when the page loads.<br>
-{image}<br>
+Click Create Event Listener, then under Lifecycle Events, select vbEnter. This will be an event that runs when the page loads.<br>
+![](/images/3-15.png)<br>
+<br>
+Hit the + sign next to Page Action Chains to create a new action chain. Name this runLoadDescriptions.<br>
+![](/images/3-16.png)<br>
 <br>
 Click on the name of your event, then on the right side hit the link to open the action chain editor.<br>
-{image}<br>
+![](/images/3-17.png)<br>
 <br>
 Drag "Call Module Function" onto the plus sign.<br>
-{image}<br>
+![](/images/3-18.png)<br>
 <br>
 Select Module Function. You should see a Page Function named loadDescriptions in the list. Select it, and you should be good to go.<br>
-{image}<br>
+![](/images/3-19.png)<br>
 <br>
 Test the page, and the books should appear on the {pagename} page. <br>
-{image}<br>
+![](/images/3-20.png)<br>
 <br>
 Great job!
   
