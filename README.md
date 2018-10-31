@@ -68,23 +68,21 @@ This lab will guide you through creating your first Web App in VBCS.
   
   <br>![](/images/15.png)<br><br>
   
-  Go to the General tab and set the `width` property to 150. The image now looks much more fitting to be a logo.<br>
+  Go to the `General` tab and set the `width` property to 150. Now that the image is resized, itlooks much more fitting to be   our website's logo.<br>
   
   ![](/images/16.png)<br>
   <br>
   
-  Next, drag on a `Heading` component one column to the right of the logo. Under the General tab inside the Text field, put  
-  whatever name you want your website to be called.<br>
+  Next, drag on a `Heading` component one column to the right of the logo. Under the `General` tab inside the `Text` field,   
+  enter whatever name you'd like your website to be called.<br>
   
-  In the row below, drag a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over `Tab 3` in 
-  the General tab, then hit the trash can icon.<br>
+  In the row below, drag over a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over `Tab 3`   in the General tab, then hit the trash can icon.<br>
   
   ![](/images/17.png)<br>
-  <br>
   
   Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text.<br><br>
   
-  Let's say that we want to customize the color of the text that we just entered. Click on the Heading and go to the `All` 
+  Let's say that we want to customize the color of the text that we just entered. Click on the Heading, go to the `All` 
   tab, then expand `General Attributes` and scroll down to the `Style` field. Enter in `color: #67aee5;`. The color 
   changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
   
@@ -95,7 +93,7 @@ This lab will guide you through creating your first Web App in VBCS.
   
   ![](/images/19.png)<br><br>
   
-  To customize the tab bar, we will first define some style. Simply paste this at the top of the Code page.<br>
+  To customize the tab bar, we'll first define some style. Simply paste this at the top of the Code page.<br>
   
   ```
   <style>
@@ -116,8 +114,7 @@ This lab will guide you through creating your first Web App in VBCS.
 
   ![](/images/20.png)<br><br>
   
-  Back on the design tab, we can view changes we made to the tab bar. In this way, you can code HTML and CSS for your web app 
-  the way you would for any website, giving you much greater flexibility.<br>
+  Back on the design tab, we can view changes we made to the tab bar. As demonstrated, you can code HTML and CSS for your web   app the way you would for any website while also viewing it in the Design tab, giving you much greater flexibility.<br>
   
   ![](/images/21.png)<br>
   <br>
@@ -129,7 +126,7 @@ This lab will guide you through creating your first Web App in VBCS.
 
   <h3>Add Navigation </h3>
 
-  Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App 
+  In order for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App 
   heirarchy on the left and hit the plus sign next to `main` in order to create a new page. Give this new page a name. For 
   this lab, we'll name the page "second-page". <br>
   
@@ -140,8 +137,8 @@ This lab will guide you through creating your first Web App in VBCS.
   code for second-page. Or alternatively, right click on main-start and hit `Duplicate`. <br><br>
   
   You'll see part of the code is underlined in red. Click within it, and then add `Add Missing Dependencies`. When a component 
-  is dragged onto the page, it automatically adds in the dependencies. However, if you copy and paste code, you'll have to add 
-  the missing dependencies yourself.<br>
+  is dragged onto the page, it automatically adds in the dependencies. However, if you copy and paste code directly, you'll  
+  have to add the missing dependencies yourself.<br>
   
   ![](/images/22.png)<br>
   <br>
