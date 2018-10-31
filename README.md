@@ -482,6 +482,44 @@ Select Module Function. You should see a Page Function named loadDescriptions in
 Test the page, and the books should appear on the {pagename} page. <br>
 ![](/images/3-20.png)<br>
 <br>
+Now we are going to create our other module, loadImages. The process is basically the same, except we are appending images instead of text.<br>
+Insert this code alongside the first module:
+```
+  PageModule.prototype.loadImages = function() {
+    const app = document.getElementById('leftColumn');
+
+    var request = new XMLHttpRequest();
+    request.open('GET', 'https://asset-bdf37.firebaseio.com/results.json', true);
+
+    request.onload = function () {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response);
+      if (request.status >= 200 && request.status < 400) {
+        Object.keys(data).forEach(result => {
+          const bookCovers = document.createElement('img');
+          bookCovers.src = data[result].image_url;
+          console.log(result);
+          app.appendChild(bookCovers);
+          const p = document.createElement('p');
+          p.textContent = "\n";
+          app.appendChild(p);
+        });
+      }
+      else {
+        const errorMessage = document.createElement('marquee');
+        errorMessage.textContent = "Request failed.";
+        app.appendChild(errorMessage);
+      }
+    }
+
+    request.send();
+  };
+```
+Add another action change under vbEnter, this one called runLoadImages. Set it up the same as runLoadDescriptions, with this one calling the loadImages module.<br>
+<br>
+Test the page one more time, and we should see the book covers to the left of the book descriptions. <br>
+![](/images/3-21.png)<br>
+<br>
 Great job!
   
 </details>
