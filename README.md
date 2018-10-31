@@ -286,8 +286,26 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   ```
   <br>
   
+  Next, add the css for the two columns:
+  
+  ```
+    .column {
+      float: left;
+      width: 35%;
+  }
+
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  ```
   ![](/images/david-1.png)<br>
   <br>
   
+  With these 2 div objects, we'll be able to identify where the javascript should populate the images and descriptions. Let's move on to the actual Javascript.
+  
 </details>
 
+
+  
