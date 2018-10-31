@@ -2,9 +2,9 @@
 
 <h2> Lab 100: Starting Your Web App </h2>
   
-<details><summary>Create Web App</summary>
+<details><summary>1. Create Web App</summary>
 
-<h3> STEP ONE: Create Web App </h3> 
+<h3> Create Web App </h3> 
 
 Sign in to your Cloud Account. <br>
 ![](/images/1.png) <br>
@@ -37,9 +37,9 @@ A blank page will open in the center, with a components bar to the left, and a c
 <br>
 
 </details>
-<details><summary>Customize Web App</summary>
+<details><summary>2. Customize Web App</summary>
 
-<h3> STEP TWO: Customize Web App </h3>
+<h3>Customize Web App </h3>
 
 Click on the Design view tab in the top right. Drag on an image component into the very top left corner of the page. <br>
 Click on it, then look on the right side go to the Data tab. Put in https://png.icons8.com/color/1600/reflector-bulb.png for the source url. However, the image is huge, which we do not want. <br>
@@ -82,8 +82,8 @@ Back on the design tab, we can view the changes to the tab bar. In this way, you
 ![](/images/21.png)<br>
 <br>
 </details>
-<details><summary>Add Navigation</summary>
-<h3> STEP THREE: Add Navigation </h3>
+<details><summary>3. Add Navigation</summary>
+<h3>Add Navigation </h3>
 
 Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App heirarchy on the left and hit the plus sign next to main in order to create a new page. Name this something like second-page. <br>
 ![](/images/33.png)<br>
