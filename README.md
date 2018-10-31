@@ -8,9 +8,7 @@ This lab will guide you through creating your first Web App in VBCS.
 
 <h3> Create Web App </h3> 
 
-Sign in to your Cloud Account. 
-
-<br>
+Sign in to your Cloud Account. <br>
 ![](/images/1.png) <br>
 ![](/images/2.png) <br>
 <br>
