@@ -47,7 +47,7 @@ In the row below, drag a tab bar. It defaults to three tabs, but we only need tw
 <br>
 Drag and drop another Heading component, and fill in "Welcome to the Home page" for text.<br>
 It should now look something like this.<br>
-[image showing all four components]<br>
+{image showing all four components}<br>
 <br>
 Let's say we want to change the color of this text. Click on the Heading and go to the All tab, then expand General Attributes and scroll down to the Style field. Enter in "color: #67aee5;" (without the quotes). The color changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
 {image}<br>
@@ -55,8 +55,7 @@ Let's say we want to change the color of this text. Click on the Heading and go 
 However, we can also edit the HTML and CSS more directly. Near the top right, hit the Code view for the page. <br>
 {image}<br>
 <br>
-To customize the tab bar, we will first define some style. <br>
-
+To customize the tab bar, we will first define some style. Simply paste this at the top of the Code page.<br>
 ```
 <style>
 .bright {
@@ -70,19 +69,21 @@ border-style: groove;
 </style>
 ```
 <br>
-We will add this to our tabs, with dull being for the tab we are currently on, and bright being for the tab we are not on.<br> [Show code]<br>
-Back on the design tab, we can view the changes to the tab bar. This gives you much greater flexibility.<br>
-[image]<br>
+We will add this style as div classes this to our tabs, with dull being for the tab we are currently on, and bright being for the tab we are not on.<br> 
+{image}<br>
+<br>
+Back on the design tab, we can view the changes to the tab bar. In this way, you can code HTML and CSS for your web app the way you would for any website, giving you much greater flexibility.<br>
+{image}<br>
 <br>
 <h3> STEP THREE: Add Navigation </h3>
 Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App heirarchy on the left and hit the plus sign next to main in order to create a new page. Name this something like second-page. <br>
-[image]<br>
+{image}<br>
 <br>
 Paste in the code from the first page, switching which tab is dull and which tab is bright. <br>
-[image]<br>
+{image}<br>
 <br>
 On the Design view, change Welcome to the Home Page to say Welcome to the Second Page. The page should look like this.<br>
-[image]<br>
+{image}<br>
 <br>
 Next, we want to create some events and action chains. These will allow us to navigate to the second page and back again when a tab is clicked.<br>
 Go to the main flow’s page, and hit actions. Creating an action chain at the flow level allows us to reuse these components on each page.<br>
