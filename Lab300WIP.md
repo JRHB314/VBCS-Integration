@@ -134,7 +134,7 @@ PageModule.prototype.loadDescriptions = function () {
 ```
 
 Careful with your brackets here; it's easy to get one too many or one too few. <br>
-<h3>Calling ther Module Function.</h3>
+<h3>Calling the Module Function.</h3>
 We want this function to be called on page load. Go to Events for the {pageName} page.<br>
 Click Create Event Listener, then under Lifecycle Events, hit the plus by vbEnter. This will be an event that runs when the page loads.<br>
 {image}<br>
