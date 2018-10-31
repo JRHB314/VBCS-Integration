@@ -286,7 +286,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   ```
   <br>
   
-  ![](/images/22.png)<br>
+  ![](/images/david-1.png)<br>
   <br>
   
 </details>
