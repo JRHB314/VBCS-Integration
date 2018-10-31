@@ -140,9 +140,9 @@ This lab will guide you through creating your first Web App in VBCS.
   is dragged onto the page, it automatically adds in the dependencies. However, if you copy and paste code directly, you'll have to add the missing dependencies yourself.<br>
   
   ![](/images/22.png)<br>
-  <br>
+  <br><br>
   
-  Switch which tab is dull and which tab is bright. <br>
+  Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
   ![](/images/23.png)<br>
   <br>
   
