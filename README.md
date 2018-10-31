@@ -68,7 +68,7 @@ This lab will guide you through creating your first Web App in VBCS.
   
   <br>![](/images/15.png)<br><br>
   
-  Go to the `General` tab and set the `width` property to 150. Now that the image is resized, itlooks much more fitting to be   our website's logo.<br>
+  Go to the `General` tab and set the `width` property to 150. Now that the image is resized, it looks much more fitting to be   our website's logo.<br>
   
   ![](/images/16.png)<br>
   <br>
@@ -80,7 +80,7 @@ This lab will guide you through creating your first Web App in VBCS.
   
   ![](/images/17.png)<br>
   
-  Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text.<br><br>
+  Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text.<br>
   
   Let's say that we want to customize the color of the text that we just entered. Click on the Heading, go to the `All` 
   tab, then expand `General Attributes` and scroll down to the `Style` field. Enter in `color: #67aee5;`. The color 
@@ -134,11 +134,10 @@ This lab will guide you through creating your first Web App in VBCS.
   <br>
   
   Because we want the navbar to remain on this second page as well, copy the code from the first page and paste it into the 
-  code for second-page. Or alternatively, right click on main-start and hit `Duplicate`. <br><br>
+  code for second-page. Or alternatively, right click on main-start and hit `Duplicate`. <br>
   
   You'll see part of the code is underlined in red. Click within it, and then add `Add Missing Dependencies`. When a component 
-  is dragged onto the page, it automatically adds in the dependencies. However, if you copy and paste code directly, you'll  
-  have to add the missing dependencies yourself.<br>
+  is dragged onto the page, it automatically adds in the dependencies. However, if you copy and paste code directly, you'll have to add the missing dependencies yourself.<br>
   
   ![](/images/22.png)<br>
   <br>
