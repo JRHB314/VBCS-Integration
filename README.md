@@ -4,108 +4,111 @@
 
 This lab will guide you through creating your first Web App in VBCS. 
   
-<details><summary>1. Create The Web App</summary>
+<details>
+  <summary>1. Create The Web App</summary>
 
-<h3> Create Web App </h3> 
+  <h3> Create Web App </h3> 
 
-Sign in to your Cloud Account. <br>
-![](/images/1.png) <br>
-![](/images/2.png) <br>
-<br>
+  Sign in to your Cloud Account. <br>
+  ![](/images/1.png) <br>
+  ![](/images/2.png) <br>
+  <br>
 
-Navigate to Cloud Dashboard, then open the Visual Builder Service Console. If Visual Builder is not visible, click `Customize Dashboard`, then scroll to Visual Builder in the list and hit `Show`.<br>
+  Navigate to Cloud Dashboard, then open the Visual Builder Service Console. If Visual Builder is not visible, click `Customize Dashboard`, then scroll to Visual Builder in the list and hit `Show`.<br>
 
-![](/images/3.png) <br> <br>
+  ![](/images/3.png) <br> <br>
 
-At the top right of the page, hit `Quick Starts`. This will allow us to create the underlying infrastructure for VBCS at the same time that we create the VBCS instance rather than making them separately. Simply name the instance and then hit `Create`. If you don't care about configuring the database that your instance will run on, this is the way to go. 
+  At the top right of the page, hit "Quick Starts". This will allow us to create the underlying infrastructure for VBCS at the same time that we create the VBCS instance rather than making them separately. Simply name the instance and then hit `Create`. If you don't care about configuring the database that your instance will run on, this is the way to go. 
 
-<br><br>
-Alternatively, you can hit the `Customize` button on the top right. This would allow you to configure the database that is created. For the purpose of this lab, we'll stick to the default QuickStart configuration.
+  <br>
+  Alternatively, you can hit the `Customize` button on the top right. This would allow you to configure the database that is created. For the purpose of this lab, we'll stick to the default QuickStart configuration.
 
-![](/images/5.png)<br><br>
+  ![](/images/5.png)<br><br>
 
-Next, download the generated SSH key and credentials in order to continue, which will allow you to access your instance.
+  Next, download the generated SSH key and credentials in order to continue, which will allow you to access your instance.
 
-<br>![](/images/12.png)<br>
-<br>
+  <br>![](/images/12.png)<br>
+  <br>
 
-Your instance will take some time to provision. When it's ready, open the Visual Builder Home page.
+  Your instance will take some time to provision. When it's ready, open the Visual Builder Home page.
 
-<br>
-![](/images/8.png)<br>
-<br>
+  <br>![](/images/8.png)<br>
+  <br>
 
-Now, we need to create a Visual Application. From the home page, hit `New` in the top right. 
+  Now, we need to create a Visual Application. From the home page, hit `New` in the top right. 
 
-<br>
-![](/images/9.png)<br>
-<br>
+  <br>![](/images/9.png)<br>
+  <br>
 
-Name the application whatever you like; the Description is optional. 
+  Name the application whatever you like; the Description is optional. 
 
-<br>
-![](/images/10.png)<br>
-<br>
+  <br>![](/images/10.png)<br>
+  <br>
 
-Your new Application should open automatically. On the left, hit the computer icon for `Web Apps`, then the plus sign to create a new Web App. Name it, then hit `Create`. 
+  Your new Application should open automatically. On the left, hit the computer icon for `Web Apps`, then the plus sign to create a new Web App. Name it, then hit `Create`. 
 
-<br>
-![](/images/11.png)<br>
-<br>
+  <br>![](/images/11.png)<br>
+  <br>
 
-A blank page will open in the center, with a Components Bar to the left and a Customization Bar on the right.
-
-<br>
-![](/images/14.png)<br>
-<br>
-
+  A blank page will open in the center, with a Components Bar to the left and a Customization Bar on the right.<br>
+  
+  ![](/images/14.png)<br>
+  <br>
 </details>
 
-<details><summary>2. Customize Web App</summary>
+<details>
+  <summary>2. Customize Web App</summary>
+  
+  <h3>Customize Web App </h3>
+  
+  Click on the `Design` view tab in the top right. Drag on an image component into the very top left corner of the page.<br>
+  Click on it, then look on the right side go to the Data tab. Put in https://png.icons8.com/color/1600/reflector-bulb.png for   the source url. This image will act as our website's logo. As it is, the image size is bigger than what we'd expect for our   logo, so let's resize it. 
+  
+  <br>![](/images/15.png)<br><br>
+  
+  Go to the General tab and set the `width` property to 150. The image now looks much more fitting to be a logo. 
 
-<h3>Customize Web App </h3>
+  <br>
+  ![](/images/16.png)<br>
+  <br>
+  
+  Next, drag on a `Heading` component one column to the right of the logo. Under the General tab inside the Text field, put whatever name you want your website to be called.<br>
+  In the row below, drag a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over Tab 3 in the General tab, then hit the trash can icon.<br>
+  
+  ![](/images/17.png)<br>
+  <br>
+  
+  Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text.<br><br>
+  
+  Now, let's say we want to change the color of this text. Click on the Heading and go to the All tab, then expand General Attributes and scroll down to the Style field. Enter in "color: #67aee5;" (without the quotes). The color changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
+  ![](/images/18.png)<br>
+  <br>
+  However, we can also edit the HTML and CSS more directly. Near the top right, hit the Code view for the page. <br>
+  ![](/images/19.png)<br>
+  <br>
+  To customize the tab bar, we will first define some style. Simply paste this at the top of the Code page.<br>
+  ```
+  <style>
+  .bright {
+  background-color: #4286f4;
+  border-style: groove;
+  }
+  .dull {
+  background-color: #7790ba;
+  border-style: groove;
+  }
+  </style>
+  ```
+  <br>
+  We will add this style as div classes to our tabs, with dull being for the tab we are currently on, and bright being for tabs we are not on.<br> 
 
-Click on the Design view tab in the top right. Drag on an image component into the very top left corner of the page. <br>
-Click on it, then look on the right side go to the Data tab. Put in https://png.icons8.com/color/1600/reflector-bulb.png for the source url. However, the image is huge, which we do not want. <br>
-![](/images/15.png)<br>
-<br>
-Go to the General tab and set width to 150. Much better. <br>
-![](/images/16.png)<br>
-<br>
-Next drag on a Heading component one column to the right of the logo. In the General tab, inside the Text field put whatever you want your website to be called.<br>
-In the row below, drag a tab bar. It defaults to three tabs, but we only need two for now. Hover over Tab 3 in the General tab, then hit the trash can icon.<br>
-![](/images/17.png)<br>
-<br>
-Drag and drop another Heading component, and fill in "Welcome to the Home page" for text.<br>
-<br>
-Now, let's say we want to change the color of this text. Click on the Heading and go to the All tab, then expand General Attributes and scroll down to the Style field. Enter in "color: #67aee5;" (without the quotes). The color changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
-![](/images/18.png)<br>
-<br>
-However, we can also edit the HTML and CSS more directly. Near the top right, hit the Code view for the page. <br>
-![](/images/19.png)<br>
-<br>
-To customize the tab bar, we will first define some style. Simply paste this at the top of the Code page.<br>
-```
-<style>
-.bright {
-background-color: #4286f4;
-border-style: groove;
-}
-.dull {
-background-color: #7790ba;
-border-style: groove;
-}
-</style>
-```
-<br>
-We will add this style as div classes to our tabs, with dull being for the tab we are currently on, and bright being for tabs we are not on.<br> 
-
-![](/images/20.png)<br>
-<br>
-Back on the design tab, we can view the changes to the tab bar. In this way, you can code HTML and CSS for your web app the way you would for any website, giving you much greater flexibility.<br>
-![](/images/21.png)<br>
-<br>
-</details>
+  ![](/images/20.png)<br>
+  <br>
+  Back on the design tab, we can view the changes to the tab bar. In this way, you can code HTML and CSS for your web app the way you would for any website, giving you much greater flexibility.<br>
+  ![](/images/21.png)<br>
+  <br>
+  </details>
+  
 <details><summary>3. Add Navigation</summary>
 <h3>Add Navigation </h3>
 
