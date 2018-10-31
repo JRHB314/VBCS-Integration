@@ -271,9 +271,10 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 
 </details>
 
-<summary>2. Connect VBCS to the Firebase Database through Javascript </summary>
-
 <details>
+  <summary>2. Connect VBCS to the Firebase Database through Javascript </summary>
+  
   In this section of the lab, we'll make retrieve information from our Firebase database, parse it, and display it on our website. Specifically, we'll create a new page with 2 columns (one for book images and one for book descriptions) that are displayed based on the data we pull from the database.
+  
 </details>
 
