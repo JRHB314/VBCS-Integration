@@ -275,7 +275,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 </details>
 
 <details>
-  <summary>2. Connect VBCS to the Firebase Database through Javascript </summary>
+  <summary>2. Connect VBCS to the Firebase Database</summary>
   
   <h3> Add HTML/CSS </h3>
   
