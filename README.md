@@ -68,9 +68,8 @@ This lab will guide you through creating your first Web App in VBCS.
   
   <br>![](/images/15.png)<br><br>
   
-  Go to the General tab and set the `width` property to 150. The image now looks much more fitting to be a logo. 
-
-  <br>
+  Go to the General tab and set the `width` property to 150. The image now looks much more fitting to be a logo.<br>
+  
   ![](/images/16.png)<br>
   <br>
   
