@@ -66,7 +66,6 @@ border-style: groove;
 }
 </style>
 ```
-
 <br>
 We will add this style as div classes this to our tabs, with dull being for the tab we are currently on, and bright being for the tab we are not on.<br> 
 
