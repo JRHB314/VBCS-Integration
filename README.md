@@ -310,33 +310,33 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 VBCS requires that functions be written in a very particular way. You will see the base outline for this already here.<br>
 {image}<br>
 <br>
-The outermost function will return a PageModule object to VBCS, which is defined by all the module functions within it; i.e. it sends all of the module functions we create to VBCS so we can more easily access them in other components.<br>
-We will put our modules within the PageModule definition:
-```
-var PageModule = function PageModule() { OUR MODULES HERE };
-```
-Then to define a module:
+The outermost function will return a PageModule object to VBCS; it sends all of the module functions we create to VBCS so we can more easily access them in other components. Each module can be treated like a separate Javascript file.<br>
+To define a module, use this format:
 ```
 PageModule.prototype.functionName = function () { OUR CODE HERE };
 ```
-So together it looks like:
-```
-var PageModule = function PageModule() { 
-  PageModule.prototype.functionOne = function () { OUR CODE HERE };
-  PageModule.prototype.functionTwo = function () { OUR CODE HERE };
-  PageModule.prototype.functionThree = function () { OUR CODE HERE };
-};
-```
-Within the OUR CODE section, we will simply put in our javascript the way we would if we were creating a javascript file to run. <br>
-First, let's set up the module that will load the book descriptions. <br>
+So in the end it will look like:
 ```
 define([], function() {
   'use strict';
 
-  var PageModule = function PageModule() {
-    PageModule.prototype.loadDescriptions = function () {
-      //code here
-    };
+  var PageModule = function PageModule() {};
+  PageModule.prototype.functionOne = function () { OUR CODE HERE };
+  PageModule.prototype.functionTwo = function () { OUR CODE HERE };
+  PageModule.prototype.functionThree = function () { OUR CODE HERE };
+
+  return PageModule;
+});
+```
+To get started, let's set up the module that will load the book descriptions. <br>
+```
+define([], function() {
+  'use strict';
+
+  var PageModule = function PageModule() {};
+  
+  PageModule.prototype.loadDescriptions = function () {
+    //code here
   };
 
   return PageModule;
@@ -374,35 +374,35 @@ else {
 ```
 Next we are going to run through the children of the JSON response and add each entry as a line on our webpage. We'll also add a horizontal rule between each, and use a blank image to add some space between book descriptions.
 ```
-        if (request.status >= 200 && request.status < 400) {
-          Object.keys(data).forEach(result => {
-            const line = document.createElement('hr');
-            app.appendChild(line);
+      if (request.status >= 200 && request.status < 400) {
+        Object.keys(data).forEach(result => {
+          const line = document.createElement('hr');
+          app.appendChild(line);
             
-            const title = document.createElement('p');
-            title.textContent = data[result].title;
-            app.appendChild(title);
-            const author = document.createElement('p');
-            author.textContent = data[result].author;
-            app.appendChild(author);
-            const ISBN = document.createElement('p');
-            ISBN.textContent = result;
-            app.appendChild(ISBN);
-            const genre = document.createElement('p');
-            genre.textContent = data[result].genre;
-            app.appendChild(genre);
-            const published = document.createElement('p');
-            published.textContent = data[result].publish_date;
-            app.appendChild(published);
-            const publisher = document.createElement('p');
-            publisher.textContent = data[result].publisher;
-            app.appendChild(publisher);
+          const title = document.createElement('p');
+          title.textContent = data[result].title;
+          app.appendChild(title);
+          const author = document.createElement('p');
+          author.textContent = data[result].author;
+          app.appendChild(author);
+          const ISBN = document.createElement('p');
+          ISBN.textContent = result;
+          app.appendChild(ISBN);
+          const genre = document.createElement('p');
+          genre.textContent = data[result].genre;
+          app.appendChild(genre);
+          const published = document.createElement('p');
+          published.textContent = data[result].publish_date;
+          app.appendChild(published);
+          const publisher = document.createElement('p');
+          publisher.textContent = data[result].publisher;
+          app.appendChild(publisher);
             
-            const space = document.createElement('img');
-            space.src = "https://i.imgur.com/gAYM6Ws.png?3";
-            app.appendChild(space);
-          });
-        }
+          const space = document.createElement('img');
+          space.src = "https://i.imgur.com/gAYM6Ws.png?3";
+          app.appendChild(space);
+        });
+      }
 ```
 Finally, all together:
 ```
