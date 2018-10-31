@@ -1,21 +1,19 @@
 # VBCS Integration
 <h2> Lab 100: Starting Your Web App </h2>
 
-[here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)
-
 <h3> STEP ONE: Create Web App </h3> 
-<p>
+<p>[here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)
 Sign in to your Cloud Account. <br>
-[image here]() <br>
+{image here} <br>
 <br>
 Navigate to Cloud Dashboard, then open Visual Builder Service Console. If Visual Builder is not visible, click Customize Dashboard, then scroll to Visual Builder in the list and hit "Show".<br>
-[image]() <br>
+{image} <br>
 <br>
 At the mid right of the page, hit Create Instance to create a new VBCS instance. <br>
-[image]()<br>
-<br>
+{image}<br>
+<br>[here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)
 Name it whatever you like, and give it a description if you want.<br>
-[image]()<br>
+{image}<br>
 <br>
 You'll need to generate an ssh kdy if you haven't already [here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html), then copy the value into SSH Public Key. <br>
 [image]<br>
