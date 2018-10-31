@@ -280,8 +280,8 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   
   ```
   <div class="row">
-  <div class="column"> <div id="leftColumn"></div> </div>
-  <div class="column"> <div id="rightColumn"></div> </div>
+     <div class="column"> <div id="leftColumn"></div> </div>
+     <div class="column"> <div id="rightColumn"></div> </div>
 </div>
   ```
   <br>
