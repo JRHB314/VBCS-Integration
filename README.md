@@ -13,11 +13,9 @@ Sign in to your Cloud Account. <br>
 ![](/images/2.png) <br>
 <br>
 
-Navigate to Cloud Dashboard, then open the Visual Builder Service Console. If Visual Builder is not visible, click `Customize Dashboard`, then scroll to Visual Builder in the list and hit `Show`
+Navigate to Cloud Dashboard, then open the Visual Builder Service Console. If Visual Builder is not visible, click `Customize Dashboard`, then scroll to Visual Builder in the list and hit `Show`.<br>
 
-.<br>
-![](/images/3.png) <br> 
-<br>
+![](/images/3.png) <br> <br>
 
 At the top right of the page, hit `Quick Starts`. This will allow us to create the underlying infrastructure for VBCS at the same time that we create the VBCS instance rather than making them separately. Simply name the instance and then hit `Create`. If you don't care about configuring the database that your instance will run on, this is the way to go. 
 
@@ -28,8 +26,7 @@ Alternatively, you can hit the `Customize` button on the top right. This would a
 
 Next, download the generated SSH key and credentials in order to continue, which will allow you to access your instance.
 
-<br>
-![](/images/12.png)<br>
+<br>![](/images/12.png)<br>
 <br>
 
 Your instance will take some time to provision. When it's ready, open the Visual Builder Home page.
