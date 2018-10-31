@@ -132,12 +132,23 @@ PageModule.prototype.loadDescriptions = function () {
       request.send();
     };
 ```
+
 Careful with your brackets here; it's easy to get one too many or one too few. <br>
-Last step is calling this function on page load.
-Go to Events on the last side. 
-Click Create Event Listener, then under Lifecycle Events, hit the plus by vbEnter. This will be an event that runs when the page loads.
-Click on the name of your event, then on the right side hit the link to open the action chain editor.
-Drag Call Module Function onto the plus sign.
-Select Module Function. You should see a Page Function named [name] in the list. Select it, and you should be good to go.
-Test the page, and the books should appear. 
+<h3>Calling ther Module Function.</h3>
+We want this function to be called on page load. Go to Events for the {pageName} page.<br>
+Click Create Event Listener, then under Lifecycle Events, hit the plus by vbEnter. This will be an event that runs when the page loads.<br>
+{image}<br>
+<br>
+Click on the name of your event, then on the right side hit the link to open the action chain editor.<br>
+{image}<br>
+<br>
+Drag "Call Module Function" onto the plus sign.<br>
+{image}<br>
+<br>
+Select Module Function. You should see a Page Function named loadDescriptions in the list. Select it, and you should be good to go.<br>
+{image}<br>
+<br>
+Test the page, and the books should appear on the {pagename} page. <br>
+{image}<br>
+<br>
 
