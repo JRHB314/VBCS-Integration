@@ -2,6 +2,8 @@
 
 <h2> Lab 100: Starting Your Web App </h2>
 
+<details><summary>Show Steps</summary>
+
 <h3> STEP ONE: Create Web App </h3> 
 
 Sign in to your Cloud Account. <br>
@@ -134,3 +136,5 @@ Finally, add the onclick listeners for the second page, and you should be good t
 Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
 ![](/images/7.png)<br>
 <br>
+
+</details>
