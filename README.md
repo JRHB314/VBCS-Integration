@@ -6,10 +6,16 @@
 Sign in to your Cloud Account. <br>
 [image here] <br>
 <br>
-Navigate to Cloud Dashboard, then open VBCS Service Console. <br>
+Navigate to Cloud Dashboard, then open Visual Builder Service Console. If Visual Builder is not visible, click Customize Dashboard, then scroll to Visual Builder in the list and hit "Show".<br>
 [image] <br>
 <br>
-In the top right, hit New to create a new VBCS instance, and then give it a name.<br>
+At the mid right of the page, hit Create Instance to create a new VBCS instance. <br>
+[image]<br>
+<br>
+Name it whatever you like, and give it a description if you want.<br>
+[image]<br>
+<br>
+You'll need to generate an ssh kdy if you haven't already [(here's a guide for Mac)](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html), then copy the value into SSH Public Key. <br>
 [image]<br>
 <br>
 Open up your new VBCS instance. <br>
