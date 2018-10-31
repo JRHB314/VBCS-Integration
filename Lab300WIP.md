@@ -11,7 +11,7 @@ Go to the [Firebase Website](https://firebase.google.com/products) and select Re
 Click "Visit Console" then "Add Project".
 ![](/images/3-2.png)<br>
 ![](/images/3-3.png)<br>
-<br>
+<br>å
 Choose a name, leave the default settings for location, make sure all three boxes are checked, then hit Create Project.<br>
 ![](/images/3-4.png)<br>
 <br>
@@ -44,4 +44,5 @@ A list of the books and all their info should be shown. <br>
 Sidenote, if you do not already have the extension JSON Viewer or something similar, I recommend adding it to your browser.
 
 </details>
+
 
