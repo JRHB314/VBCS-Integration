@@ -81,39 +81,53 @@ Back on the design tab, we can view the changes to the tab bar. In this way, you
 Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App heirarchy on the left and hit the plus sign next to main in order to create a new page. Name this something like second-page. <br>
 {image}<br>
 <br>
-Paste in the code from the first page, switching which tab is dull and which tab is bright. <br>
+Copy the code from the first page and paste it into the code for second-page. Alternatively, we can right click on main-start and hit Duplicate. You'll see part of the code is underlined in red. Click within it, and then say Add Missing Dependencies. When a component is dragged onto the page, it automatically adds in the dependencies, but if you copy and paste code, you have to do this.<br>
+{image}<br>
+<br>
+Switch which tab is dull and which tab is bright. <br>
 {image}<br>
 <br>
 On the Design view, change Welcome to the Home Page to say Welcome to the Second Page. The page should look like this.<br>
 {image}<br>
 <br>
 Next, we want to create some events and action chains. These will allow us to navigate to the second page and back again when a tab is clicked.<br>
-Go to the main flow’s page, and hit actions. Creating an action chain at the flow level allows us to reuse these components on each page.<br>
-Create new action chain and call it something like navigateHome. <br>
+Click on flow "main", and hit the flag icon near the left to open up Actions. Creating an action chain at the flow level allows us to reuse these components on each page.<br>
 {image}<br>
 <br>
+Hit "+ Action Chain" to create a new action chain and call it something like navigateHome. <br>
 Drag and drop a Navigate component to the plus sign, then click Select Target.<br>
 {image}<br>
 <br>
 Choose Peer Page, and then main-start.<br>
 {image}<br>
 <br>
+{image}<br>
+<br>
 Repeat this process for a navigateSecondPage action chain, this time selecting second-page as target.<br>
-Now, go back to main-start and tab to Events. Near the top-right hit Event Listener, then create a new Custom Event. Call this something like clickHomeTab. <br>
+Events need to be created at the page level, because the event that triggers your action happens on a particular page. Go back to main-start and click on the bell icon near the left to go to Events. Hit "+ Event Listener".
 {image}<br>
 <br>
-On the next page, select navigateHome for the action chain.<br>
+Scroll down to "Other Events" and hit the plus sign. Call this something like clickHomeTab. When done, hit Select.<br>
 {image}<br>
 <br>
-Repeat this process for clickSecondTab and navigateSecondPage.<br>
-Then create these same events in the second-page events.<br>
-<br>
-Last but not least, we want to connect these event listeners to our tabs so that the action chains will be run.<br>
-Go to Code view and insert on-click="[[$listeners.eventName]]" where eventName is the name of your event for each tab (i.e., clickHomeTab and clickSecondTab). <br>
+On the next page, select navigateHome for the action chain, then hit Select.<br>
 {image}<br>
 <br>
-Note, many components have an Events tab that allows you to create events containing an action chain all in one click, but because we want different parts of the tab bar to take us to different pages, we have to do it manually.<br>
+Repeat this process for creating clickSecondTab and having it trigger navigateSecondPage.<br>
+Then create these same events for second-page.<br>
+{image}<br>
+<br>
+Last but not least, we want to connect these event listeners to be activated when our tabs are clicked. Go to Code view and add the onclick listener after the li id for both tabs.
+```
+<li id ="oj-tab-bar-XXXXXXXXX-X-tab-X" on-click="[[$listeners.eventName]]"
+``` 
+Where eventName is the name of your event for each tab (i.e., clickHomeTab and clickSecondTab). <br>
+{image}<br>
+<br>
+Note, many components have an Events tab that allows you to create an event and action chain all in one click, but because we want different parts of the tab bar to take us to different pages, we have to do this manually.<br>
 The Events tab is very useful for things such as buttons, where you can quickly create an action for when the button is clicked.<br>
 <br>
-Finally, put in the listners for the second page, and you should be good to go! You now have a functional website.<br>
+Finally, add the onclick listeners for the second page, and you should be good to go! You now have a functional website.<br>
 Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
+{image}<br>
+<br>
