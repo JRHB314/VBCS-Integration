@@ -229,7 +229,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   
   <h3> Set up a Firebase Database </h3>
 
-  Go to the [Firebase Website](https://firebase.google.com/products) and select Realtime Database.<br>
+  Login to a google account and go to the [Firebase Website](https://firebase.google.com/products). Select Realtime Database.<br>
   ![](/images/3-1.png)<br>
   <br>
   Click "Visit Console" then "Add Project".
