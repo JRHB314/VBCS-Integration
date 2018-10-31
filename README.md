@@ -220,7 +220,11 @@ This lab will guide you through creating your first Web App in VBCS.
   <br>
 </details>
 
-<h2> Lab 300: Connecting VBCS to a Firebase database </h2>
+<h2> Lab 200: Connecting VBCS to an Oracle Database </h2>
+
+Oracle offers quick tools to integrate Oracle Cloud Databases with VBCS.
+
+<h2> Lab 300: Connecting VBCS to a Firebase Database </h2>
 
 Now we will try connecting to a non-Oracle Cloud Database; in this case, Google's Firebase. 
   
