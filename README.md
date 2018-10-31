@@ -67,7 +67,7 @@ border-style: groove;
 </style>
 ```
 <br>
-We will add this style as div classes this to our tabs, with dull being for the tab we are currently on, and bright being for the tab we are not on.<br> 
+We will add this style as div classes to our tabs, with dull being for the tab we are currently on, and bright being for tabs we are not on.<br> 
 
 ![](/images/20.png)<br>
 <br>
@@ -77,55 +77,55 @@ Back on the design tab, we can view the changes to the tab bar. In this way, you
 <h3> STEP THREE: Add Navigation </h3>
 
 Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App heirarchy on the left and hit the plus sign next to main in order to create a new page. Name this something like second-page. <br>
-![](/images/19.png)<br>
+![](/images/33.png)<br>
 <br>
 Copy the code from the first page and paste it into the code for second-page. Alternatively, we can right click on main-start and hit Duplicate. You'll see part of the code is underlined in red. Click within it, and then say Add Missing Dependencies. When a component is dragged onto the page, it automatically adds in the dependencies, but if you copy and paste code, you have to do this.<br>
-![](/images/20.png)<br>
+![](/images/22.png)<br>
 <br>
 Switch which tab is dull and which tab is bright. <br>
-![](/images/19.png)<br>
+![](/images/23.png)<br>
 <br>
 On the Design view, change Welcome to the Home Page to say Welcome to the Second Page. The page should look like this.<br>
-![](/images/20.png)<br>
+![](/images/24.png)<br>
 <br>
 Next, we want to create some events and action chains. These will allow us to navigate to the second page and back again when a tab is clicked.<br>
 Click on flow "main", and hit the flag icon near the left to open up Actions. Creating an action chain at the flow level allows us to reuse these components on each page.<br>
-![](/images/21.png)<br>
+![](/images/25.png)<br>
 <br>
 Hit "+ Action Chain" to create a new action chain and call it something like navigateHome. <br>
 Drag and drop a Navigate component to the plus sign, then click Select Target.<br>
-![](/images/22.png)<br>
-<br>
-Choose Peer Page, and then main-start.<br>
-![](/images/23.png)<br>
-<br>
-![](/images/24.png)<br>
-<br>
-Repeat this process for a navigateSecondPage action chain, this time selecting second-page as target.<br>
-Events need to be created at the page level, because the event that triggers your action happens on a particular page. Go back to main-start and click on the bell icon near the left to go to Events. Hit "+ Event Listener".
-![](/images/25.png)<br>
-<br>
-Scroll down to "Other Events" and hit the plus sign. Call this something like clickHomeTab. When done, hit Select.<br>
 ![](/images/26.png)<br>
 <br>
-On the next page, select navigateHome for the action chain, then hit Select.<br>
+Choose Peer Page, and then main-start.<br>
 ![](/images/27.png)<br>
+![](/images/28.png)<br>
+<br>
+Repeat this process for a navigateSecondPage action chain, this time selecting second-page as target.<br>
+<br>
+Events need to be created at the page level, because the event that triggers your action happens on a particular page. Go back to main-start and click on the bell icon near the left to go to Events. Hit "+ Event Listener".
+![](/images/29.png)<br>
+<br>
+Scroll down to "Other Events" and hit the plus sign. Call this something like clickHomeTab. When done, hit Select.<br>
+![](/images/30.png)<br>
+<br>
+On the next page, select navigateHome for the action chain, then hit Select.<br>
+![](/images/31.png)<br>
 <br>
 Repeat this process for creating clickSecondTab and having it trigger navigateSecondPage.<br>
 Then create these same events for second-page.<br>
-![](/images/28.png)<br>
+![](/images/32.png)<br>
 <br>
 Last but not least, we want to connect these event listeners to be activated when our tabs are clicked. Go to Code view and add the onclick listener after the li id for both tabs.
 ```
 <li id ="oj-tab-bar-XXXXXXXXX-X-tab-X" on-click="[[$listeners.eventName]]"
 ``` 
 Where eventName is the name of your event for each tab (i.e., clickHomeTab and clickSecondTab). <br>
-![](/images/29.png)<br>
+![](/images/34.png)<br>
 <br>
 Note, many components have an Events tab that allows you to create an event and action chain all in one click, but because we want different parts of the tab bar to take us to different pages, we have to do this manually.<br>
 The Events tab is very useful for things such as buttons, where you can quickly create an action for when the button is clicked.<br>
 <br>
 Finally, add the onclick listeners for the second page, and you should be good to go! You now have a functional website.<br>
 Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
-![](/images/30.png)<br>
+![](/images/7.png)<br>
 <br>
