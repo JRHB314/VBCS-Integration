@@ -56,8 +56,8 @@ Let's say we want to change the color of this text. Click on the Heading and go 
 However, we can also edit the HTML and CSS more directly. Near the top right, hit the Code view for the page. <br>
 {image}<br>
 <br>
-To customize the tab bar, we will first define some style. <br>
-'''
+To customize the tab bar, we will first define some style. <br> </p>
+```
 <style>
 .bright {
 background-color: #4286f4;
@@ -68,7 +68,8 @@ background-color: #7790ba;
 border-style: groove;
 }
 </style>
-'''
+```
+<p>
 <br>
 We will add this to our tabs, with dull being for the tab we are currently on, and bright being for the tab we are not on.<br> [Show code]<br>
 Back on the design tab, we can view the changes to the tab bar. This gives you much greater flexibility.<br>
@@ -88,27 +89,27 @@ On the Design view, change Welcome to the Home Page to say Welcome to the Second
 Next, we want to create some events and action chains. These will allow us to navigate to the second page and back again when a tab is clicked.<br>
 Go to the main flow’s page, and hit actions. Creating an action chain at the flow level allows us to reuse these components on each page.<br>
 Create new action chain and call it something like navigateHome. <br>
-[image]<br>
+{image}<br>
 <br>
 Drag and drop a Navigate component to the plus sign, then click Select Target.<br>
-[image]<br>
+{image}<br>
 <br>
 Choose Peer Page, and then main-start.<br>
-[image]<br>
+{image}<br>
 <br>
 Repeat this process for a navigateSecondPage action chain, this time selecting second-page as target.<br>
 Now, go back to main-start and tab to Events. Near the top-right hit Event Listener, then create a new Custom Event. Call this something like clickHomeTab. <br>
-[image]<br>
+{image}<br>
 <br>
 On the next page, select navigateHome for the action chain.<br>
-[image]<br>
+{image}<br>
 <br>
 Repeat this process for clickSecondTab and navigateSecondPage.<br>
 Then create these same events in the second-page events.<br>
 <br>
 Last but not least, we want to connect these event listeners to our tabs so that the action chains will be run.<br>
 Go to Code view and insert on-click="[[$listeners.eventName]]" where eventName is the name of your event for each tab (i.e., clickHomeTab and clickSecondTab). <br>
-[show pic where to insert code]<br>
+{image}<br>
 <br>
 Note, many components have an Events tab that allows you to create events containing an action chain all in one click, but because we want different parts of the tab bar to take us to different pages, we have to do it manually.<br>
 The Events tab is very useful for things such as buttons, where you can quickly create an action for when the button is clicked.<br>
