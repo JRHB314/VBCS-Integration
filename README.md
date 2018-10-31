@@ -274,7 +274,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 <details>
   <summary>2. Connect VBCS to the Firebase Database through Javascript </summary>
   
-  <h3> Edit the page we'll display the information on </h3>
+  <h3> Add HTML/CSS </h3>
   
   We'll first add some HTML code to the page we'll display the information on. We'll format the page with a left-side column to display the book image, and to the right of that the description of the book. To do so, let's add the HTML structure to our existing page. Navigate to the `Code` view of the page, and copy and paste this HTML code and add it at the very end:<br>
   
@@ -286,7 +286,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   ```
   <br>
   
-  Next, add the css for the two columns:
+  With the HTML in place, we can next add the css for the two columns to style them properly:
   
   ```
     .column {
@@ -303,7 +303,11 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   ![](/images/david-1.png)<br>
   <br>
   
-  With these 2 div objects, we'll be able to identify where the javascript should populate the images and descriptions. Let's move on to the actual Javascript.
+  With these 2 div objects properly set up, we'll be able to identify where the javascript should populate the images and descriptions. Let's move on to the actual Javascript.<br>
+  
+  <h3> Add the Javascript </h3>
+  
+  Add the following 
   
 </details>
 
