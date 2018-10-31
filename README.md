@@ -1,29 +1,32 @@
 # VBCS Integration
-[here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)
+
 <h2> Lab 100: Starting Your Web App </h2>
+
 <h3> STEP ONE: Create Web App </h3> 
-[here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)
+
 Sign in to your Cloud Account. <br>
 {image here} <br>
 <br>
-</p>
-[here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)<p>
 Navigate to Cloud Dashboard, then open Visual Builder Service Console. If Visual Builder is not visible, click Customize Dashboard, then scroll to Visual Builder in the list and hit "Show".<br>
 {image} <br>
 <br>
-At the mid right of the page, hit Create Instance to create a new VBCS instance. <br>
-{image}<br>
-<br>[here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)
-Name it whatever you like, and give it a description if you want.<br>
+At the top right of the page, hit Quick Starts. This will allow us to create the underlying infrastructure for VBCS at the same time we create the VBCS instance, rather than making them separately. Simply name the instance and then hit Create. If you don't care about configuring the database that your instance will run on, this is the way to go. <br>
+Alternatively, you can hit the Customize button on the top right. This would allow you to configure the database that is created. For the purpose of this lab, we will stick to the default QuickStart configuration.
 {image}<br>
 <br>
-You'll need to generate an ssh kdy if you haven't already [here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html), then copy the value into SSH Public Key. <br>
-[image]<br>
+Now, you need to download the generated SSH key and credentials in order to continue. These allow you to access your instance.<br>
+{image}<br>
 <br>
-Open up your new VBCS instance. <br>
-[image]<br>
+Your instance will take some time to provision. When it's ready, you can open the Visual Builder Home page.<br>
+{image}<br>
 <br>
-On the left, hit the computer icon for Web Apps, then create new. Name it whatever you like. <br>
+Now we need to create a Visual Application. From the home page, hit New in the top right. <br>
+{image}<br>
+<br>
+Name it whatever you like. Description is optional. <br>
+{image}<br>
+<br>
+Your new Application should open automatically. On the left, hit the computer icon for Web Apps, then create new. Name it whatever you like. <br>
 [image]<br>
 <br>
 Expand flows, then main, then click on main-start. <br>
@@ -32,9 +35,12 @@ This will show a blank page in the center, with a components bar to the left, an
 <br></p>
 <h3> STEP TWO: Customize Web App</h3>
 <p>
-Drag on an image component into the very top left corner of the page. <br>
-Click on it, then look on the right side go to the Data tab. Put in [url] for the source url. <br>
-[image showing data tab]<br>
+Click on the Design view tab in the top right. Drag on an image component into the very top left corner of the page. <br>
+Click on it, then look on the right side go to the Data tab. Put in https://png.icons8.com/color/1600/reflector-bulb.png for the source url. <br>
+{image showing data tab}<br>
+<br>
+However, the image is huge, which we do not want. Go to the General tab and set width to 150. Much better. <br>
+{image}<br>
 <br>
 Next drag on a Heading component one column to the right of the logo. In the General tab, put in Text [website name].<br>
 In the row below, drag a tab bar. It defaults to two tabs, which is fine for now. We will be adding more later.<br>
