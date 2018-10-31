@@ -2,10 +2,12 @@
 <h2> Lab 100: Starting Your Web App </h2>
 
 <h3> STEP ONE: Create Web App </h3> 
-<p>[here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)
+[here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)
 Sign in to your Cloud Account. <br>
 {image here} <br>
 <br>
+</p>
+[here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)<p>
 Navigate to Cloud Dashboard, then open Visual Builder Service Console. If Visual Builder is not visible, click Customize Dashboard, then scroll to Visual Builder in the list and hit "Show".<br>
 {image} <br>
 <br>
