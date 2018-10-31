@@ -88,7 +88,7 @@ You'll see part of the code is underlined in red. Click within it, and then say 
 Switch which tab is dull and which tab is bright. <br>
 ![](/images/23.png)<br>
 <br>
-On the Design view, change Welcome to the Home Page to say Welcome to the Second Page. The page should look like this.<br>
+On the Design view, change "Welcome to the Home Page" to say "Welcome to the Second Page". It should look like this.<br>
 ![](/images/24.png)<br>
 <br>
 Next, we want to create some events and action chains. These will allow us to navigate to the second page and back again when a tab is clicked.<br>
