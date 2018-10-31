@@ -4,41 +4,68 @@
 
 This lab will guide you through creating your first Web App in VBCS. 
   
-<details><summary>1. Create Web App</summary>
+<details><summary>1. Create The Web App</summary>
 
 <h3> Create Web App </h3> 
 
-Sign in to your Cloud Account. <br>
+Sign in to your Cloud Account. 
+
+<br>
 ![](/images/1.png) <br>
 ![](/images/2.png) <br>
 <br>
-Navigate to Cloud Dashboard, then open Visual Builder Service Console. If Visual Builder is not visible, click Customize Dashboard, then scroll to Visual Builder in the list and hit "Show".<br>
+
+Navigate to Cloud Dashboard, then open the Visual Builder Service Console. If Visual Builder is not visible, click `Customize Dashboard`, then scroll to Visual Builder in the list and hit `Show`
+
+.<br>
 ![](/images/3.png) <br> 
 <br>
-At the top right of the page, hit Quick Starts. This will allow us to create the underlying infrastructure for VBCS at the same time we create the VBCS instance, rather than making them separately. Simply name the instance and then hit Create. If you don't care about configuring the database that your instance will run on, this is the way to go. <br>
-Alternatively, you can hit the Customize button on the top right. This would allow you to configure the database that is created. For the purpose of this lab, we will stick to the default QuickStart configuration.
-![](/images/5.png)<br>
+
+At the top right of the page, hit `Quick Starts`. This will allow us to create the underlying infrastructure for VBCS at the same time that we create the VBCS instance rather than making them separately. Simply name the instance and then hit `Create`. If you don't care about configuring the database that your instance will run on, this is the way to go. 
+
+<br><br>
+Alternatively, you can hit the `Customize` button on the top right. This would allow you to configure the database that is created. For the purpose of this lab, we'll stick to the default QuickStart configuration.
+
+![](/images/5.png)<br><br>
+
+Next, download the generated SSH key and credentials in order to continue, which will allow you to access your instance.
+
 <br>
-Now, you need to download the generated SSH key and credentials in order to continue. These allow you to access your instance.<br>
 ![](/images/12.png)<br>
 <br>
-Your instance will take some time to provision. When it's ready, you can open the Visual Builder Home page.<br>
+
+Your instance will take some time to provision. When it's ready, open the Visual Builder Home page.
+
+<br>
 ![](/images/8.png)<br>
 <br>
-Now we need to create a Visual Application. From the home page, hit New in the top right. <br>
+
+Now, we need to create a Visual Application. From the home page, hit `New` in the top right. 
+
+<br>
 ![](/images/9.png)<br>
 <br>
-Name it whatever you like. Description is optional. <br>
+
+Name the application whatever you like; the Description is optional. 
+
+<br>
 ![](/images/10.png)<br>
 <br>
-Your new Application should open automatically. On the left, hit the computer icon for Web Apps, then the plus sign to create a new Web App. Name it, then hit Create. <br>
+
+Your new Application should open automatically. On the left, hit the computer icon for `Web Apps`, then the plus sign to create a new Web App. Name it, then hit `Create`. 
+
+<br>
 ![](/images/11.png)<br>
 <br>
-A blank page will open in the center, with a components bar to the left, and a customization bar on the right.<br>
+
+A blank page will open in the center, with a Components Bar to the left and a Customization Bar on the right.
+
+<br>
 ![](/images/14.png)<br>
 <br>
 
 </details>
+
 <details><summary>2. Customize Web App</summary>
 
 <h3>Customize Web App </h3>
