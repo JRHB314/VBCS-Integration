@@ -54,7 +54,6 @@ However, we can also edit the HTML and CSS more directly. Near the top right, hi
 ![](/images/19.png)<br>
 <br>
 To customize the tab bar, we will first define some style. Simply paste this at the top of the Code page.<br>
-
 ```
 <style>
 .bright {
@@ -70,6 +69,7 @@ border-style: groove;
 
 <br>
 We will add this style as div classes this to our tabs, with dull being for the tab we are currently on, and bright being for the tab we are not on.<br> 
+
 ![](/images/20.png)<br>
 <br>
 Back on the design tab, we can view the changes to the tab bar. In this way, you can code HTML and CSS for your web app the way you would for any website, giving you much greater flexibility.<br>
