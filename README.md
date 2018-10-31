@@ -1,6 +1,6 @@
 # VBCS Integration
-<h2> Lab 100: Starting Your Web App </h2>
 [here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)
+<h2> Lab 100: Starting Your Web App </h2>
 <h3> STEP ONE: Create Web App </h3> 
 [here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)
 Sign in to your Cloud Account. <br>
