@@ -27,11 +27,11 @@ Name it whatever you like. Description is optional. <br>
 {image}<br>
 <br>
 Your new Application should open automatically. On the left, hit the computer icon for Web Apps, then create new. Name it whatever you like. <br>
-[image]<br>
+{image}<br>
 <br>
 Expand flows, then main, then click on main-start. <br>
 This will show a blank page in the center, with a components bar to the left, and a customization bar on the right.<br>
-[image]<br>
+{image}<br>
 <br></p>
 <h3> STEP TWO: Customize Web App</h3>
 <p>
@@ -43,19 +43,33 @@ However, the image is huge, which we do not want. Go to the General tab and set 
 {image}<br>
 <br>
 Next drag on a Heading component one column to the right of the logo. In the General tab, inside the Text field put whatever you want your website to be called.<br>
-In the row below, drag a tab bar. It defaults to three tabs, but we only need two for now. Hover over tab 3 in the General tab, then hit the trash can icon.<br>
+In the row below, drag a tab bar. It defaults to three tabs, but we only need two for now. Hover over Tab 3 in the General tab, then hit the trash can icon.<br>
+{image}<br>
+<br>
 Drag and drop another Heading component, and fill in "Welcome to the Home page" for text.<br>
 It should now look something like this.<br>
 [image showing all four components]<br>
 <br>
 Let's say we want to change the color of this text. Click on the Heading and go to the All tab, then expand General Attributes and scroll down to the Style field. Enter in "color: #67aee5;" (without the quotes). The color changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
-[image]<br>
+{image}<br>
 <br>
-However, we can also edit the HTML and CSS more directly. Near the top right, hit the Code tab for the page. <br>
-[image]<br>
+However, we can also edit the HTML and CSS more directly. Near the top right, hit the Code view for the page. <br>
+{image}<br>
 <br>
 To customize the tab bar, we will first define some style. <br>
-[Show code]<br>
+'''
+<style>
+.bright {
+background-color: #4286f4;
+border-style: groove;
+}
+.dull {
+background-color: #7790ba;
+border-style: groove;
+}
+</style>
+'''
+<br>
 We will add this to our tabs, with dull being for the tab we are currently on, and bright being for the tab we are not on.<br> [Show code]<br>
 Back on the design tab, we can view the changes to the tab bar. This gives you much greater flexibility.<br>
 [image]<br>
