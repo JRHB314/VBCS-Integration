@@ -32,9 +32,8 @@ Your new Application should open automatically. On the left, hit the computer ic
 Expand flows, then main, then click on main-start. <br>
 This will show a blank page in the center, with a components bar to the left, and a customization bar on the right.<br>
 {image}<br>
-<br></p>
+<br>
 <h3> STEP TWO: Customize Web App</h3>
-<p>
 Click on the Design view tab in the top right. Drag on an image component into the very top left corner of the page. <br>
 Click on it, then look on the right side go to the Data tab. Put in https://png.icons8.com/color/1600/reflector-bulb.png for the source url. <br>
 {image showing data tab}<br>
@@ -56,7 +55,8 @@ Let's say we want to change the color of this text. Click on the Heading and go 
 However, we can also edit the HTML and CSS more directly. Near the top right, hit the Code view for the page. <br>
 {image}<br>
 <br>
-To customize the tab bar, we will first define some style. <br> </p>
+To customize the tab bar, we will first define some style. <br>
+
 ```
 <style>
 .bright {
@@ -69,14 +69,12 @@ border-style: groove;
 }
 </style>
 ```
-<p>
 <br>
 We will add this to our tabs, with dull being for the tab we are currently on, and bright being for the tab we are not on.<br> [Show code]<br>
 Back on the design tab, we can view the changes to the tab bar. This gives you much greater flexibility.<br>
 [image]<br>
-<br></p>
+<br>
 <h3> STEP THREE: Add Navigation </h3>
-<p>
 Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App heirarchy on the left and hit the plus sign next to main in order to create a new page. Name this something like second-page. <br>
 [image]<br>
 <br>
@@ -116,4 +114,3 @@ The Events tab is very useful for things such as buttons, where you can quickly 
 <br>
 Finally, put in the listners for the second page, and you should be good to go! You now have a functional website.<br>
 Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
-</p>
