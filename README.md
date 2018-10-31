@@ -1,6 +1,8 @@
 # VBCS Integration
 
 <h2> Lab 100: Starting Your Web App </h2>
+
+This lab will guide you through creating your first Web App in VBCS. 
   
 <details><summary>1. Create Web App</summary>
 
