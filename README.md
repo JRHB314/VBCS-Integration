@@ -20,7 +20,6 @@ This lab will guide you through creating your first Web App in VBCS.
 
   At the top right of the page, hit "Quick Starts". This will allow us to create the underlying infrastructure for VBCS at the same time that we create the VBCS instance rather than making them separately. Simply name the instance and then hit `Create`. If you don't care about configuring the database that your instance will run on, this is the way to go. 
 
-  <br>
   Alternatively, you can hit the `Customize` button on the top right. This would allow you to configure the database that is created. For the purpose of this lab, we'll stick to the default QuickStart configuration.
 
   ![](/images/5.png)<br><br>
