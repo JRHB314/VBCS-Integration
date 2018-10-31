@@ -276,8 +276,8 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   
   <h3> Add HTML/CSS </h3>
   
-  We'll first add some HTML code to the page we'll display the information on. We'll format the page with a left-side column to display the book image, and to the right of that the description of the book. To do so, let's add the HTML structure to our existing page. Navigate to the `Code` view of the page, and copy and paste this HTML code and add it at the very end:<br>
-  
+  Now that our database has been set up, we'll need to connect it to VBCS. We'll be using this database information to populate one of our pages with images and descriptions of books, so the first thing we need to do is to come up with a layout of how we want our page to look. For this lab, we'll format the page with a left-side column to display book images and a right-side column to display the book information. Let's create this layout by adding the HTML structure to our existing page. Navigate to the `Code` view of the page, and copy and paste this HTML code and add it at the very end:<br>
+
   ```
   <div class="row">
      <div class="column"> <div id="leftColumn"></div> </div>
@@ -308,8 +308,10 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   <h3> Add the Javascript </h3>
   
 VBCS requires that functions be written in a very particular way. You will see the base outline for this already here.<br>
+
 {image}<br>
 <br>
+
 The outermost function will return a PageModule object to VBCS; it sends all of the module functions we create to VBCS so we can more easily access them in other components. Each module can be treated like a separate Javascript file.<br>
 To define a module, use this format:
 ```
