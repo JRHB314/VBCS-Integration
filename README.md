@@ -15,7 +15,7 @@ At the mid right of the page, hit Create Instance to create a new VBCS instance.
 Name it whatever you like, and give it a description if you want.<br>
 [image]<br>
 <br>
-You'll need to generate an ssh kdy if you haven't already [here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html), then copy the value into SSH Public Key. <br>
+You'll need to generate an ssh kdy if you haven't already</p> [here's a guide for Mac](https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/OSX/SSHKeyOSX.html)<p>, then copy the value into SSH Public Key. <br>
 [image]<br>
 <br>
 Open up your new VBCS instance. <br>
