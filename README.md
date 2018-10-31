@@ -30,8 +30,7 @@ Name it whatever you like. Description is optional. <br>
 Your new Application should open automatically. On the left, hit the computer icon for Web Apps, then the plus sign to create a new Web App. Name it, then hit Create. <br>
 ![](/images/11.png)<br>
 <br>
-Expand flows, then main, then click on main-start. <br>
-This will show a blank page in the center, with a components bar to the left, and a customization bar on the right.<br>
+A blank page will open in the center, with a components bar to the left, and a customization bar on the right.<br>
 ![](/images/14.png)<br>
 <br>
 <h3> STEP TWO: Customize Web App </h3>
@@ -45,19 +44,17 @@ Go to the General tab and set width to 150. Much better. <br>
 <br>
 Next drag on a Heading component one column to the right of the logo. In the General tab, inside the Text field put whatever you want your website to be called.<br>
 In the row below, drag a tab bar. It defaults to three tabs, but we only need two for now. Hover over Tab 3 in the General tab, then hit the trash can icon.<br>
-![](/images/13.png)<br>
+![](/images/17.png)<br>
 <br>
 Drag and drop another Heading component, and fill in "Welcome to the Home page" for text.<br>
-It should now look something like this.<br>
-![](/images/14.png)<br>
-<br>
 Let's say we want to change the color of this text. Click on the Heading and go to the All tab, then expand General Attributes and scroll down to the Style field. Enter in "color: #67aee5;" (without the quotes). The color changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
-![](/images/15.png)<br>
+![](/images/18.png)<br>
 <br>
 However, we can also edit the HTML and CSS more directly. Near the top right, hit the Code view for the page. <br>
-![](/images/16.png)<br>
+![](/images/19.png)<br>
 <br>
 To customize the tab bar, we will first define some style. Simply paste this at the top of the Code page.<br>
+
 ```
 <style>
 .bright {
@@ -70,12 +67,13 @@ border-style: groove;
 }
 </style>
 ```
+
 <br>
 We will add this style as div classes this to our tabs, with dull being for the tab we are currently on, and bright being for the tab we are not on.<br> 
-![](/images/17.png)<br>
+![](/images/20.png)<br>
 <br>
 Back on the design tab, we can view the changes to the tab bar. In this way, you can code HTML and CSS for your web app the way you would for any website, giving you much greater flexibility.<br>
-![](/images/18.png)<br>
+![](/images/21.png)<br>
 <br>
 <h3> STEP THREE: Add Navigation </h3>
 
