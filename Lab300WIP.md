@@ -83,7 +83,7 @@ Before we can do anything with the response, we have to parse it as a JSON. Put 
 ```
 var data = JSON.parse(this.response);
 ```
-Right below this, put this code. It will run desired actions if the request is a success, and return an error if there's a problem.
+Right below that, put this code. It will run desired actions if the request is a success, and return an error if there's a problem.
 ```
 if (request.status >= 200 && request.status < 400) {
   //actions to perform on successful request
