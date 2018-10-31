@@ -47,7 +47,8 @@ In the row below, drag a tab bar. It defaults to three tabs, but we only need tw
 ![](/images/17.png)<br>
 <br>
 Drag and drop another Heading component, and fill in "Welcome to the Home page" for text.<br>
-Let's say we want to change the color of this text. Click on the Heading and go to the All tab, then expand General Attributes and scroll down to the Style field. Enter in "color: #67aee5;" (without the quotes). The color changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
+<br>
+Now, let's say we want to change the color of this text. Click on the Heading and go to the All tab, then expand General Attributes and scroll down to the Style field. Enter in "color: #67aee5;" (without the quotes). The color changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
 ![](/images/18.png)<br>
 <br>
 However, we can also edit the HTML and CSS more directly. Near the top right, hit the Code view for the page. <br>
@@ -79,7 +80,9 @@ Back on the design tab, we can view the changes to the tab bar. In this way, you
 Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App heirarchy on the left and hit the plus sign next to main in order to create a new page. Name this something like second-page. <br>
 ![](/images/33.png)<br>
 <br>
-Copy the code from the first page and paste it into the code for second-page. Alternatively, we can right click on main-start and hit Duplicate. You'll see part of the code is underlined in red. Click within it, and then say Add Missing Dependencies. When a component is dragged onto the page, it automatically adds in the dependencies, but if you copy and paste code, you have to do this.<br>
+Copy the code from the first page and paste it into the code for second-page. Alternatively, we can right click on main-start and hit Duplicate. <br>
+<br>
+You'll see part of the code is underlined in red. Click within it, and then say Add Missing Dependencies. When a component is dragged onto the page, it automatically adds in the dependencies, but if you copy and paste code, you have to do this.<br>
 ![](/images/22.png)<br>
 <br>
 Switch which tab is dull and which tab is bright. <br>
@@ -120,12 +123,14 @@ Last but not least, we want to connect these event listeners to be activated whe
 <li id ="oj-tab-bar-XXXXXXXXX-X-tab-X" on-click="[[$listeners.eventName]]"
 ``` 
 Where eventName is the name of your event for each tab (i.e., clickHomeTab and clickSecondTab). <br>
+<br>
 ![](/images/34.png)<br>
 <br>
-Note, many components have an Events tab that allows you to create an event and action chain all in one click, but because we want different parts of the tab bar to take us to different pages, we have to do this manually.<br>
+Note, many components have an Events tab that allows you to create an event and action chain all in one click, but because we want different parts of the tab bar to take us to different pages, we have to set them up manually.<br>
 The Events tab is very useful for things such as buttons, where you can quickly create an action for when the button is clicked.<br>
 <br>
 Finally, add the onclick listeners for the second page, and you should be good to go! You now have a functional website.<br>
+<br>
 Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
 ![](/images/7.png)<br>
 <br>
