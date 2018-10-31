@@ -33,7 +33,8 @@ Expand flows, then main, then click on main-start. <br>
 This will show a blank page in the center, with a components bar to the left, and a customization bar on the right.<br>
 {image}<br>
 <br>
-<h3> STEP TWO: Customize Web App</h3>
+<h3> STEP TWO: Customize Web App </h3>
+
 Click on the Design view tab in the top right. Drag on an image component into the very top left corner of the page. <br>
 Click on it, then look on the right side go to the Data tab. Put in https://png.icons8.com/color/1600/reflector-bulb.png for the source url. <br>
 {image showing data tab}<br>
@@ -76,6 +77,7 @@ Back on the design tab, we can view the changes to the tab bar. In this way, you
 {image}<br>
 <br>
 <h3> STEP THREE: Add Navigation </h3>
+
 Now, for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App heirarchy on the left and hit the plus sign next to main in order to create a new page. Name this something like second-page. <br>
 {image}<br>
 <br>
