@@ -566,7 +566,7 @@ Great job!
  Next, let's copy over the Javascript code. Under the `js` tab of our catalogue page, copy and paste the two slightly modified functions below onto our search page. 
  
  ```
-   PageModule.prototype.loadDescriptions = function (inputGenre) {
+   PageModule.prototype.loadDescriptions = function (inputGenre) { // our function now takes in a "genre" input
 
         const app = document.getElementById('rightColumn');      
 
@@ -578,7 +578,7 @@ Great job!
           var data = JSON.parse(this.response);
           if (request.status >= 200 && request.status < 400) {
             Object.keys(data).forEach(result => {     
-              if(data[result].genre == inputGenre){
+              if(data[result].genre == inputGenre){ // we'll only want to display descriptions for a specific genre
                 const line = document.createElement('hr');
                 app.appendChild(line);
 
@@ -618,7 +618,7 @@ Great job!
  ```
  
  ```
-   PageModule.prototype.loadImages = function(inputGenre) {
+   PageModule.prototype.loadImages = function(inputGenre) { // our function now takes in a "genre" input
         const app = document.getElementById('leftColumn');
 
         var request = new XMLHttpRequest();
@@ -629,7 +629,7 @@ Great job!
           var data = JSON.parse(this.response);
           if (request.status >= 200 && request.status < 400) {
             Object.keys(data).forEach(result => {
-              if(data[result].genre == inputGenre){
+              if(data[result].genre == inputGenre){ // we'll only want to display images for a specific genre
                 const bookCovers = document.createElement('img');
                 bookCovers.src = data[result].image_url;
                 console.log(result);
