@@ -668,12 +668,17 @@ Recall that our function now takes in a paramter, so on the right side under `In
  ![](/images/david-search-11.png)<br>
 <br>
 
- Let's test our page out. Click the `Live` button at the top right corner. Enter in `Fantasy` and hit search. Our website now loads all the books with the fantasy genre! 
+ Let's test our page out. Click the `Live` button at the top right corner. Enter in `Fantasy` and hit search. Our website now loads all the books with the fantasy genre! <i>(If the search button displays at the bottom of the page instead of the top, re-order the left-column and right-column HTML divs to the end of your page HTML code).</i>
  
  ![](/images/david-search-12.png)<br>
 <br>
  
-Try hitting the search button again. Uh oh, looks like the page is getting populated with the same books every time someone hits search. We'll fix this by first removing the book images/descriptions before someone hits search.<br>
+Try hitting the search button again. Uh oh, looks like the page is getting populated with the same books every time someone hits search. 
+
+![](/images/david-search-13.png)<br>
+<br>
+
+We'll fix this by first removing the book images/descriptions before someone hits search.<br>
  
  Go to the `js` tab, and paste in the following function that will clear the book images/descriptions:
  
@@ -690,17 +695,17 @@ Try hitting the search button again. Uh oh, looks like the page is getting popul
     };
  ```
 
-![](/images/david-search-13.png)<br>
+![](/images/david-search-14.png)<br>
 <br>
 
 Create a new action chain that invokes this resetPage function.
 
-![](/images/david-search-14.png)<br>
+![](/images/david-search-15.png)<br>
 <br>
 
 Now bind this action chain to whenever someone clicks the search button.
 
-![](/images/david-search-15.png)<br>
+![](/images/david-search-16.png)<br>
 <br>
 
 Try loading the page again. It works! We have now successfully implemented the search functionality.
