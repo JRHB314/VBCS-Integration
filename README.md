@@ -79,7 +79,7 @@ This lab will guide you through creating your first Web App in VBCS.
   In the row below, drag over a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over `Tab 3`   in the General tab, then hit the trash can icon. Rename the tabs `Home` and `Second Page`.<br>
   
   ![](/images/17.png)<br>
- ![](/images/17.5.png)<br>
+  ![](/images/1-17.5.png)<br>
 <br>
   
   Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text.<br>
@@ -138,18 +138,12 @@ This lab will guide you through creating your first Web App in VBCS.
   Because we want the navbar to remain on this second page as well, copy the code from the first page and paste it into the 
   code for second-page. Or alternatively, right click on main-start and hit `Duplicate`. <br>
   
-  You'll see part of the code is underlined in red. Click within it, and then add `Add Missing Dependencies`. When a component 
-  is dragged onto the page, it automatically adds in the dependencies. However, if you copy and paste code directly, you'll have to add the missing dependencies yourself.<br>
-  
-  ![](/images/22.png)<br>
-  <br><br>
-  
-  Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
-  ![](/images/23.png)<br>
+  Go to the Code view for this second page; we need to make a small change. Switch which tab is dull and which tab is bright, since dull tabs represent the current page. <br><br>
+  ![](/images/1-23.png)<br>
   <br>
   
   On the Design view, change "Welcome to the Home Page" to say "Welcome to the Second Page". It should look like this.<br>
-  ![](/images/24.png)<br>
+  ![](/images/1-24.png)<br>
   <br>
   
   Next, let's create some <i>events</i> and <i>action chains</i>. These will allow us to navigate to the second page and back 
@@ -218,7 +212,7 @@ This lab will guide you through creating your first Web App in VBCS.
   
   Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
   
-  ![](/images/7.png)<br>
+  ![](/images/1-7.png)<br>
   <br>
 </details>
 
