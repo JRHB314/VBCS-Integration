@@ -563,7 +563,93 @@ Great job!
  
  {img}
  
- Next, let's copy over the Javascript code too. Under the `js` tab of our catalogue page, copy and paste the two functions we have (loadImages and loadDescriptions) onto our search page.
+ Next, let's copy over the Javascript code. Under the `js` tab of our catalogue page, copy and paste the two slightly modified functions below onto our search page. 
+ 
+ ```
+   PageModule.prototype.loadDescriptions = function (inputGenre) {
+
+        const app = document.getElementById('rightColumn');      
+
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://asset-bdf37.firebaseio.com/results.json', true);
+
+        request.onload = function () {
+          // Begin accessing JSON data here
+          var data = JSON.parse(this.response);
+          if (request.status >= 200 && request.status < 400) {
+            Object.keys(data).forEach(result => {     
+              if(data[result].genre == inputGenre){
+                const line = document.createElement('hr');
+                app.appendChild(line);
+
+                const title = document.createElement('p');
+                title.textContent = data[result].title;
+                app.appendChild(title);
+                const author = document.createElement('p');
+                author.textContent = data[result].author;
+                app.appendChild(author);
+                const ISBN = document.createElement('p');
+                ISBN.textContent = result;
+                app.appendChild(ISBN);
+                const genre = document.createElement('p');
+                genre.textContent = data[result].genre;
+                app.appendChild(genre);
+                const published = document.createElement('p');
+                published.textContent = data[result].publish_date;
+                app.appendChild(published);
+                const publisher = document.createElement('p');
+                publisher.textContent = data[result].publisher;
+                app.appendChild(publisher);
+
+                const space = document.createElement('img');
+                space.src = "https://i.imgur.com/gAYM6Ws.png?3";
+                app.appendChild(space);
+              }
+            });
+          }
+          else {
+            const errorMessage = document.createElement('marquee');
+            errorMessage.textContent = "Request failed.";
+            app.appendChild(errorMessage);
+          }
+        }
+        request.send();
+      }; 
+ ```
+ 
+ ```
+   PageModule.prototype.loadImages = function(inputGenre) {
+        const app = document.getElementById('leftColumn');
+
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://asset-bdf37.firebaseio.com/results.json', true);
+
+        request.onload = function () {
+          // Begin accessing JSON data here
+          var data = JSON.parse(this.response);
+          if (request.status >= 200 && request.status < 400) {
+            Object.keys(data).forEach(result => {
+              if(data[result].genre == inputGenre){
+                const bookCovers = document.createElement('img');
+                bookCovers.src = data[result].image_url;
+                console.log(result);
+                app.appendChild(bookCovers);
+                const p = document.createElement('p');
+                p.textContent = "\n";
+                app.appendChild(p);
+              }
+            });
+          }
+          else {
+            const errorMessage = document.createElement('marquee');
+            errorMessage.textContent = "Request failed.";
+            app.appendChild(errorMessage);
+          }
+        }
+
+        request.send();
+      };
+ ```
  
  {img}
  
