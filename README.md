@@ -715,7 +715,7 @@ We'll fix this by first removing the book images/descriptions before someone hit
 ![](/images/david-search-14.png)<br>
 <br>
 
-Create a new action chain that invokes this resetPage function. On the left side, go to `Actions` and hit `+ New Action Chain`.<br>
+With this new function added, navigate to our action chain that invokes the loadImage and loadDescription functions. Add a new `module function` that calls on the resetPage function.
 
 ![](/images/david-search-15.png)<br>
 <br>
