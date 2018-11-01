@@ -1,11 +1,26 @@
-<h2> Lab 500: Connecting VBCS to ArangoDB Database </h2>
+<h2> Lab 500: Connecting VBCS to GrapheneDB Database </h2>
 
 Graph databases are...
 
-<details><summary>1. Set up ArangoDB Database</summary>
+<details><summary>1. Set up GrapheneDB Database</summary>
 
-create account
-
+create account<br>
+create database<br>
+hobby sandbox<br>
+Name database<br>
+leave other defaults<br>
+hit create database<br>
+open neo4j browser<br>
+Neo4j uses [Cypher](https://neo4j.com/developer/cypher-query-language/) to code. Read up on it if you want to know more.<br>
+Here are some basic concepts:<br>
+-It's meant to resemble ascii art<br>
+-Nodes are surrounded by parantheses to resemble circles<br>
+-Relationships are described in arrows<br>
+```
+CREATE (nodeA)
+CREATE (nodeB)
+CREATE (nodeA)-[follows:FOLLOWS]->(nodeB)
+```
 
 </details>
 
