@@ -717,9 +717,12 @@ Create a new action chain that invokes this resetPage function.
 ![](/images/david-search-15.png)<br>
 <br>
 
+![](/images/david-search-16.png)<br>
+<br>
+
 Now bind this action chain to whenever someone clicks the search button.
 
-![](/images/david-search-16.png)<br>
+![](/images/david-search-17.png)<br>
 <br>
 
 Try loading the page again. It works! We have now successfully implemented the search functionality.
