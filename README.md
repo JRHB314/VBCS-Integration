@@ -547,7 +547,7 @@ Great job!
  ![](/images/david-search-4.png)<br>
 <br>
  
- We have a nice simple layout. We need to now save the user's input into a variable. On the left side under the `variable` funcion, create a new variable. Call it `genre`.
+ We have a nice simple layout. We need to now save the user's input into a variable. On the left side under the `variable` funcion, create a new variable. Call it `genre`.<br>
  
  ![](/images/david-search-5.png)<br>
 <br>
