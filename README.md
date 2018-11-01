@@ -276,6 +276,19 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 
 <details>
   <summary>2. Connect VBCS to the Firebase Database</summary>
+
+  <h3> Create New Page </h3>
+  
+First thing we want to do is create another page, this one called book-catalog, on which we will display our book descriptions and images. Right click on main-start and hit "Duplicate", then right click on the copy to rename it "book-catalog". On the Design view of the page, click on the "Welcome to the Home Page" heading, then hit the trash can icon in the bottom left of the right bar to delete the component.<br>
+![](/images/3-25.png)<br>
+<br>
+Now we have to update the tab bar to include this new page. Go to the code view for the page and look for the "oj-tab-bar-XXXXXXXXX-X" item. Inside that you should see two oj-tab-bar-XXXXXXXXX-X-tab-X items. Copy the code for the first tab (the one with dull formatting) and paste it right below the code for the second tab. Rename the tab "Catalog" and change the listener to clickCatalogTab (though this event does not yet exist. Finally, change the first tab's style to bright, so only the third tab is dull.<br>
+![](/images/3-26.png)
+<br>
+Repeat this process for the other pages, but on the other pages, the Catalog tab should have bright styling. <br>
+![](/images/3-27.png)
+<br>  
+Now we just need to create our action chain navigateCatalogPage (created at the flow level) and our event clickCatalogTab (created for each page) and we are good to go.<br>
   
   <h3> Add HTML/CSS </h3>
   
