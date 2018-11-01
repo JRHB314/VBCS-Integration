@@ -72,11 +72,80 @@ Run the following code segments to fill in our graph database.
 
 ```
 CREATE (userA:Person {name:"RachelWebb"})
-FOREACH (name in ["SamArcher", "AprilGold", "JacqueNoir", "BradHillman", "JaneDoe", "AngelinaGibbs", "YukiTsukino","JohanLitwick","VelmaGomez","PamelaSelzer"] |
+FOREACH (name in ["SamArcher", "AprilGold", "JacqueNoir", "BradHillman", "JaneDoe", "AngelinaGibbs", "YukiTsukino","JohanLitwick","VelmaGarcia","PamelaSelzer"] |
   CREATE (:Person {name:name})-[:FOLLOWS]->(userA))
 ```
+We use MERGE instead of CREATE when we want to either make a relationship for an existing node, or, if the named node doesn't exist yet, create it. Otherwise we'll end up with duplicate nodes.
 ```
 MATCH (userB:Person {name:"SamArcher"})
-FOREACH (name in ["BradHillman", "BobFlinstone", "JaneDoe"] |
-  CREATE (:Person {name:name})-[:FOLLOWS]->(userB))
+FOREACH (userName in ["BradHillman", "BobFlinstone", "JaneDoe"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userB))
+```
+```
+MATCH (userC:Person {name:"AprilGold"})
+FOREACH (userName in ["RachelWebb", "BobFlinstone", "JaneDoe", "RajeshBishnoi", "JohanLitwich", "PamelaSelzer"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userC))
+```
+```
+MATCH (userD:Person {name:"JacqueNoir"})
+FOREACH (userName in ["MariaGomez", "JohanLitwick"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userD))
+```
+```
+MATCH (userE:Person {name:"MariaGomez"})
+FOREACH (userName in ["JacqueNoir"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userE))
+```
+```
+MATCH (userF:Person {name:"BradHillman"})
+FOREACH (userName in ["JaneDoe", "RajeshBishnoi"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userF))
+```
+```
+MATCH (userG:Person {name:"JaneDoe"})
+FOREACH (userName in ["BradHillman"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userG))
+```
+Note, BobFlinstone, who would be userH, has no followers, so we skip them. Poor Bob.
+```
+MATCH (userI:Person {name:"AngelinaGibbs"})
+FOREACH (userName in ["AprilGold", "JacqueNoir, "MariaGomez", "RajeshBishnoi"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userI))
+```
+```
+MATCH (userJ:Person {name:"YukiTsukino"})
+FOREACH (userName in ["BobFlinstone", "RajeshBishnoi"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userJ))
+```
+```
+MATCH (userK:Person {name:"RajeshBishnoi"})
+FOREACH (userName in ["YukiTsukino"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userK))
+```
+```
+MATCH (userL:Person {name:"JohanLitwick"})
+FOREACH (userName in ["JacqueNoir", "YukiTsukino"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userL))
+```
+```
+MATCH (userM:Person {name:"VelmaGarcia"})
+FOREACH (userName in ["RachelWebb", "BobFlinstone", "BradHillman", "YukiTsukino", "RajeshBishnoi"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userM))
+```
+```
+MATCH (userN:Person {name:"PamelaSelzer"})
+FOREACH (userName in ["BradHillman"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userN))
 ```
