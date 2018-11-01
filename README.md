@@ -143,11 +143,11 @@ This lab will guide you through creating your first Web App in VBCS.
   <br><br>
   
   Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
-  ![](/images/23.png)<br>
+  ![](/images/1-23.png)<br>
   <br>
   
   On the Design view, change "Welcome to the Home Page" to say "Welcome to the Second Page". It should look like this.<br>
-  ![](/images/24.png)<br>
+  ![](/images/1-24.png)<br>
   <br>
   
   Next, let's create some <i>events</i> and <i>action chains</i>. These will allow us to navigate to the second page and back 
