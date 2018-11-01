@@ -1,10 +1,11 @@
-<h2> Lab 500: Connecting VBCS to AWS Neptune </h2>
+<h2> Lab 500: Connecting VBCS to ArangoDB Database </h2>
 
-oefkejnfkdjf 
+Graph databases are...
 
 <details><summary>1. Set up ArangoDB Database</summary>
 
 create account
+
 
 </details>
 
