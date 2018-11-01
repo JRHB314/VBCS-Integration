@@ -723,7 +723,7 @@ With this new function added, navigate to our action chain that invokes the load
 ![](/images/david-search-21.png)<br>
 <br>
 
-Now go back to the `Designer` view, click the submit button, and bind this action chain to whenever someone clicks the search button. There should be 2 events binded to the search button: one that loads the images/descriptions, and now another one that clears the page.
+Now go back to the `Designer` view, click the submit button, and bind this action chain to whenever someone clicks the search button. There should be one event binded to the search button that clears any existing images/descrpitions then loads more images/descriptions.
 
 ![](/images/david-search-17.png)<br>
 <br>
