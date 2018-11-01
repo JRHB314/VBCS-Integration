@@ -1,6 +1,3 @@
-
-<details><summary>2. Connect VBCS to the Firebase Database</summary>
-  
 <h3> Create New Page </h3>
   
 First thing we want to do is create another page, this one called book-catalog, on which we will display our book descriptions and images. Right click on main-start and hit `Duplicate`, then right click on the copy to rename it `book-catalog`. On the Design view of the page, click on the "Welcome to the Home Page" heading, then hit the trash can icon in the bottom left of the right bar to delete the component.<br>
@@ -262,5 +259,3 @@ Test the page one more time, and we should see the book covers to the left of th
 ![](/images/3-21.png)<br>
 <br>
 Great job!
-  
-</details>
