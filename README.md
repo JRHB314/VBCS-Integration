@@ -717,13 +717,10 @@ We'll fix this by first removing the book images/descriptions before someone hit
 
 With this new function added, navigate to our action chain that invokes the loadImage and loadDescription functions. Add a new `module function` that calls on the resetPage function.
 
-![](/images/david-search-15.png)<br>
-<br>
-
 ![](/images/david-search-16.png)<br>
 <br>
 
-![](/images/david-search-19.png)<br>
+![](/images/david-search-21.png)<br>
 <br>
 
 Now go back to the `Designer` view, click the submit button, and bind this action chain to whenever someone clicks the search button. There should be 2 events binded to the search button: one that loads the images/descriptions, and now another one that clears the page.
