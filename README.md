@@ -191,8 +191,7 @@ This lab will guide you through creating your first Web App in VBCS.
   
   where eventName is the name of your event for each tab (i.e., clickHomeTab and clickSecondTab). <br>
   
-  <br>
-  ![](/images/34.png)<br>
+  ![](/images/1-34.png)<br>
   <br>
   
   Note that many components have an Events tab that allows you to create an event and action chain all in one click, but    
