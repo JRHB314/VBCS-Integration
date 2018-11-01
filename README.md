@@ -540,22 +540,23 @@ Great job!
   Let's review what we've done until this point. So far, we've built our web application, created a Firebase database and populated it with information, and wrote custom Javascript to extract data from our database URL. We invoked those functions and had them run at page load time, and we were able to display book images and descriptions on our catalog page. Great! But what if we want to display books based on a user search? That takes a bit of extra work. We'll need to first capture the user's input, and then parse our JSON object accordingly.<br>
   
   First create a third page for this website's search functionality. We'll call it "search". Duplicate `main-start` and rename the copy `search`.<br> 
-Change "Welcome to the Home page." to say "Search". Drag and drop a `user input` box for the user to type in their search term, followed by a `button` for running that search. Click on the `Input Text` label and change it to say "Genre:".Let's also drag over a button to the right of the input text. Change the text of the button to "search".<br> 
+Change "Welcome to the Home page." to say "Search". Drag and drop a `user input` box for the user to type in their search term, followed by a `button` for running that search. Click on the `Input Text` label and change it to say "Genre:". Let's also drag over a button to the right of the input text. Change the text of the button to "search".<br> 
  
  ![](/images/3-ds3.png)<br>
 <br>
 
-Note, however, that we only have three tabs; we need to make one more tab for the new page. Follow the instructions in the previous step for creating a new tab, but this time for searchpage.<br>
+Note, however, that we only have three tabs; we need to make one more tab for the new page.<br>
 Briefly,<br>
 -Copy and paste code for a new tab in each page.<br>
 -Change the tab name to "Search" and the onclick listener to clickSearchTab.<br>
 -Create an action chain navigateSearchPage at the flow level.<br>
 -Create an event listener on each page called clickSearchTab.<br>
+Review Step 2. if you want more specific instructions. 
 
  ![](/images/3-30.png)<br>
 <br>
  
- We have a nice simple layout. We need to now save the user's input into a variable. On the left side click the (x) icon to open up `Variables` page. Create a new variable and call it `genre`.<br>
+  Now that we've finished our simple layout, we need to save the user's input into a variable. On the left side click the (x) icon to open up `Variables` page. Create a new variable and call it "genre".<br>
  
  ![](/images/david-search-5.png)<br>
 <br>
