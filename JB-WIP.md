@@ -112,10 +112,10 @@ FOREACH (userName in ["BradHillman"] |
   MERGE (userID:Person {name:userName})
   CREATE (userID)-[:FOLLOWS]->(userG))
 ```
-Note, BobFlinstone, who would be userH, has no followers, so we skip them. Poor Bob.
+Note, BobFlinstone, who would be userH, has no followers, so we skip him. Poor Bob.
 ```
 MATCH (userI:Person {name:"AngelinaGibbs"})
-FOREACH (userName in ["AprilGold", "JacqueNoir, "MariaGomez", "RajeshBishnoi"] |
+FOREACH (userName in ["AprilGold", "JacqueNoir", "MariaGomez", "RajeshBishnoi"] |
   MERGE (userID:Person {name:userName})
   CREATE (userID)-[:FOLLOWS]->(userI))
 ```
@@ -149,3 +149,9 @@ FOREACH (userName in ["BradHillman"] |
   MERGE (userID:Person {name:userName})
   CREATE (userID)-[:FOLLOWS]->(userN))
 ```
+Then let's run:
+```
+START n=node(*) MATCH (n)-[r]->(m) RETURN n,r,m;
+```
+With this many nodes it will appear a bit messy; drag nodes around until you can get something a bit easier to look at. You can also hit the expand button to make the view fill the page.<br>
+{image of nodes}
