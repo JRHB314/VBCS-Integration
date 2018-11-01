@@ -712,7 +712,7 @@ We'll fix this by first removing the book images/descriptions before someone hit
 ![](/images/david-search-14.png)<br>
 <br>
 
-Create a new action chain that invokes this resetPage function.
+Create a new action chain that invokes this resetPage function. On the left side, go to `Actions` and hit `+ New Action Chain`.
 
 ![](/images/david-search-15.png)<br>
 <br>
