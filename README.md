@@ -76,9 +76,10 @@ This lab will guide you through creating your first Web App in VBCS.
   Next, drag on a `Heading` component one column to the right of the logo. Under the `General` tab inside the `Text` field,   
   enter whatever name you'd like your website to be called.<br>
   
-  In the row below, drag over a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over `Tab 3`   in the General tab, then hit the trash can icon.<br>
+  In the row below, drag over a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over `Tab 3`   in the General tab, then hit the trash can icon. Rename the tabs `Home` and `Second Page`.<br>
   
   ![](/images/17.png)<br>
+  ![](/images/1-17.5.png)<br>
   
   Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text.<br>
   
@@ -91,7 +92,7 @@ This lab will guide you through creating your first Web App in VBCS.
   
   In addition, we can also edit the HTML and CSS code directly. Near the top right, hit the `Code` view for the page. <br>
   
-  ![](/images/19.png)<br><br>
+  ![](/images/1-19.png)<br><br>
   
   To customize the tab bar, we'll first define some style. Simply paste this at the top of the Code page.<br>
   
@@ -112,11 +113,11 @@ This lab will guide you through creating your first Web App in VBCS.
   We will add this style as div classes to our tabs, with dull being for the tab we are currently on, and bright being for 
   tabs we are not on.<br>
 
-  ![](/images/20.png)<br><br>
+  ![](/images/1-20.png)<br><br>
   
-  Back on the design tab, we can view changes we made to the tab bar. As demonstrated, you can code HTML and CSS for your web   app the way you would for any website while also viewing it in the Design tab, giving you much greater flexibility.<br>
+  Back on the design tab, we can view changes we made to the tab bar. As demonstrated, you can code HTML and CSS for your web   app the way you would for any website, while also having the option to change it in the Design view, giving you much greater flexibility.<br>
   
-  ![](/images/21.png)<br>
+  ![](/images/1-21.png)<br>
   <br>
   
  </details>
@@ -126,21 +127,9 @@ This lab will guide you through creating your first Web App in VBCS.
 
   <h3>Add Navigation </h3>
 
-  In order for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App 
-  heirarchy on the left and hit the plus sign next to `main` in order to create a new page. Give this new page a name. For 
-  this lab, we'll name the page "second-page". <br>
-  
-  ![](/images/33.png)<br>
+  In order for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. We want to carry over the components from the first page to this home page (logo, title, navbar) so we'll go ahead and copy it. Go to the Web App heirarchy on the left, right click on main-start and hit `Duplicate`. Then rename the page `second-page`.<br>
+  ![](/images/1-33.png)<br>
   <br>
-  
-  Because we want the navbar to remain on this second page as well, copy the code from the first page and paste it into the 
-  code for second-page. Or alternatively, right click on main-start and hit `Duplicate`. <br>
-  
-  You'll see part of the code is underlined in red. Click within it, and then add `Add Missing Dependencies`. When a component 
-  is dragged onto the page, it automatically adds in the dependencies. However, if you copy and paste code directly, you'll have to add the missing dependencies yourself.<br>
-  
-  ![](/images/22.png)<br>
-  <br><br>
   
   Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
   ![](/images/1-23.png)<br>
@@ -216,7 +205,7 @@ This lab will guide you through creating your first Web App in VBCS.
   
   Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
   
-  ![](/images/7.png)<br>
+  ![](/images/1-7.png)<br>
   <br>
 </details>
 
