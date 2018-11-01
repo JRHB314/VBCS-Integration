@@ -548,6 +548,7 @@ Great job!
   
  ![](/images/david-search-2.png)<br>
 <br>
+img here <br>
   
  Let's create a `user input` box, followed by a `button` for the user to type in and submit their genre. Under the `Design` view, navigate to the left tab under "Field" and drag an `input text` under our header. Change the input text to display `Genre:`.<br> 
  
