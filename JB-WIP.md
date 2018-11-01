@@ -11,7 +11,7 @@ Name database<br>
 leave other defaults<br>
 hit create database<br>
 open neo4j browser<br>
-Neo4j uses [Cypher](https://neo4j.com/developer/cypher-query-language/) to code. Read up on it if you want to know more.<br>
+Neo4j uses [Cypher](https://neo4j.com/developer/cypher-query-language/) to code. Read up on it if you want to know more after this lab.<br>
 Here are some basic concepts:<br>
 -It's meant to resemble ascii art<br>
 -Nodes are surrounded by parantheses to resemble circles<br>
@@ -64,9 +64,15 @@ Then to display all of C's followers:
 MATCH (cFollowers)-[:FOLLOWS]->(userC:Person {name:"C"})
 RETURN userC, cFollowers
 ```
-
-
-<br><br><br>
+Now that you've got a sense of working with Cypher, let's start fresh. 
 ```
 MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r //clear all nodes and relationships
+```
+Go to the resources directory in this repository, and copy and paste the code from that file to run on the console.
+
+```
+CREATE (userA:Person {name:"RachelWebb"})
+FOREACH (name in ["SamArcher", "AprilGold", "JacqueNoir", "BradHillman", "JaneDoe", "AngelinaGibbs", "YukiTsukino","JohanLitwick","VelmaGomez","PamelaSelzer"] |
+  CREATE (:Person {name:name})-[:FOLLOWS]->(userA))
+
 ```
