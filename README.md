@@ -663,8 +663,8 @@ Recall that our function now takes in a paramter, so on the right side under `In
 ![](/images/david-search-10.png)<br>
 <br>
 
- Now perform the same steps for the `loadDescriptions` function.<br>
- 
+ Now perform the same steps for the `loadDescriptions` function (drag another module function in for the loadDescriptions function, and bind the paramters to the function). The end action chain should look like this: <br>
+
  ![](/images/david-search-11.png)<br>
 <br>
 
