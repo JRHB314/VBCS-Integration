@@ -714,12 +714,15 @@ We'll fix this by first removing the book images/descriptions before someone hit
 ![](/images/david-search-14.png)<br>
 <br>
 
-Create a new action chain that invokes this resetPage function. On the left side, go to `Actions` and hit `+ New Action Chain`.
+Create a new action chain that invokes this resetPage function. On the left side, go to `Actions` and hit `+ New Action Chain`.<br>
 
 ![](/images/david-search-15.png)<br>
 <br>
 
 ![](/images/david-search-16.png)<br>
+<br>
+
+![](/images/david-search-19.png)<br>
 <br>
 
 Now bind this action chain to whenever someone clicks the search button.
