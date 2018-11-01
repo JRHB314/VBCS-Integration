@@ -547,7 +547,7 @@ Great job!
  ![](/images/david-search-4.png)<br>
 <br>
  
- We have a nice simple layout. We need to now save the user's input into a variable. On the left side under the `variable` funcion, create a new variable. Call it `genre`.<br>
+ We have a nice simple layout. We need to now save the user's input into a variable. On the left side under the `variable` function, create a new variable. Call it `genre`.<br>
  
  ![](/images/david-search-5.png)<br>
 <br>
@@ -653,14 +653,19 @@ Great job!
  ![](/images/david-search-8.png)<br>
 <br>
  
- An action chain window has popped up. Drag over a `Call Module Function`. Click `Select Module Function`. Under "Page Functions", select our `loadImages` function. Recall that our function now takes in a paramter, so on the right side under `Input Paramters`, map `inputGenre` to our `Genre` variable. Click `save`.<br> 
+ An action chain window has popped up. Drag over a `Call Module Function`. Click `Select Module Function`. Under "Page Functions", select our `loadImages` function.<br>
  
  ![](/images/david-search-9.png)<br>
 <br>
 
+Recall that our function now takes in a paramter, so on the right side under `Input Paramters`, map `inputGenre` to our `Genre` variable. Click `save`.<br> 
+
+![](/images/david-search-10.png)<br>
+<br>
+
  Now perform the same steps for the `loadDescriptions` function.<br>
  
- ![](/images/david-search-10.png)<br>
+ ![](/images/david-search-11.png)<br>
 <br>
 
  Let's test our page out. Click the play icon at the top right corner. Enter in `Fantasy` and hit search. Our website now loads all the books with the fantasy genre! Try hitting the search button again. Uh oh, looks like the page is getting populated with the same books every time someone hits search. We'll fix this by first removing the book images/descriptions before someone hits search.<br>
@@ -680,17 +685,17 @@ Great job!
     };
  ```
 
-![](/images/david-search-11.png)<br>
+![](/images/david-search-12.png)<br>
 <br>
 
 Create a new action chain that invokes this resetPage function.
 
-![](/images/david-search-12.png)<br>
+![](/images/david-search-13.png)<br>
 <br>
 
 Now bind this action chain to whenever someone clicks the search button.
 
-![](/images/david-search-13.png)<br>
+![](/images/david-search-14.png)<br>
 <br>
 
 Try loading the page again. It works! We have now successfully implemented the search functionality.
