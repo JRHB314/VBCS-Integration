@@ -127,22 +127,9 @@ This lab will guide you through creating your first Web App in VBCS.
   <h3>Add Navigation </h3>
 
   In order for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App 
-  heirarchy on the left and hit the plus sign next to `main` in order to create a new page. Give this new page a name. For 
-  this lab, we'll name the page "second-page". <br>
+  heirarchy on the left and right click on `main-start` to duplicate the page. Rename it "second-page". Duplicating will copy HTML/CSS as well as any events or action chains. <br>
   
-  ![](/images/33.png)<br>
-  <br>
-  
-  Because we want the navbar to remain on this second page as well, copy the code from the first page and paste it into the 
-  code for second-page. Or alternatively, right click on main-start and hit `Duplicate`. <br>
-  
-  You'll see part of the code is underlined in red. Click within it, and then add `Add Missing Dependencies`. When a component 
-  is dragged onto the page, it automatically adds in the dependencies. However, if you copy and paste code directly, you'll have to add the missing dependencies yourself.<br>
-  
-  ![](/images/22.png)<br>
-  <br><br>
-  
-  Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
+  Go to the Code view; we need to make a small change. Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
   ![](/images/23.png)<br>
   <br>
   
