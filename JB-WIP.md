@@ -2,7 +2,9 @@
 
 oefkejnfkdjf 
 
-<details><summary>1. Set up Neptune DB</summary>
+<details><summary>1. Set up ArangoDB Database</summary>
+
+create account
 
 </details>
 
