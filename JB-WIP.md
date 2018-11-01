@@ -53,8 +53,20 @@ Run this code to see all of our nodes so far:
 ```
 START n=node(*) MATCH (n)-[r]->(m) RETURN n,r,m; //show all nodes and relationships
 ```
+Now, let's say C has 5 followers. That quickly becomes tedious to code individually, so we can use a FOREACH loop.
+```
+MATCH (userC:Person {name:"C"})
+FOREACH (name in ["follower1","follower2","follower3","follower4","follower5"] |
+  CREATE (:Person {name:name})-[:FOLLOWS]->(userC))
+```
+Then to display all of C's followers:
+```
+MATCH (cFollowers)-[:FOLLOWS]->(userC:Person {name:"C"})
+RETURN userC, cFollowers
+```
 
 
+<br><br><br>
 ```
 MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r //clear all nodes and relationships
 ```
