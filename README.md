@@ -725,7 +725,7 @@ Create a new action chain that invokes this resetPage function. On the left side
 ![](/images/david-search-19.png)<br>
 <br>
 
-Now bind this action chain to whenever someone clicks the search button.
+Now go back to the `Designer` view, click the submit button, and bind this action chain to whenever someone clicks the search button. There should be 2 events binded to the search button: one that loads the images/descriptions, and now another one that clears the page.
 
 ![](/images/david-search-17.png)<br>
 <br>
