@@ -68,11 +68,15 @@ Now that you've got a sense of working with Cypher, let's start fresh.
 ```
 MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r //clear all nodes and relationships
 ```
-Go to the resources directory in this repository, and copy and paste the code from that file to run on the console.
+Run the following code segments to fill in our graph database.
 
 ```
 CREATE (userA:Person {name:"RachelWebb"})
 FOREACH (name in ["SamArcher", "AprilGold", "JacqueNoir", "BradHillman", "JaneDoe", "AngelinaGibbs", "YukiTsukino","JohanLitwick","VelmaGomez","PamelaSelzer"] |
   CREATE (:Person {name:name})-[:FOLLOWS]->(userA))
-
+```
+```
+MATCH (userB:Person {name:"SamArcher"})
+FOREACH (name in ["BradHillman", "BobFlinstone", "JaneDoe"] |
+  CREATE (:Person {name:name})-[:FOLLOWS]->(userB))
 ```
