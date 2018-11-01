@@ -323,7 +323,7 @@ To define a module, use this format:
 ```
 PageModule.prototype.functionName = function () { OUR CODE HERE };
 ```
-So in the end it will look like:
+Our functions will look like:
 ```
 define([], function() {
   'use strict';
@@ -467,8 +467,8 @@ Careful with your brackets here; it's easy to get one too many or one too few. <
 
 <h3>Calling the Module Function.</h3>
 
-We want this function to be called on page load. Go to Events for the {pageName} page.<br>
-Click Create Event Listener, then under Lifecycle Events, select vbEnter. This will be an event that runs when the page loads.<br>
+We want this function to be called whenever the page loads. Go to `Events` on the left sidebar for the {pageName} page.<br>
+Click `Create Event Listener`, then under `Lifecycle Events`, select `vbEnter`. This will be an event that runs whenever the page loads.<br>
 ![](/images/3-15.png)<br>
 <br>
 Hit the + sign next to Page Action Chains to create a new action chain. Name this runLoadDescriptions.<br>
@@ -519,7 +519,7 @@ Insert this code alongside the first module:
     request.send();
   };
 ```
-Add another action change under vbEnter, this one called runLoadImages. Set it up the same as runLoadDescriptions, with this one calling the loadImages module.<br>
+Add another action change under vbEnter, this one called `runLoadImages`. Set it up the same as runLoadDescriptions, with this one calling the loadImages module.<br>
 <br>
 Test the page one more time, and we should see the book covers to the left of the book descriptions. <br>
 ![](/images/3-21.png)<br>
@@ -528,5 +528,10 @@ Great job!
   
 </details>
 
-
+<details>
+  <summary>3. Creating a Search Page </summary>
+  
+  <h3> Creating the Website's Search Page </h3>
+</details>
+  
   
