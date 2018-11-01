@@ -76,9 +76,11 @@ This lab will guide you through creating your first Web App in VBCS.
   Next, drag on a `Heading` component one column to the right of the logo. Under the `General` tab inside the `Text` field,   
   enter whatever name you'd like your website to be called.<br>
   
-  In the row below, drag over a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over `Tab 3`   in the General tab, then hit the trash can icon.<br>
+  In the row below, drag over a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over `Tab 3`   in the General tab, then hit the trash can icon. Rename the tabs `Home` and `Second Page`.<br>
   
   ![](/images/17.png)<br>
+ ![](/images/17.5.png)<br>
+<br>
   
   Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text.<br>
   
@@ -86,7 +88,7 @@ This lab will guide you through creating your first Web App in VBCS.
   tab, then expand `General Attributes` and scroll down to the `Style` field. Enter in `color: #67aee5;`. The color 
   changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
   
-  ![](/images/18.png)<br>
+  ![](/images/1-18.png)<br>
   <br>
   
   In addition, we can also edit the HTML and CSS code directly. Near the top right, hit the `Code` view for the page. <br>
