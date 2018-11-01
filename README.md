@@ -127,9 +127,22 @@ This lab will guide you through creating your first Web App in VBCS.
   <h3>Add Navigation </h3>
 
   In order for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App 
-  heirarchy on the left and right click on `main-start` to duplicate the page. Rename it "second-page". Duplicating will copy HTML/CSS as well as any events or action chains. <br>
+  heirarchy on the left and hit the plus sign next to `main` in order to create a new page. Give this new page a name. For 
+  this lab, we'll name the page "second-page". <br>
   
-  Go to the Code view; we need to make a small change. Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
+  ![](/images/33.png)<br>
+  <br>
+  
+  Because we want the navbar to remain on this second page as well, copy the code from the first page and paste it into the 
+  code for second-page. Or alternatively, right click on main-start and hit `Duplicate`. <br>
+  
+  You'll see part of the code is underlined in red. Click within it, and then add `Add Missing Dependencies`. When a component 
+  is dragged onto the page, it automatically adds in the dependencies. However, if you copy and paste code directly, you'll have to add the missing dependencies yourself.<br>
+  
+  ![](/images/22.png)<br>
+  <br><br>
+  
+  Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
   ![](/images/23.png)<br>
   <br>
   
@@ -524,15 +537,18 @@ Great job!
   
   Let's first create a third page for this website's search functionality. We'll call it "search". On the left side under main, hit the `+` button to create a new page, and name it `search`.<br> 
   
-  {img}
+  ![](/images/david-search-1.png)<br>
+<br>
   
   Next, let's add the Navbar from our previous pages onto this page. Under the `Code` view, copy and paste the code from the second page onto our search page. Rename the header to "Welcome to the Third Page" instead of "Welcome to the Second Page". While we're at it, let's also copy the HTML structure for the book image/descriptions, as well as the CSS.<br> 
   
- {img}
+ ![](/images/david-search-2.png)<br>
+<br>
   
  Let's create a `user input` box, followed by a `button` for the user to type in and submit their genre. Under the `Design` view, navigate to the left tab under "Field" and drag an `input text` under our header. Change the input text to display `Genre:`.<br> 
  
- {img}
+ ![](/images/david-search-3.png)<br>
+<br>
  
  Let's also drag over a button to the right of the input text. Change the text of the button to `search`. These components are too close to the header, so resize them and then add some extra padding. Under `All -> General Attributes` of each of these components, add the following css:<br>
  
@@ -540,15 +556,18 @@ Great job!
   padding-top: 100px;
  ```
  
- {img}
+ ![](/images/david-search-4.png)<br>
+<br>
  
  We have a nice simple layout. We need to now save the user's input into a variable. On the left side under the `variable` funcion, create a new variable. Call it `genre`.
  
- {img}
+ ![](/images/david-search-5.png)<br>
+<br>
  
  Go back to the search page and click on the text input box. Under `Data`, enter `{{ $page.variables.genre }}`. This saves the value that the user types into our genre variable.
  
- {img}
+ ![](/images/david-search-6.png)<br>
+<br>
  
  Next, let's copy over the Javascript code. Under the `js` tab of our catalogue page, copy and paste the two slightly modified functions below onto our search page. 
  
@@ -638,19 +657,23 @@ Great job!
       };
  ```
  
- {img}
+ ![](/images/david-search-7.png)<br>
+<br>
  
  Now that we have our logic, let's bind this logic to an action. Under Designer view, click the Search button. Under the `Events` tab, click `New Event -> Quick Start Click`. 
  
- {img}
+ ![](/images/david-search-8.png)<br>
+<br>
  
  An action chain window has popped up. Drag over a `Call Module Function`. Click `Select Module Function`. Under "Page Functions", select our `loadImages` function. Recall that our function now takes in a paramter, so on the right side under `Input Paramters`, map `inputGenre` to our `Genre` variable. Click `save`.<br> 
  
- {img}
- 
+ ![](/images/david-search-9.png)<br>
+<br>
+
  Now perform the same steps for the `loadDescriptions` function.<br>
  
- {img}
+ ![](/images/david-search-10.png)<br>
+<br>
 
  Let's test our page out. Click the play icon at the top right corner. Enter in `Fantasy` and hit search. Our website now loads all the books with the fantasy genre! Try hitting the search button again. Uh oh, looks like the page is getting populated with the same books every time someone hits search. We'll fix this by first removing the book images/descriptions before someone hits search.<br>
  
@@ -669,15 +692,18 @@ Great job!
     };
  ```
 
-{img}
+![](/images/david-search-11.png)<br>
+<br>
 
 Create a new action chain that invokes this resetPage function.
 
-{img}
+![](/images/david-search-12.png)<br>
+<br>
 
 Now bind this action chain to whenever someone clicks the search button.
 
-{img}
+![](/images/david-search-13.png)<br>
+<br>
 
 Try loading the page again. It works! We have now successfully implemented the search functionality.
 
