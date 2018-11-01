@@ -93,7 +93,7 @@ This lab will guide you through creating your first Web App in VBCS.
   
   In addition, we can also edit the HTML and CSS code directly. Near the top right, hit the `Code` view for the page. <br>
   
-  ![](/images/19.png)<br><br>
+  ![](/images/1-19.png)<br><br>
   
   To customize the tab bar, we'll first define some style. Simply paste this at the top of the Code page.<br>
   
