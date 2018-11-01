@@ -276,19 +276,6 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 
 <details>
   <summary>2. Connect VBCS to the Firebase Database</summary>
-
-  <h3> Create New Page </h3>
-  
-First thing we want to do is create another page, this one called book-catalog, on which we will display our book descriptions and images. Right click on main-start and hit "Duplicate", then right click on the copy to rename it "book-catalog". On the Design view of the page, click on the "Welcome to the Home Page" heading, then hit the trash can icon in the bottom left of the right bar to delete the component.<br>
-![](/images/3-25.png)<br>
-<br>
-Now we have to update the tab bar to include this new page. Go to the code view for the page and look for the "oj-tab-bar-XXXXXXXXX-X" item. Inside that you should see two oj-tab-bar-XXXXXXXXX-X-tab-X items. Copy the code for the first tab (the one with dull formatting) and paste it right below the code for the second tab. Rename the tab "Catalog" and change the listener to clickCatalogTab (though this event does not yet exist. Finally, change the first tab's style to bright, so only the third tab is dull.<br>
-![](/images/3-26.png)
-<br>
-Repeat this process for the other pages, but on the other pages, the Catalog tab should have bright styling. <br>
-![](/images/3-27.png)
-<br>  
-Now we just need to create our action chain navigateCatalogPage (created at the flow level) and our event clickCatalogTab (created for each page) and we are good to go.<br>
   
   <h3> Add HTML/CSS </h3>
   
@@ -546,10 +533,45 @@ Great job!
   
   <h3> Creating the Website's Search Functionality </h3>
   
-  Let's take a look at what we've done until this point. Up until now, we've built our web application, created a Fire database and populated it with information, and wrote custom Javascript to extract data from our database URL. We invoked those functions and had them run at page load time, and we were able to display book images and descriptions on our second page. Great! But what if we want to display books based on a specific genre that a user enters? We'll need to a bit extra work. We'll need to first capture the user's input, then parse our JSON object accordingly.<br>
+  Let's take a look at what we've done until this point. Up until now, we've built our web application, created a Fire database and populated it with information, and wrote custom Javascript to extract data from our database URL. We invoked those functions and had them run at page load time, and we were able to display book images and descriptions on our second page. Great! But what if we want to display books based on a specific genre that a user enters? We'll need to a bit of extra work. We'll need to first capture the user's input, and then parse our JSON object accordingly.<br>
   
-  Let's first create a third page
+  Let's first create a third page for this website's search functionality. We'll call it "search". On the left side under main, hit the `+` button to create a new page, and name it `search`.<br> 
+  
+  {img}
+  
+  Next, let's add the Navbar from our previous pages onto this page. Under the `Code` view, copy and paste the code from the second page onto our search page. Rename the header to "Welcome to the Third Page" instead of "Welcome to the Second Page". While we're at it, let's also copy the HTML structure for the book image/descriptions, as well as the CSS.<br> 
+  
+ {img}
+  
+ Let's create a `user input` box, followed by a `button` for the user to type in and submit their genre. Under the `Design` view, navigate to the left tab under "Field" and drag an `input text` under our header. Change the input text to display `Genre:`.<br> 
+ 
+ {img}
+ 
+ Let's also drag over a button to the right of the input text. Change the text of the button to `search`. These components are too close to the header, so resize them and then add some extra padding. Under `All -> General Attributes` of each of these components, add the following css:<br>
+ 
+ ```
+  padding-top: 100px;
+ ```
+ 
+ {img}
+ 
+ We have a nice simple layout. We need to now save the user's input into a variable. On the left side under the `variable` funcion, create a new variable. Call it `genre`.
+ 
+ {img}
+ 
+ Go back to the search page and click on the text input box. Under `Data`, enter `{{ $page.variables.genre }}`. This saves the value that the user types into our genre variable.
+ 
+ {img}
+ 
+ Next, let's copy over the Javascript code too. Under the `js` tab of our catalogue page, copy and paste the two functions we have (loadImages and loadDescriptions) onto our search page.
+ 
+ {img}
+ 
+ 
+  
+  
+  
   
 </details>
-  
+
   
