@@ -35,8 +35,11 @@ Briefly,<br>
 -Change the tab name to "Search" and the onclick listener to clickSearchTab.<br>
 -Create an action chain navigateSearchPage at the flow level.<br>
 -Create an event listener on each page called clickSearchTab.<br>
+
+ ![](/images/3-30.png)<br>
+<br>
  
- We have a nice simple layout. We need to now save the user's input into a variable. On the left side under the `variable` function, create a new variable. Call it `genre`.<br>
+ We have a nice simple layout. We need to now save the user's input into a variable. On the left side click the (x) icon to open up `Variables` page. Create a new variable and call it `genre`.<br>
  
  ![](/images/david-search-5.png)<br>
 <br>
@@ -46,7 +49,7 @@ Briefly,<br>
  ![](/images/david-search-6.png)<br>
 <br>
  
- Next, let's copy over the Javascript code. Under the `js` tab of our catalogue page, copy and paste the two slightly modified functions below onto our search page. 
+ Next, let's copy over the Javascript code. Under the `JS` tab of our catalog page, copy and paste the two slightly modified functions below onto our search page. 
  
  ```
    PageModule.prototype.loadDescriptions = function (inputGenre) { // our function now takes in a "genre" input
@@ -159,7 +162,7 @@ Recall that our function now takes in a paramter, so on the right side under `In
 
  Let's test our page out. Click the `Live` button at the top right corner. Enter in `Fantasy` and hit search. Our website now loads all the books with the fantasy genre! <i>(If the search button displays at the bottom of the page instead of the top, re-order the left-column and right-column HTML divs to the end of your page HTML code).</i>
  
- ![](/images/david-search-12.png)<br>
+ ![](/images/3-ds12.png)<br>
 <br>
  
 Try hitting the search button again. Uh oh, looks like the page is getting populated with the same books every time someone hits search. 
@@ -167,7 +170,7 @@ Try hitting the search button again. Uh oh, looks like the page is getting popul
 ![](/images/david-search-13.png)<br>
 <br>
 
-We'll fix this by first removing the book images/descriptions before someone hits search.<br>
+We'll fix this by first removing the book images/descriptions every time someone hits search before loading the new images/descriptions.<br>
  
  Go to the `js` tab, and paste in the following function that will clear the book images/descriptions:
  
@@ -183,7 +186,6 @@ We'll fix this by first removing the book images/descriptions before someone hit
       }
     };
  ```
-
 ![](/images/david-search-14.png)<br>
 <br>
 
@@ -195,17 +197,14 @@ With this new function added, navigate to our action chain that invokes the load
 ![](/images/david-search-16.png)<br>
 <br>
 
-![](/images/david-search-19.png)<br>
+![](/images/david-search-21.png)<br>
 <br>
 
-Now go back to the `Designer` view, click the submit button, and bind this action chain to whenever someone clicks the search button. There should be 2 events binded to the search button: one that loads the images/descriptions, and now another one that clears the page.
+Now go back to the `Designer` view, click the submit button, and bind this action chain to whenever someone clicks the search button. There are now three actions within this action chain. One to remove any previous search results, one to load descriptions, and the last to load images.
 
 ![](/images/david-search-17.png)<br>
 <br>
 
 Try loading the page again. It works! We have now successfully implemented the search functionality.
-
-![](/images/david-search-20.png)<br>
-<br>
 
 </details>
