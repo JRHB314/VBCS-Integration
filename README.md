@@ -76,12 +76,9 @@ This lab will guide you through creating your first Web App in VBCS.
   Next, drag on a `Heading` component one column to the right of the logo. Under the `General` tab inside the `Text` field,   
   enter whatever name you'd like your website to be called.<br>
   
-  
-  In the row below, drag over a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over `Tab 3`   in the General tab, then hit the trash can icon. Then rename the first tab to "Home" and the second tab to "Second Page".<br>
+  In the row below, drag over a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over `Tab 3`   in the General tab, then hit the trash can icon.<br>
   
   ![](/images/17.png)<br>
-  ![](/images/1-17.5.png)<br>
-<br>
   
   Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text.<br>
   
@@ -89,7 +86,7 @@ This lab will guide you through creating your first Web App in VBCS.
   tab, then expand `General Attributes` and scroll down to the `Style` field. Enter in `color: #67aee5;`. The color 
   changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
   
-  ![](/images/1-18.png)<br>
+  ![](/images/18.png)<br>
   <br>
   
   In addition, we can also edit the HTML and CSS code directly. Near the top right, hit the `Code` view for the page. <br>
@@ -115,11 +112,11 @@ This lab will guide you through creating your first Web App in VBCS.
   We will add this style as div classes to our tabs, with dull being for the tab we are currently on, and bright being for 
   tabs we are not on.<br>
 
-  ![](/images/1-20.png)<br><br>
+  ![](/images/20.png)<br><br>
   
-  Back on the design tab, we can view changes we made to the tab bar. As demonstrated, you can code HTML and CSS for your web   app the way you would for any website, or make changes in the Design view, giving you much greater flexibility.<br>
+  Back on the design tab, we can view changes we made to the tab bar. As demonstrated, you can code HTML and CSS for your web   app the way you would for any website while also viewing it in the Design tab, giving you much greater flexibility.<br>
   
-  ![](/images/1-21.png)<br>
+  ![](/images/21.png)<br>
   <br>
   
  </details>
@@ -129,20 +126,28 @@ This lab will guide you through creating your first Web App in VBCS.
 
   <h3>Add Navigation </h3>
 
-  In order for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Because we want to carry over the formatting we already did (the logo, title, and navbar) we'll just go ahead and duplicate the page. Go to the Web App heirarchy on the left, right click main-start, hit `Duplicate` then rename the page "second-page". 
- <br>
+  In order for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. Go to the Web App 
+  heirarchy on the left and hit the plus sign next to `main` in order to create a new page. Give this new page a name. For 
+  this lab, we'll name the page "second-page". <br>
   
-  ![](/images/1-33.png)<br>
+  ![](/images/33.png)<br>
   <br>
   
- You can also copy and paste segments of code using the Code view. But the duplicate function copies not just html/css, but any events, action chains, Javascript, and so on.<br>
-<br>
-Go to the Code view now; we need to make a minor change. Switch which tab is dull and which tab is bright.<br>
-  ![](/images/1-23.png)<br>
+  Because we want the navbar to remain on this second page as well, copy the code from the first page and paste it into the 
+  code for second-page. Or alternatively, right click on main-start and hit `Duplicate`. <br>
+  
+  You'll see part of the code is underlined in red. Click within it, and then add `Add Missing Dependencies`. When a component 
+  is dragged onto the page, it automatically adds in the dependencies. However, if you copy and paste code directly, you'll have to add the missing dependencies yourself.<br>
+  
+  ![](/images/22.png)<br>
+  <br><br>
+  
+  Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
+  ![](/images/23.png)<br>
   <br>
   
   On the Design view, change "Welcome to the Home Page" to say "Welcome to the Second Page". It should look like this.<br>
-  ![](/images/1-24.png)<br>
+  ![](/images/24.png)<br>
   <br>
   
   Next, let's create some <i>events</i> and <i>action chains</i>. These will allow us to navigate to the second page and back 
@@ -211,7 +216,7 @@ Go to the Code view now; we need to make a minor change. Switch which tab is dul
   
   Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
   
-  ![](/images/1-7.png)<br>
+  ![](/images/7.png)<br>
   <br>
 </details>
 
@@ -648,11 +653,18 @@ Great job!
  
  {img}
  
+ Now that we have our logic, let's bind this logic to an action. Under Designer view, click the Search button. Under the `Events` tab, click `New Event -> Quick Start Click`. 
  
-  
-  
-  
-  
+ {img}
+ 
+ An action chain window has popped up. Drag over a `Call Module Function`. Click `Select Module Function`. Under "Page Functions", select our `loadImages` function. Recall that our function now takes in a paramter, so on the right side under `Input Paramters`, map `inputGenre` to our `Genre` variable. Click `save`.<br> 
+ 
+ {img}
+ 
+ Now perform the same steps for the `loadDescriptions` function.<br>
+ 
+ {img}
+
 </details>
 
   
