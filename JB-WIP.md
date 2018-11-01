@@ -9,9 +9,19 @@ MongoDB is a very popular database, and it offers a bit more customization on it
 While Firebase uses a Google account, which many people already have, for MongoDB you will have to create an account if you do not have one yet. Go [here](https://cloud.mongodb.com/user#/atlas/register/accountProfile) and fill out the requested information.<br> 
 ![](/images/4-1.png) <br>
 <br>
-Then, login. It should redirect you to this page.
+Then, login. It should redirect you to this page.<br>
 ![](/images/4-2.png) <br>
 <br>
+Hit `Build a Cluster` to get started.<br>
+![](/images/4-3.png) <br>
+<br>
+Go ahead and leave the default settings; just hit `Create Cluster` at the bottom of the screen.<br>
+![](/images/4-4.png) <br>
+<br>
+It will take some time to provision. Give it a few minutes, then refresh the page.<br>
+![](/images/4-5.png) <br>
+<br>
+
 
 
 Add data of books to DB.<br>
