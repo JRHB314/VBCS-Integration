@@ -87,7 +87,7 @@ This lab will guide you through creating your first Web App in VBCS.
   tab, then expand `General Attributes` and scroll down to the `Style` field. Enter in `color: #67aee5;`. The color 
   changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
   
-  ![](/images/18.png)<br>
+  ![](/images/1-18.png)<br>
   <br>
   
   In addition, we can also edit the HTML and CSS code directly. Near the top right, hit the `Code` view for the page. <br>
