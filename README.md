@@ -533,7 +533,9 @@ Great job!
   
   <h3> Creating the Website's Search Functionality </h3>
   
-  Let's take a look at what we've done until this point. Up until now, we've built our web application, created a Fire database and populated it with information, and wrote custom Javascript to extract data from our database URL. We invoked those functions and had them run at page load time, and we were able to display book images and descriptions on our second page. Great! But what if we want to display books based on a specific genre that a user enters? 
+  Let's take a look at what we've done until this point. Up until now, we've built our web application, created a Fire database and populated it with information, and wrote custom Javascript to extract data from our database URL. We invoked those functions and had them run at page load time, and we were able to display book images and descriptions on our second page. Great! But what if we want to display books based on a specific genre that a user enters? We'll need to a bit extra work. We'll need to first capture the user's input, then parse our JSON object accordingly.<br>
+  
+  Let's first create a third page
   
 </details>
   
