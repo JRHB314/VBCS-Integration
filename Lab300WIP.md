@@ -1,11 +1,24 @@
 
   <summary>2. Connect VBCS to the Firebase Database</summary>
   
+<h3> Create New Page </h3>
+  
+First thing we want to do is create another page, this one called book-catalog, on which we will display our book descriptions and images. Right click on main-start and hit `Duplicate`, then right click on the copy to rename it `book-catalog`. On the Design view of the page, click on the "Welcome to the Home Page" heading, then hit the trash can icon in the bottom left of the right bar to delete the component.<br>
+![](/images/3-25.png)<br>
+<br>
+Now we have to update the tab bar to include this new page. Go to the code view for the page and look for the "oj-tab-bar-XXXXXXXXX-X" item. Inside that you should see two oj-tab-bar-XXXXXXXXX-X-tab-X items. Copy the code for the first tab (the one with dull formatting) and paste it right below the code for the second tab. Rename the tab "Catalog" and change the listener to clickCatalogTab (though this event does not yet exist. Finally, change the first tab's style to bright, so only the third tab is dull.<br>
+![](/images/3-26.png)
+<br>
+Repeat this process for the other pages, but on the other pages, the Catalog tab should have bright styling. <br>
+![](/images/3-27.png)
+<br>  
+Now we just need to create our action chain navigateCatalogPage (created at the flow level) and our event clickCatalogTab (created for each page) and we are good to go.<br>
+  
   <h3> Add HTML/CSS </h3>
   
   Now that our database has been set up, we'll need to connect it to VBCS. We'll be using this database information to populate one of our pages with images and descriptions of books, so the first thing we need to do is to come up with a layout of how we want our page to look. For this lab, we'll format the page with a left-side column to display book images and a right-side column to display the book information.<br>
   
-  Let's create this layout by adding the HTML structure to our existing second page. Navigate to the `Code` view of the page, and copy and paste this HTML code and add it at the very end:<br>
+  Let's create this layout by adding the HTML structure to our new book-catalog page. Navigate to the `Code` view of the page, and copy and paste this HTML code and add it at the very end:<br>
 
   ```
   <div class="row">
@@ -29,7 +42,7 @@
       clear: both;
   }
   ```
-  ![](/images/david-1.png)<br>
+  ![](/images/3-d1.png)<br>
   <br>
   
   With these 2 div objects properly set up, we'll be able to identify where the javascript should populate the images and descriptions. Let's move on to the actual Javascript.<br>
