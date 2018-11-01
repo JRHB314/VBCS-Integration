@@ -220,7 +220,7 @@ Drag "Call Module Function" onto the plus sign.<br>
 Select Module Function. You should see a Page Function named loadDescriptions in the list. Select it, and you should be good to go.<br>
 ![](/images/3-19.png)<br>
 <br>
-Test the page, and the books should appear on the {pagename} page. <br>
+Test the page, and the books should appear on the Catalog page. <br>
 ![](/images/3-20.png)<br>
 <br>
 Now we are going to create our other module, loadImages. The process is basically the same, except we are appending images instead of text.<br>
