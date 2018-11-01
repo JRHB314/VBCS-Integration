@@ -112,11 +112,11 @@ This lab will guide you through creating your first Web App in VBCS.
   We will add this style as div classes to our tabs, with dull being for the tab we are currently on, and bright being for 
   tabs we are not on.<br>
 
-  ![](/images/20.png)<br><br>
+  ![](/images/1-20.png)<br><br>
   
   Back on the design tab, we can view changes we made to the tab bar. As demonstrated, you can code HTML and CSS for your web   app the way you would for any website while also viewing it in the Design tab, giving you much greater flexibility.<br>
   
-  ![](/images/21.png)<br>
+  ![](/images/1-21.png)<br>
   <br>
   
  </details>
@@ -130,7 +130,7 @@ This lab will guide you through creating your first Web App in VBCS.
   heirarchy on the left and hit the plus sign next to `main` in order to create a new page. Give this new page a name. For 
   this lab, we'll name the page "second-page". <br>
   
-  ![](/images/33.png)<br>
+  ![](/images/1-33.png)<br>
   <br>
   
   Because we want the navbar to remain on this second page as well, copy the code from the first page and paste it into the 
