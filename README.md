@@ -537,34 +537,25 @@ Great job!
   
   <h3> Creating the Website's Search Functionality </h3>
   
-  Let's take a look at what we've done until this point. Up until now, we've built our web application, created a Fire database and populated it with information, and wrote custom Javascript to extract data from our database URL. We invoked those functions and had them run at page load time, and we were able to display book images and descriptions on our second page. Great! But what if we want to display books based on a specific genre that a user enters? We'll need to a bit of extra work. We'll need to first capture the user's input, and then parse our JSON object accordingly.<br>
+  Let's review what we've done until this point. So far, we've built our web application, created a Firebase database and populated it with information, and wrote custom Javascript to extract data from our database URL. We invoked those functions and had them run at page load time, and we were able to display book images and descriptions on our catalog page. Great! But what if we want to display books based on a user search? That takes a bit of extra work. We'll need to first capture the user's input, and then parse our JSON object accordingly.<br>
   
-  Let's first create a third page for this website's search functionality. We'll call it "search". On the left side under main, hit the `+` button to create a new page, and name it `search`.<br> 
-  
-  ![](/images/david-search-1.png)<br>
+  First create a third page for this website's search functionality. We'll call it "search". Duplicate `main-start` and rename the copy `search`.<br> 
+Change "Welcome to the Home page." to say "Search". Drag and drop a `user input` box for the user to type in their search term, followed by a `button` for running that search. Click on the `Input Text` label and change it to say "Genre:".Let's also drag over a button to the right of the input text. Change the text of the button to "search".<br> 
+ 
+ ![](/images/3-ds3.png)<br>
 <br>
-  
-  Next, let's add the Navbar from our previous pages onto this page. Under the `Code` view, copy and paste the code from the second page onto our search page. Rename the header to "Welcome to the Third Page" instead of "Welcome to the Second Page". While we're at it, let's also copy the HTML structure for the book image/descriptions, as well as the CSS.<br> 
-  
- ![](/images/david-search-2.png)<br>
-<br>
-img here <br>
-  
- Let's create a `user input` box, followed by a `button` for the user to type in and submit their genre. Under the `Design` view, navigate to the left tab under "Field" and drag an `input text` under our header. Change the input text to display `Genre:`.<br> 
- 
- ![](/images/david-search-3.png)<br>
-<br>
- 
- Let's also drag over a button to the right of the input text. Change the text of the button to `search`. These components are too close to the header, so resize them and then add some extra padding. Under `All -> General Attributes` of each of these components, add the following css:<br>
- 
- ```
-  padding-top: 100px;
- ```
- 
- ![](/images/david-search-4.png)<br>
+
+Note, however, that we only have three tabs; we need to make one more tab for the new page. Follow the instructions in the previous step for creating a new tab, but this time for searchpage.<br>
+Briefly,<br>
+-Copy and paste code for a new tab in each page.<br>
+-Change the tab name to "Search" and the onclick listener to clickSearchTab.<br>
+-Create an action chain navigateSearchPage at the flow level.<br>
+-Create an event listener on each page called clickSearchTab.<br>
+
+ ![](/images/3-30.png)<br>
 <br>
  
- We have a nice simple layout. We need to now save the user's input into a variable. On the left side under the `variable` function, create a new variable. Call it `genre`.<br>
+ We have a nice simple layout. We need to now save the user's input into a variable. On the left side click the (x) icon to open up `Variables` page. Create a new variable and call it `genre`.<br>
  
  ![](/images/david-search-5.png)<br>
 <br>
@@ -574,7 +565,7 @@ img here <br>
  ![](/images/david-search-6.png)<br>
 <br>
  
- Next, let's copy over the Javascript code. Under the `js` tab of our catalogue page, copy and paste the two slightly modified functions below onto our search page. 
+ Next, let's copy over the Javascript code. Under the `JS` tab of our catalog page, copy and paste the two slightly modified functions below onto our search page. 
  
  ```
    PageModule.prototype.loadDescriptions = function (inputGenre) { // our function now takes in a "genre" input
@@ -687,7 +678,7 @@ Recall that our function now takes in a paramter, so on the right side under `In
 
  Let's test our page out. Click the `Live` button at the top right corner. Enter in `Fantasy` and hit search. Our website now loads all the books with the fantasy genre! <i>(If the search button displays at the bottom of the page instead of the top, re-order the left-column and right-column HTML divs to the end of your page HTML code).</i>
  
- ![](/images/david-search-12.png)<br>
+ ![](/images/3-ds12.png)<br>
 <br>
  
 Try hitting the search button again. Uh oh, looks like the page is getting populated with the same books every time someone hits search. 
@@ -695,7 +686,7 @@ Try hitting the search button again. Uh oh, looks like the page is getting popul
 ![](/images/david-search-13.png)<br>
 <br>
 
-We'll fix this by first removing the book images/descriptions before someone hits search.<br>
+We'll fix this by first removing the book images/descriptions every time someone hits search before loading the new images/descriptions.<br>
  
  Go to the `js` tab, and paste in the following function that will clear the book images/descriptions:
  
@@ -711,28 +702,25 @@ We'll fix this by first removing the book images/descriptions before someone hit
       }
     };
  ```
-
 ![](/images/david-search-14.png)<br>
 <br>
 
 With this new function added, navigate to our action chain that invokes the loadImage and loadDescription functions. Add a new `module function` that calls on the resetPage function.
 
-![](/images/david-search-16.png)<br>
+![](/images/david-search-15.png)<br>
 <br>
 
-The action chain should now look like this:<br>
+![](/images/david-search-16.png)<br>
+<br>
 
 ![](/images/david-search-21.png)<br>
 <br>
 
-Our new action chain now clears any existing images/descriptions before loading other ones, and is still bounded to the search button.
+Now go back to the `Designer` view, click the submit button, and bind this action chain to whenever someone clicks the search button. There are now three actions within this action chain. One to remove any previous search results, one to load descriptions, and the last to load images.
 
 ![](/images/david-search-17.png)<br>
 <br>
 
 Try loading the page again. It works! We have now successfully implemented the search functionality.
-
-![](/images/david-search-20.png)<br>
-<br>
 
 </details>
