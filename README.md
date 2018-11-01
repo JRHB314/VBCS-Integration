@@ -732,4 +732,7 @@ Now go back to the `Designer` view, click the submit button, and bind this actio
 
 Try loading the page again. It works! We have now successfully implemented the search functionality.
 
+![](/images/david-search-20.png)<br>
+<br>
+
 </details>
