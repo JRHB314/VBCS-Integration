@@ -177,13 +177,13 @@ This lab will guide you through creating your first Web App in VBCS.
   ![](/images/31.png)<br>
   <br>
   
-  Repeat this process for creating clickSecondTab and having it trigger navigateSecondPage.<br>
+  Repeat this process for creating cxckSecondTab and having it trigger navigateSecondPage.<br>
   Then, create these same events for second-page.<br>
   
   ![](/images/32.png)<br>
   <br>
   
-  Last but not least, we want to connect these event listeners to be activated whenever our tabs are clicked. Go to Code view,   and add the onclick listener after the li id for both tabs. Enter
+  Last but not least, we want to connect these event listeners to be activated whenever our tabs are clicked. Go to Code view,   and add the onclick listener after the lid for both tabs. Enter
   
   ```
   <li id ="oj-tab-bar-XXXXXXXXX-X-tab-X" on-click="[[$listeners.eventName]]"
@@ -272,6 +272,8 @@ First thing we want to do is create another page, this one called book-catalog, 
 <br>
 Now we have to update the tab bar to include this new page. Go to the code view for the page and look for the "oj-tab-bar-XXXXXXXXX-X" item. Inside that you should see two oj-tab-bar-XXXXXXXXX-X-tab-X items. Copy the code for the first tab (the one with dull formatting) and paste it right below the code for the second tab. Rename the tab "Catalog" and change the listener to clickCatalogTab (though this event does not yet exist. Finally, change the first tab's style to bright, so only the third tab is dull.<br>
 ![](/images/3-26.png)<br>
+<br>
+You could have gone to customize the tab bar on the Design view and hit the plus sign to the right of the title `Tabs` in the customization bar, but this would not have copied the style or the listener.<br>
 <br>
 Repeat this process for the other pages, but on the other pages, the Catalog tab should have bright styling. <br>
 ![](/images/3-27.png)<br>
