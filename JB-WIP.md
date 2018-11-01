@@ -84,7 +84,7 @@ FOREACH (userName in ["BradHillman", "BobFlinstone", "JaneDoe"] |
 ```
 ```
 MATCH (userC:Person {name:"AprilGold"})
-FOREACH (userName in ["RachelWebb", "BobFlinstone", "JaneDoe", "RajeshBishnoi", "JohanLitwich", "PamelaSelzer"] |
+FOREACH (userName in ["RachelWebb", "BobFlinstone", "JaneDoe", "RajeshBishnoi", "JohanLitwick", "PamelaSelzer"] |
   MERGE (userID:Person {name:userName})
   CREATE (userID)-[:FOLLOWS]->(userC))
 ```
@@ -155,3 +155,4 @@ START n=node(*) MATCH (n)-[r]->(m) RETURN n,r,m;
 ```
 With this many nodes it will appear a bit messy; drag nodes around until you can get something a bit easier to look at. You can also hit the expand button to make the view fill the page.<br>
 {image of nodes}
+To see how many followers someone has, look at the number of incoming arrows, while outgoing arrows show who they follow. Bob Flinstone, of course, has no incoming arrows. Every user follows at least one other person. Some are mutual followers, while others are unreciprocated. Some people have many more connections than others. By using a graph, it's easy to see these concepts.
