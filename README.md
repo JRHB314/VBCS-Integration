@@ -728,8 +728,43 @@ Try loading the page again. It works! We have now successfully implemented the s
 
 <h2> Lab 400: Connecting VBCS to a Graph Database (Neo4j) </h2>
 
-In this part of the lab, we'll learn a bit about how Graph Databases work, and see how to integrate them with VBCS.
+In this part of the lab, we'll learn a bit about how Graph Databases work, and see how to integrate them with VBCS. Specifically, we'll be using a free Graph Database called Neo4j.
 
 <details>
+  <summary>1. Set up the Neo4j Database </summary>
+  
+  <h3>Create the Neo4j Database </h3>
+  
+  Visit [Graphene DB](https://app.graphenedb.com/) and sign up for an account. Login to the dashboard, then click `Create Database`.
+  
+  ![](/images/david-gdb-1.png)<br>
+<br>
+  
+  Select the free "Sandbox" tier.<br>
+  
+  ![](/images/david-gdb-2.png)<br>
+<br>
+
+  Give your database a name. Leave the default Neo4j Version as 3.4.9 and click `Create Database`.<br>
+
+  ![](/images/david-gdb-3.png)<br>
+<br>
+
+  On the next page, a pop up should appear asking you to create a user. Click `Create user now`.
+  
+  ![](/images/david-gdb-4.png)<br>
+<br>
+
+  Give your user a Label with no expiration date and click `Create User`.
+  
+  ![](/images/david-gdb-5.png)<br>
+<br>
+
+  <b>Copy down your credentials. This is the only time you'll be able to see the password, so make a note of it.</b>
+  
+  ![](/images/david-gdb-6.png)<br>
+<br>
+
+  <h3>Populate the Database </h3>
   
 </details>
