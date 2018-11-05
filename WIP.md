@@ -22,12 +22,13 @@ Keep in mind, if you lose track of a component or have trouble clicking on somet
 Click the icon again to close it.<br>
 <br>
 Next we need to create some String variables to be bound to our components.<br>
--searchUsername: the username that will be searched. Put this in the Data field for the topmost Text field. 
--username: the returned username. Put this variable in place of the "Username" heading we had before.
--imageURL: will hold the returned source image url. Set the default value to `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png`. Then put this for the source url of the Image component.
--followerCount: will hold the returned follower count. Put this in the Data field of the top "count" text.
--followingCount: will hold the returned following count. Put this in the Data field of the middle "count" text.
--mutualCount: will hold the returned mutuals count. Put this in the Data field of the bottom "count" text.
+-searchUsername: the username that will be searched. Put this in the Data field for the topmost Text field. <br>
+-username: the returned username. Set it's default value to "Username." Put this variable in place of the "Username" heading we had before.<br>
+-imageURL: will hold the returned source image url. Set the default value to `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png`. Then put this for the source url of the Image component.<br>
+-followerCount: will hold the returned follower count. Put this in the Data field of the top "count" text.<br>
+-followingCount: will hold the returned following count. Put this in the Data field of the middle "count" text.<br>
+-mutualCount: will hold the returned mutuals count. Put this in the Data field of the bottom "count" text.<br>
+{img}
+{img}
+<br>
 
-
-need to set image url variable and all variables
