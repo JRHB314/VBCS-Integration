@@ -838,19 +838,27 @@ However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that th
 <br>
 
 To get rid of it, hover over the invisible node, grab its id and run `MATCH (n) where id(n) = # DETACH DELETE n` where # is the ID of the node.<br>
-  Also note that `MATCH (n) RETURN (n)` simply returns all nodes; it doesn't technically return their relationships. The Graph visualizer will show these relationships anyway, but the JSON returned (look at the `Table` tab) does not. To return all nodes and their relationships, run `MATCH (n)-[r]->(m) RETURN n,r,m;`.
+
+![](/images/david-gdb-14.png)<br>
+<br>
+
+Also note that `MATCH (n) RETURN (n)` simply returns all nodes; it doesn't <i>technically</i> return their relationships. The Graph visualizer will show these relationships anyway, but the JSON returned (look at the `Table` tab) does not. To return all nodes and their relationships, run `MATCH (n)-[r]->(m) RETURN n,r,m;`.
+
+![](/images/david-gdb-15.png)<br>
+<br>
   
-  <img><br>
-  
-  Now run this line of code again to see all of our nodes so far: `MATCH (n) RETURN (n)`.
-  
-  Great! Everything looks correct. Now let's say we want userC to be followed by 5 other users. We could create 5 followers and then define their relationship with userC, but the easier approach would be to use a `FOREACH` loop:
+Great! Everything looks correct. Now let's say we want userC to be followed by 5 other users. We could create 5 followers and then define their relationship with userC, but the easier approach would be to use a `FOREACH` loop:
   
   ```
   MATCH (userC:Person {name:"C"})
   FOREACH (followerName in ["follower1","follower2","follower3","follower4","follower5"] |
     CREATE (:Person {name: followerName})-[:FOLLOWS]->(userC))
   ```
+  
+  Your graph should look like:<br>
+  
+  ![](/images/david-gdb-16.png)<br>
+<br>
   
   Notice that here in the relationship, we don't need to write `[rel:FOLLOWS]` because we are simply creating the relationship, and don't reference it later in the query.<br>
   
@@ -861,14 +869,14 @@ To get rid of it, hover over the invisible node, grab its id and run `MATCH (n) 
   RETURN cFollowers
   ```
   
-  <img>
+  ![](/images/david-gdb-17.png)<br>
+<br>
   
-  Now that we've had a little practice with Neo4j and graph databases, let's jump into creating the actual data we'll use to mimic our "Instagram model". Reset the database with:
-  
+  Now that we've had a little practice with Neo4j and graph databases, let's jump into creating the actual data we'll use to mimic our "Instagram model". We need a clean start, so let's reset the database with:
+
   ```
     MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r
   ```
-  
   
 </details>
 
@@ -897,9 +905,10 @@ To get rid of it, hover over the invisible node, grab its id and run `MATCH (n) 
   CREATE (userID)-[:FOLLOWS]->(userB))
   ```
   
-  We just gave Sam Archer 3 followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to either create a relationship for an existing node, or, if our node doesn't exist yet, create it. userID is an arbitrary reference we give to the creation of these new nodes when using the `MERGE` function. Remember, these references can be named anything we want; these names were chose to be easy to understand.<br>
+  We just gave Sam Archer 3 followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to either create a relationship for an existing node, or, if our node doesn't exist yet, create it. userID is an arbitrary reference we give to the creation of these new nodes when using the `MERGE` function. Remember, these references can be named anything we want; these names were chosen to be easy to understand.<br>
   
   Let's continue to add followers. Go to the resources folder and copy and paste the code in "CreateFollowers" into the broswer console.<br>
+  
 <br>
   Now, to review a few things. First of all, what is `WITH count(*) as dummy`? This simply allows us to run multiple commands at once. Cypher doesn't like to run unrelated querieis; the WITH statement links the queries, but essentially is doing nothing. This is just a workaround to make it easier to share the code.<br>
   Here's another thing to note:
