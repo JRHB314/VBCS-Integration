@@ -31,7 +31,7 @@ Next we need to create some String variables to be bound to our components.<br>
 {img}
 {img}
 <br>
-This means we are ready to set up our Service Connection. On the far left, hit the icon that looks like a wire with a bump in it (the third from the top) and then hit the plus sign to create a new Service Connection. Choose Define by Endpoint.<br>
+This means we are ready to set up our Service Connection. In Lab 300 we called the REST endpoint in our Javascript, but VBCS actually offers a nice feature to make REST calls without (much) coding. On the far left, hit the icon that looks like a wire with a bump in it (the third from the top) and then hit the plus sign to create a new Service Connection. Choose Define by Endpoint.<br>
 {img}
 <br>
 Now, we need our REST endpoint URL. Reopen your GrapheneDB Database, and go to the Connection tab. There you will find your HTTP REST endpoint.<br>
@@ -43,6 +43,51 @@ Copy and paste that URL on VBCS, then add `/transaction/commit` to the end of it
 Hit next. Change Service Name to "Neo4j Get User Data". <br>
 {img}
 <br>
-Go to the Authentication tab, and choose `Basic` from the dropdown. You should have already made a database user in GrapheneDB; if not, review part 1 of this lab. Enter in the username and password for this user. <b>This is not the same as your GrapheneDB account.</b>
-
+Go to the Authentication tab, and choose `Basic` from the dropdown. You should have already made a database user in GrapheneDB; if not, review part 1 of this lab. Enter in the username and password for this user. <b>This is not the same as your GrapheneDB account.</b> <br>
+{img}
+<br>
+On the Request tab, copy and paste this code:
+```
+{
+  "statements" : [ {
+    "statement" : "MATCH (n:Person {name:'YukiTsukino'}) return n"
+  } ]
+}
+```
+This will simply return the node and all of its information. We'll select the specific fields we want in VBCS later. <br>
+Note; it is just an example. We will not be searching for YukiTsukino every time. <br>
+<br>
+Finally, on the Test tab scroll down slightly until you see the `Send` button. <br>
+The response should look like this:
+```
+{
+    "results": [
+        {
+            "columns": [
+                "n"
+            ],
+            "data": [
+                {
+                    "row": [
+                        {
+                            "image": "https://inhabitat.com/wp-content/blogs.dir/1/files/2013/12/snowflake10.jpg",
+                            "name": "YukiTsukino",
+                            "quotes": "If youre reading this... Congratulations, youre alive. If thats not something to smile about, then I dont know what is."
+                        }
+                    ],
+                    "meta": [
+                        {
+                            "id": 33,
+                            "type": "node",
+                            "deleted": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "errors": []
+}
+```
+In the top right of the response, hit `Copy to Response Body`. Now hit Create.<br>
 <br>Action Chain. Click the button and go to the Events tab; hit `New Event`, then `QuickStart: click`. 
