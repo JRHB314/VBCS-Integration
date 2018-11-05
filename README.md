@@ -886,9 +886,10 @@ Great! Everything looks correct. Now let's say that we want userC to be followed
   CREATE (:Person {name:followerName})-[:FOLLOWS]->(userA))
   ```
   
-  View all the current nodes/relationships: `MATCH (n)-[r]->(m) RETURN n,r,m;`.
+  View all the current nodes/relationships: `MATCH (n)-[r]->(m) RETURN n,r,m;`.<br>
   
-  <img>
+  ![](/images/david-gdb-18.png)<br>
+<br>
   
   Now that we have a person named Rachel Webb along with some people that follower her, let's give her followers their own followers: 
   
@@ -899,36 +900,45 @@ Great! Everything looks correct. Now let's say that we want userC to be followed
   CREATE (userID)-[:FOLLOWS]->(userB))
   ```
   
-  We just gave Sam Archer 3 followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to either create a relationship for an existing node, or, if our node doesn't exist yet, create it. userID is an arbitrary reference we give to the creation of these new nodes when using the `MERGE` function. Remember, these references can be named anything we want; these names were chosen to be easy to understand.<br>
+  Verify that your graph looks like this:<br>
   
-  Let's continue to add followers. Go to the resources folder and copy and paste the code in "CreateFollowers" into the broswer console.<br>
+ ![](/images/david-gdb-19.png)<br>
+<br> 
+  
+  We just gave Sam Archer 3 followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to either create a relationship for an existing node, or, if our node doesn't yet exist, create it. userID is an arbitrary reference we give to the creation of these new nodes when using the `MERGE` function. Remember, these references can be named anything we want; these names were chosen to be easy to understand.<br>
+  
+  Let's continue to add followers. Go to the resources folder and copy and paste the code in "CreateFollowers" into the browser console.<br> At this point your graph probably looks a bit messy, but your graph should resemble something like this:<br>
+  
+  ![](/images/david-gdb-20.png)<br>
+<br> 
   
 <br>
-  Now, to review a few things. First of all, what is `WITH count(*) as dummy`? This simply allows us to run multiple commands at once. Cypher doesn't like to run unrelated querieis; the WITH statement links the queries, but essentially is doing nothing. This is just a workaround to make it easier to share the code.<br>
-  Here's another thing to note:
+  Let's take a moment to review a few things. First of all, the large chunk of code that we just placed had a line that said `WITH count(*) as dummy`. What is this? This simply allows us to run multiple Cypher commands at once. Cypher doesn't like to run unrelated queries; the WITH statement links the queries, but essentially does nothing. Think of this as a workaround to make it easier to share the code.<br>
+  
+  Here's another thing to note. In the code that we just pasted, take a close look at userE:
+  
   ```
   MATCH (userE:Person {name:"MariaGomez"})
   FOREACH (userName in ["JacqueNoir"] |
     MERGE (userID:Person {name:userName})
     CREATE (userID)-[:FOLLOWS]->(userE))
   ```
- Maria wasn't created as one of Rachel's followers. However, she still exists by this point. This is because the MERGE command created her as one of Jacque's followers. That's the power of MERGE--it won't create a duplicate, but will create an element if it doesn't exist. <br>
-  You may notice it skips userH, who would be BobFlinstone. Bob has no followers, so we don't need to create any. Poor Bob.<br>
-  <br>
-
-  With that done, let's run `MATCH (n) RETURN (n)` to see our graph:
   
-  <img>
+ Maria wasn't created as one of Rachel's followers. However, she still exists by this point. This is because the `MERGE` command created her as one of Jacque's followers. That's the power of MERGE--it won't create a duplicate, but it will create an element if it doesn't exist. <br>
+ 
+  Also note that there is no command for userH (BobFlinstone). Bob has no followers, so we don't need to create any. Poor Bob.<br>
   
-  Next we want to add a little more detail to these users. We'll add a profile picture and a quote for each user. Again, go to the resources folder in this directory, this time copying and pasting the code from the AddInformation file.<br>
+  Next, we'll want to add a little more detail to these users. We'll add a profile picture and a quote for each user. Again, go to the resources folder in this directory, this time copying and pasting the code from the AddInformation file.<br>
   Each follows this basic format:
+  
 ```
 MATCH (n:Person {name:'UserName'}) 
 SET n.image = 'https://some-image-url.jpg'
 SET n.quotes = 'Here is a really meaningful quote!'
 ```
+
 First we MATCH "n" to the node with name "UserName". Then we use SET to add these two new fields.<br>
 <br>
-  Phew! And we're done.
+  Phew! And we're done. To recap, we added a Person named Rachel Webb, gave her followers, and then added some more followers to Rachel Webb's followers through our createFollowers resource. Then, we added two more attributes to each person, their image and a quote that they display. Awesome!
   
 </details>
