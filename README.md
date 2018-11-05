@@ -872,7 +872,7 @@ However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that th
   
   <img>
   
-  Now that we have a person named Rachel Webb along with some people that follower her, let's give some of her followers their own followers: 
+  Now that we have a person named Rachel Webb along with some people that follower her, let's give her followers their own followers: 
   
   ```
   MATCH (userB:Person {name:"SamArcher"})
@@ -881,9 +881,9 @@ However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that th
   CREATE (userID)-[:FOLLOWS]->(userB))
   ```
   
-  We just gave Sam Archer 3 more followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to create a relationship for an existing node. We would also use `MERGE` when our node doesn't exist yet and we need to create it at the time we run the cypher statement. userID is an arbitrary reference we give to the creation of these new nodes when using the `MERGE` function. Remember, these references can be named anything we want; these names were chose to be easy to understand.<br>
+  We just gave Sam Archer 3 followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to either create a relationship for an existing node, or, if our node doesn't exist yet, create it. userID is an arbitrary reference we give to the creation of these new nodes when using the `MERGE` function. Remember, these references can be named anything we want; these names were chose to be easy to understand.<br>
   
-  Let's give a couple of Rachel Webb's followers more followers for a slightly more complex graph. Run these:
+  Let's continue to add followers. Run these:
   
   ```
   MATCH (userC:Person {name:"AprilGold"})
@@ -900,12 +900,12 @@ However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that th
   ```
   
   ```
-  MATCH (userE:Person {name:"MariaGomez"}) // MariaGomez isn't one of Rachel Webb's followers in the defined list
+  MATCH (userE:Person {name:"MariaGomez"})
   FOREACH (userName in ["JacqueNoir"] |
   MERGE (userID:Person {name:userName})
   CREATE (userID)-[:FOLLOWS]->(userE))
   ```
- 
+ Even though Maria wasn't created as one of Rachel's followers, she still already exists. This is because the MERGE command created her as one of Jacque's followers. That's the power of MERGE--it won't create a duplicate, but will create an element if it doesn't exist. 
   ```
   MATCH (userF:Person {name:"BradHillman"})
   FOREACH (userName in ["JaneDoe", "RajeshBishnoi"] |
@@ -919,14 +919,126 @@ However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that th
   MERGE (userID:Person {name:userName})
   CREATE (userID)-[:FOLLOWS]->(userG))
   ```
-  
-  This is plenty to work with, so let's assume that the rest of Rachel Webb's followers in the list have no followers of their own. Now let's run `MATCH (n) RETURN (n)` to see our graph:
+  ```
+MATCH (userG:Person {name:"JaneDoe"})
+FOREACH (userName in ["BradHillman"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userG))
+```
+Note, BobFlinstone, who would be userH, has no followers, so we skip him. Poor Bob.
+```
+MATCH (userI:Person {name:"AngelinaGibbs"})
+FOREACH (userName in ["AprilGold", "JacqueNoir", "MariaGomez", "RajeshBishnoi"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userI))
+```
+```
+MATCH (userJ:Person {name:"YukiTsukino"})
+FOREACH (userName in ["BobFlinstone", "RajeshBishnoi"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userJ))
+```
+```
+MATCH (userK:Person {name:"RajeshBishnoi"})
+FOREACH (userName in ["YukiTsukino"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userK))
+```
+```
+MATCH (userL:Person {name:"JohanLitwick"})
+FOREACH (userName in ["JacqueNoir", "YukiTsukino"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userL))
+```
+```
+MATCH (userM:Person {name:"VelmaGarcia"})
+FOREACH (userName in ["RachelWebb", "BobFlinstone", "BradHillman", "YukiTsukino", "RajeshBishnoi"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userM))
+```
+```
+MATCH (userN:Person {name:"PamelaSelzer"})
+FOREACH (userName in ["BradHillman"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userN))
+```
+  This is plenty to work with. Now let's run `MATCH (n) RETURN (n)` to see our graph:
   
   <img>
   
   Next we want to add a little more detail to these users. We'll add a profile picture and a quote for each user.
 
-
-  
+```
+MATCH (n:Person {name:'AprilGold'}) 
+SET n.image = 'https://www.babysense.com/wp-content/uploads/2015/07/colostrum.jpg'
+SET n.quotes = 'If you are a dreamer come in. If you are a dreamer a wisher a liar A hoper a pray-er a magic-bean-buyer. If youre a pretender come sit by my fire. For we have some flax golden tales to spin. Come in! Come in!'
+```
+We use SET to add these two new fields.
+```
+MATCH (n:Person {name:'RachelWebb'}) 
+SET n.image = 'https://ridgwaydvm.files.wordpress.com/2014/01/spider_web_windows_7_wallpapers.jpg'
+SET n.quotes = 'When you reach the end of your rope, tie a knot in it and hang on.'
+```
+```
+MATCH (n:Person {name:'SamArcher'}) 
+SET n.image = 'https://i.pinimg.com/originals/5e/8b/8a/5e8b8a14a3e77bea5ab077e761616f0d.jpg'
+SET n.quotes = 'The most difficult thing is the decision to act, the rest is merely tenacity. The fears are paper tigers. You can do anything you decide to do. You can act to change and control your life; and the procedure, the process is its own reward.'
+```
+```
+MATCH (n:Person {name:'JacqueNoir'}) 
+SET n.image = 'https://render.fineartamerica.com/images/rendered/search/print/images-medium-5/black-cat-mariusz-szmerdt.jpg'
+SET n.quotes = 'Though my soul may set in darkness, it will rise in perfect light; I have loved the stars too fondly to be fearful of the night.'
+```
+```
+MATCH (n:Person {name:'BradHillman'}) 
+SET n.image = 'https://d3d00swyhr67nd.cloudfront.net/w800h800/GMI/GMI_OLD_2015_223.jpg'
+SET n.quotes = 'Work like you dont need the money. Love like youve never been hurt. Dance like nobodys watching.'
+```
+```
+MATCH (n:Person {name:'MariaGomez'}) 
+SET n.image = 'https://kids.nationalgeographic.com/content/dam/kids/photos/articles/Nature/H-P/Habitats/Ocean/wave.ngsversion.1500050062134.adapt.1900.1.jpg'
+SET n.quotes = 'All that is gold does not glitter / Not all those who wander are lost; / The old that is strong does not wither / Deep roots are not reached by the frost.'
+```
+```
+MATCH (n:Person {name:'YukiTsukino'}) 
+SET n.image = 'https://inhabitat.com/wp-content/blogs.dir/1/files/2013/12/snowflake10.jpg'
+SET n.quotes = 'If youre reading this... Congratulations, youre alive. If thats not something to smile about, then I dont know what is.'
+```
+```
+MATCH (n:Person {name:'JaneDoe'}) 
+SET n.image = 'https://data.whicdn.com/images/171303775/large.jpg'
+SET n.quotes = 'The supreme art of war is to subdue the enemy without fighting.'
+```
+```
+MATCH (n:Person {name:'AngelinaGibbs'}) 
+SET n.image = 'https://i.etsystatic.com/6249353/r/il/32a5ac/1128672477/il_570xN.1128672477_d7sn.jpg'
+SET n.quotes = 'There is only one corner of the universe you can be certain of improving, and thats your own self.'
+```
+```
+MATCH (n:Person {name:'JohanLitwick'}) 
+SET n.image = 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/nearly-burnt-down-burning-candle-on-old-candle-holder-stefan-rotter.jpg'
+SET n.quotes = 'Trees are poems the earth writes upon the sky, We fell them down and turn them into paper, That we may record our emptiness.'
+```
+```
+MATCH (n:Person {name:'VelmaGarcia'}) 
+SET n.image = 'https://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/velma-dinkley-scooby-doo-mystery-inc-1.17.jpg'
+SET n.quotes = 'There is nothing on this earth more to be prized than true friendship.'
+```
+```
+MATCH (n:Person {name:'AprilGold'}) 
+SET n.image = 'https://www.babysense.com/wp-content/uploads/2015/07/colostrum.jpg'
+SET n.quotes = 'If you are a dreamer come in. If you are a dreamer a wisher a liar A hoper a pray-er a magic-bean-buyer. If youre a pretender come sit by my fire. For we have some flax golden tales to spin. Come in! Come in!'
+```
+```
+MATCH (n:Person {name:'AprilGold'}) 
+SET n.image = 'https://www.babysense.com/wp-content/uploads/2015/07/colostrum.jpg'
+SET n.quotes = 'If you are a dreamer come in. If you are a dreamer a wisher a liar A hoper a pray-er a magic-bean-buyer. If youre a pretender come sit by my fire. For we have some flax golden tales to spin. Come in! Come in!'
+```
+```
+MATCH (n:Person {name:'AprilGold'}) 
+SET n.image = 'https://www.babysense.com/wp-content/uploads/2015/07/colostrum.jpg'
+SET n.quotes = 'If you are a dreamer come in. If you are a dreamer a wisher a liar A hoper a pray-er a magic-bean-buyer. If youre a pretender come sit by my fire. For we have some flax golden tales to spin. Come in! Come in!'
+```
+  Phew! And we're done.
   
 </details>
