@@ -794,8 +794,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   CREATE (userA)-[rel:FOLLOWS]->(userB) 
   return userA, userB, rel
   ```
-  
-  <b>Explanation</b>: In this code snippet, we are creating two users, referenced by userA and userB, of type "Person", with an attribute called "name". After we have the two nodes created, we create a relationship referenced by "rel" of type "FOLLOWS" between userA and userB.<br>
+  Explanation</b>: In this code snippet, we are creating two users, referenced by userA and userB, of type "Person", with an attribute called "name". After we have the two nodes created, we create a relationship referenced by "rel" of type "FOLLOWS" between userA and userB.<br>
   
   ![](/images/david-gdb-9.png)<br>
 <br>
