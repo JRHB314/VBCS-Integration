@@ -860,7 +860,7 @@ However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that th
   <summary>3. Populating Our Graph Database </summary><br>
   <h3>Populating Our Graph Database</h3>
   
-  Let's create a user temporarily identified by userA named Rachel Webb. Then, let's create some people that follow her:
+  Let's create a user named Rachel Webb. Then, let's create some people that follow her:
   
   ```
   CREATE (userA:Person {name:"RachelWebb"})
@@ -883,7 +883,7 @@ However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that th
   
   We just gave Sam Archer 3 followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to either create a relationship for an existing node, or, if our node doesn't exist yet, create it. userID is an arbitrary reference we give to the creation of these new nodes when using the `MERGE` function. Remember, these references can be named anything we want; these names were chose to be easy to understand.<br>
   
-  Let's continue to add followers. Run these:
+  Let's continue to add followers. Go to the resources folder and copy and paste the code in "CreateFollowers" into the broswer console.
   
   ```
   MATCH (userC:Person {name:"AprilGold"})
