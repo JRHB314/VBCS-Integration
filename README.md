@@ -909,6 +909,9 @@ Great! Everything looks correct. Now let's say that we want userC to be followed
   
   Let's continue to add followers. Go to the resources folder, copy and paste the code in "CreateFollowers" into the browser console and run it.<br> 
   
+  ![](/images/david-gdb-21.png)<br>
+<br> 
+  
   At this point your graph probably looks a bit messy, but your graph should resemble something like this:<br>
   
   ![](/images/david-gdb-20.png)<br>
