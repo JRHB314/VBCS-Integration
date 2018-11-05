@@ -886,7 +886,7 @@ Great! Everything looks correct. Now let's say that we want userC to be followed
   CREATE (:Person {name:followerName})-[:FOLLOWS]->(userA))
   ```
   
-  View all the current nodes/relationships: `MATCH (n) RETURN (n)`.
+  View all the current nodes/relationships: `MATCH (n)-[r]->(m) RETURN n,r,m;`.
   
   <img>
   
