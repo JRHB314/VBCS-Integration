@@ -795,7 +795,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   return userA, userB, rel
   ```
   
-  <b>Explanation</b>: In this code snippet, we are creating two users, identified by userA and userB, of type "Person" with an attribute called "name". After we have the two nodes created, we create a relationship identified by "rel" of type "FOLLOWS" between userA and userB.<br>
+  <b>Explanation</b>: In this code snippet, we are creating two users, referenced by userA and userB, of type "Person", with an attribute called "name". After we have the two nodes created, we create a relationship referenced by "rel" of type "FOLLOWS" between userA and userB.<br>
   
   <img><br>
   
@@ -811,17 +811,17 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   return userA, userC, rel
   ```
   
-  Uh oh, it looks like the A node showed up blank. Why is that? We created userA in the previous cypher statement, but because we are writing a separate cypher statement, it has no idea how to reference that userA. That is, the references we creae to nodes only last one statement, and can be changed in the next; "userA" is not stored as a property of "A". We could call it "N", "nodeA", or whatver we want, and it only has to be consistent within the query. <br>
-  Now, we have to first find userA and userC using `MATCH` in order to use them in our query. This is similar to a SELECT statement in SQL.
+  Uh oh, it looks like the A node showed up blank. Why is that? We created userA in the previous Cypher statement, but because we are writing a separate Cypher statement, it has no idea how to reference that userA. That is, the references we create to nodes only last one statement, and can be changed in the next; "userA" is not stored as a property of "A". We could call it "N", "nodeA", or whatver we want, and it only has to be consistent within the query. <br>
+  Now, we have to first find A, as well as C since we just created them, using `MATCH`. This is similar to a SELECT statement in SQL. This allows us to use "userA" and "userC" as references.
   
-  ```
+```
   MATCH (userA:Person {name:"A"})
   MATCH (userC:Person {name:"C"})
   CREATE (userA)-[rel:FOLLOWS]->(userC)
   return userA, userC, rel
-  ```
-  
-  Great! userA is now properly following userC. However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that there's an empty node following userC. To get rid of it, hover over the invisible node, grab its id and run `MATCH (n) where id(n) = # DETACH DELETE n` where # is the ID of the node.<br>
+```
+  Great! A is now properly following C.<br>
+However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that there's still that empty node following C. To get rid of it, hover over the invisible node, grab its id and run `MATCH (n) where id(n) = # DETACH DELETE n` where # is the ID of the node.<br>
   Also note that `MATCH (n) RETURN (n)` simply returns all nodes; it doesn't technically return their relationships. The Graph visualizer will show these relationships anyway, but the JSON returned (look at the `Table` tab) does not. To return all nodes and their relationships, run `MATCH (n)-[r]->(m) RETURN n,r,m;`.
   
   <img><br>
@@ -836,13 +836,13 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
     CREATE (:Person {name: followerName})-[:FOLLOWS]->(userC))
   ```
   
-  Notice that here in the relationship, we don't need to write `[rel:FOLLOWS]` because we are only creating it, and don't reference it later in the query.<br>
+  Notice that here in the relationship, we don't need to write `[rel:FOLLOWS]` because we are simply creating the relationship, and don't reference it later in the query.<br>
   
   If we want to view who follows userC:
   
   ```
   MATCH (cFollowers)-[:FOLLOWS]->(userC:Person {name:"C"})
-  RETURN userC, cFollowers
+  RETURN cFollowers
   ```
   
   <img>
@@ -881,7 +881,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   CREATE (userID)-[:FOLLOWS]->(userB))
   ```
   
-  We just gave Sam Archer 3 more followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to create a relationship for an existing node. We would also use `MERGE` when our node doesn't exist yet and we need to create it at the time we run the cypher statement. userID is an arbitrary identifier we give to the creation of these new nodes when using the `MERGE` function.<br>
+  We just gave Sam Archer 3 more followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to create a relationship for an existing node. We would also use `MERGE` when our node doesn't exist yet and we need to create it at the time we run the cypher statement. userID is an arbitrary reference we give to the creation of these new nodes when using the `MERGE` function. Remember, these references can be named anything we want; these names were chose to be easy to understand.<br>
   
   Let's give a couple of Rachel Webb's followers more followers for a slightly more complex graph. Run these:
   
@@ -923,6 +923,10 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   This is plenty to work with, so let's assume that the rest of Rachel Webb's followers in the list have no followers of their own. Now let's run `MATCH (n) RETURN (n)` to see our graph:
   
   <img>
+  
+  Next we want to add a little more detail to these users. We'll add a profile picture and a quote for each user.
+
+
   
   
 </details>
