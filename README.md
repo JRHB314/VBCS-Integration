@@ -777,7 +777,9 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   ![](/images/david-gdb-8.png)<br>
 <br>
 
-  Now that we have succesfully created our graph database as well as a user for it, let's learn a bit more about how they work. In graph databases, there are `Nodes` and `Relationships`. Nodes are enclosed in parantheses to resemble circles, and relationships are described using arrows. Copy and paste this code in the top console bar:
+  Now that we have succesfully created our graph database as well as a user for it, let's learn a bit more about how they work.<br>
+  
+  In graph databases, there are `Nodes` and `Relationships`. Nodes are enclosed in parantheses to resemble circles, and relationships are described using arrows. Copy and paste this code in the top console bar:
   
   ```
   CREATE (userA:Person {name:"A"}) // here, we create a node that is a "Person" with an attribute called name
@@ -785,5 +787,13 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   CREATE (userA)-[rel:FOLLOWS]->(userB) // create a relationship between the 2 nodes. In this case, userA FOLLOWS userB
   return userA, userB, rel
   ```
+  
+  In this code snippet, we are creating two users, identified by userA and userB, of type person with an attribute called "name". After we have the two nodes created, we creat a relationship identified by "rel" of type "FOLLOWS" between userA and userB.<br>
+  
+  Some helpful commands: 
+  - `MATCH (n) RETURN (n)` to view all nodes and relationships<br> 
+  - `MATCH (n) DETACH DELETE n` to delete all nodes and relationships<br>
+  
+  
   
 </details>
