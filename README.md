@@ -784,7 +784,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
 <details>
   <summary>1. Getting Familiar with Graph Databases </summary>
   
-  <b>Note: You can skip this section and jump to the next if you are already know how graph databases work.</b>
+  <h3><b>Note: You can skip this section and jump to the next if you are already know how graph databases work.</b></h3>
   
   In graph databases, there are `Nodes` and `Relationships`. Nodes are enclosed in parantheses to resemble circles, and relationships are described using arrows. Copy and paste this cypher statement (the graph database equivalent of sql statements in relational databases) in the top console bar:
   
