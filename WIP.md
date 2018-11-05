@@ -31,4 +31,14 @@ Next we need to create some String variables to be bound to our components.<br>
 {img}
 {img}
 <br>
+This means we are ready to set up our Service Connection. On the far left, hit the icon that looks like a wire with a bump in it (the third from the top) and then hit the plus sign to create a new Service Connection. Choose Define by Endpoint.<br>
+{img}
+<br>
+Now, we need our REST endpoint URL. Reopen your GrapheneDB Database, and go to the Connection tab. There you will find your HTTP REST endpoint.<br>
+{img}
+<br>
+Copy and paste that URL on VBCS, then change Method to POST. <br>
+{img}
+<br>
 
+<br>Action Chain. Click the button and go to the Events tab; hit `New Event`, then `QuickStart: click`. 
