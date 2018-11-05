@@ -779,7 +779,10 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
 
   Now that we have succesfully created our graph database as well as a user for it, let's learn a bit more about how they work.<br>
   
-  In graph databases, there are `Nodes` and `Relationships`. Nodes are enclosed in parantheses to resemble circles, and relationships are described using arrows. Copy and paste this code in the top console bar:
+  <h3>Becoming familiar with Graph Databases</h3>
+  
+  <b>Note: You can skip this section and jump to the next if you are already know how graph databases work.</b>
+  In graph databases, there are `Nodes` and `Relationships`. Nodes are enclosed in parantheses to resemble circles, and relationships are described using arrows. Copy and paste this cypher statement (the graph database equivalent of sql statements in relational databases) in the top console bar:
   
   ```
   CREATE (userA:Person {name:"A"}) 
@@ -788,12 +791,36 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   return userA, userB, rel
   ```
   
-  Explanation: In this code snippet, we are creating two users, identified by userA and userB, of type "Person" with an attribute called "name". After we have the two nodes created, we create a relationship identified by "rel" of type "FOLLOWS" between userA and userB.<br>
+  <b>Explanation</b>: In this code snippet, we are creating two users, identified by userA and userB, of type "Person" with an attribute called "name". After we have the two nodes created, we create a relationship identified by "rel" of type "FOLLOWS" between userA and userB.<br>
   
-  Some helpful commands: 
-  - `MATCH (n) RETURN (n)` to view all nodes and relationships<br> 
-  - `MATCH (n) DETACH DELETE n` to delete all nodes and relationships<br>
+  <img><br>
   
+  Notice that all nodes have a unique ID field (similar to primary keys in the relational database model).<br>
   
+  <img><br>
+  
+  With 2 nodes and a relationship successfully created, let's create a 3rd node/relationship. Enter the following code snippet in the console:
+  
+  ```
+  CREATE (userC:Person {name:"C"})
+  CREATE (userA)-[rel:FOLLOWS]->(userC)
+  return userA, userC, rel
+  ```
+  
+  Uh oh, it looks like the A node showed up blank. Why is that? We created userA in the previous cypher statement, but because we are writing a separate cypher statement, it has no idea how to reference that userA. We have to actually find userA and userC first in order to use them correctly. 
+  
+  ```
+  MATCH (userA:Person {name:"A"})
+  MATCH (userC:Person {name:"C"})
+  CREATE (userA)-[rel:FOLLOWS]->(userC)
+  return userA, userC, rel
+  ```
+  
+  Great! userA is now properly following userC. However, if we run `MATCH (n) RETURN (n)`, we'll see that there's an empty node following userC. To get rid of it, hover over the invisible node, grab it's id and run `MATCH (n) where id(n) = # DETACH DELETE n` where # is the ID of the node.<br>
+  
+  <img><br>
+  
+  Now run this line of code to see all of our nodes/relationships so far: `MATCH (n) RETURN (n)`.
+
   
 </details>
