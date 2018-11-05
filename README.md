@@ -907,9 +907,9 @@ Great! Everything looks correct. Now let's say that we want userC to be followed
   
   We just gave Sam Archer 3 followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to either create a relationship for an existing node, or, if our node doesn't yet exist, create it. userID is an arbitrary reference we give to the creation of these new nodes when using the `MERGE` function. Remember, these references can be named anything we want; these names were chosen to be easy to understand.<br>
   
-  Let's continue to add followers. Go to the resources folder and copy and paste the code in "CreateFollowers" into the browser console. Run it.<br> 
+  Let's continue to add followers. Go to the resources folder, copy and paste the code in "CreateFollowers" into the browser console and run it.<br> 
   
-  <br>At this point your graph probably looks a bit messy, but your graph should resemble something like this:<br>
+  At this point your graph probably looks a bit messy, but your graph should resemble something like this:<br>
   
   ![](/images/david-gdb-20.png)<br>
 <br> 
