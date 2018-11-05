@@ -883,162 +883,33 @@ However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that th
   
   We just gave Sam Archer 3 followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to either create a relationship for an existing node, or, if our node doesn't exist yet, create it. userID is an arbitrary reference we give to the creation of these new nodes when using the `MERGE` function. Remember, these references can be named anything we want; these names were chose to be easy to understand.<br>
   
-  Let's continue to add followers. Go to the resources folder and copy and paste the code in "CreateFollowers" into the broswer console.
-  
-  ```
-  MATCH (userC:Person {name:"AprilGold"})
-  FOREACH (userName in ["RachelWebb", "BobFlinstone", "JaneDoe", "RajeshBishnoi", "JohanLitwick", "PamelaSelzer"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userC))
-  ```
-  
-  ```
-  MATCH (userD:Person {name:"JacqueNoir"})
-  FOREACH (userName in ["MariaGomez", "JohanLitwick"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userD))
-  ```
-  
+  Let's continue to add followers. Go to the resources folder and copy and paste the code in "CreateFollowers" into the broswer console.<br>
+<br>
+  Now, to review a few things. First of all, what is `WITH count(*) as dummy`? This simply allows us to run multiple commands at once. Cypher doesn't like to run unrelated querieis; the WITH statement links the queries, but essentially is doing nothing. This is just a workaround to make it easier to share the code.<br>
+  Here's another thing to note:
   ```
   MATCH (userE:Person {name:"MariaGomez"})
   FOREACH (userName in ["JacqueNoir"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userE))
+    MERGE (userID:Person {name:userName})
+    CREATE (userID)-[:FOLLOWS]->(userE))
   ```
- Even though Maria wasn't created as one of Rachel's followers, she still already exists. This is because the MERGE command created her as one of Jacque's followers. That's the power of MERGE--it won't create a duplicate, but will create an element if it doesn't exist. 
-  ```
-  MATCH (userF:Person {name:"BradHillman"})
-  FOREACH (userName in ["JaneDoe", "RajeshBishnoi"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userF))
-  ```
- 
-  ```
-  MATCH (userG:Person {name:"JaneDoe"})
-  FOREACH (userName in ["BradHillman"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userG))
-  ```
-  ```
-MATCH (userG:Person {name:"JaneDoe"})
-FOREACH (userName in ["BradHillman"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userG))
-```
-Note, BobFlinstone, who would be userH, has no followers, so we skip him. Poor Bob.
-```
-MATCH (userI:Person {name:"AngelinaGibbs"})
-FOREACH (userName in ["AprilGold", "JacqueNoir", "MariaGomez", "RajeshBishnoi"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userI))
-```
-```
-MATCH (userJ:Person {name:"YukiTsukino"})
-FOREACH (userName in ["BobFlinstone", "RajeshBishnoi"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userJ))
-```
-```
-MATCH (userK:Person {name:"RajeshBishnoi"})
-FOREACH (userName in ["YukiTsukino"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userK))
-```
-```
-MATCH (userL:Person {name:"JohanLitwick"})
-FOREACH (userName in ["JacqueNoir", "YukiTsukino"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userL))
-```
-```
-MATCH (userM:Person {name:"VelmaGarcia"})
-FOREACH (userName in ["RachelWebb", "BobFlinstone", "BradHillman", "YukiTsukino", "RajeshBishnoi"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userM))
-```
-```
-MATCH (userN:Person {name:"PamelaSelzer"})
-FOREACH (userName in ["BradHillman"] |
-  MERGE (userID:Person {name:userName})
-  CREATE (userID)-[:FOLLOWS]->(userN))
-```
-  This is plenty to work with. Now let's run `MATCH (n) RETURN (n)` to see our graph:
+ Maria wasn't created as one of Rachel's followers. However, she still exists by this point. This is because the MERGE command created her as one of Jacque's followers. That's the power of MERGE--it won't create a duplicate, but will create an element if it doesn't exist. <br>
+  You may notice it skips userH, who would be BobFlinstone. Bob has no followers, so we don't need to create any. Poor Bob.<br>
+  <br>
+
+  With that done, let's run `MATCH (n) RETURN (n)` to see our graph:
   
   <img>
   
-  Next we want to add a little more detail to these users. We'll add a profile picture and a quote for each user.
-
+  Next we want to add a little more detail to these users. We'll add a profile picture and a quote for each user. Again, go to the resources folder in this directory, this time copying and pasting the code from the AddInformation file.<br>
+  Each follows this basic format:
 ```
-MATCH (n:Person {name:'AprilGold'}) 
-SET n.image = 'https://www.babysense.com/wp-content/uploads/2015/07/colostrum.jpg'
-SET n.quotes = 'If you are a dreamer come in. If you are a dreamer a wisher a liar A hoper a pray-er a magic-bean-buyer. If youre a pretender come sit by my fire. For we have some flax golden tales to spin. Come in! Come in!'
+MATCH (n:Person {name:'UserName'}) 
+SET n.image = 'https://some-image-url.jpg'
+SET n.quotes = 'Here is a really meaningful quote!'
 ```
-We use SET to add these two new fields.
-```
-MATCH (n:Person {name:'RachelWebb'}) 
-SET n.image = 'https://ridgwaydvm.files.wordpress.com/2014/01/spider_web_windows_7_wallpapers.jpg'
-SET n.quotes = 'When you reach the end of your rope, tie a knot in it and hang on.'
-```
-```
-MATCH (n:Person {name:'SamArcher'}) 
-SET n.image = 'https://i.pinimg.com/originals/5e/8b/8a/5e8b8a14a3e77bea5ab077e761616f0d.jpg'
-SET n.quotes = 'The most difficult thing is the decision to act, the rest is merely tenacity. The fears are paper tigers. You can do anything you decide to do. You can act to change and control your life; and the procedure, the process is its own reward.'
-```
-```
-MATCH (n:Person {name:'JacqueNoir'}) 
-SET n.image = 'https://render.fineartamerica.com/images/rendered/search/print/images-medium-5/black-cat-mariusz-szmerdt.jpg'
-SET n.quotes = 'Though my soul may set in darkness, it will rise in perfect light; I have loved the stars too fondly to be fearful of the night.'
-```
-```
-MATCH (n:Person {name:'BradHillman'}) 
-SET n.image = 'https://d3d00swyhr67nd.cloudfront.net/w800h800/GMI/GMI_OLD_2015_223.jpg'
-SET n.quotes = 'Work like you dont need the money. Love like youve never been hurt. Dance like nobodys watching.'
-```
-```
-MATCH (n:Person {name:'MariaGomez'}) 
-SET n.image = 'https://kids.nationalgeographic.com/content/dam/kids/photos/articles/Nature/H-P/Habitats/Ocean/wave.ngsversion.1500050062134.adapt.1900.1.jpg'
-SET n.quotes = 'All that is gold does not glitter / Not all those who wander are lost; / The old that is strong does not wither / Deep roots are not reached by the frost.'
-```
-```
-MATCH (n:Person {name:'YukiTsukino'}) 
-SET n.image = 'https://inhabitat.com/wp-content/blogs.dir/1/files/2013/12/snowflake10.jpg'
-SET n.quotes = 'If youre reading this... Congratulations, youre alive. If thats not something to smile about, then I dont know what is.'
-```
-```
-MATCH (n:Person {name:'JaneDoe'}) 
-SET n.image = 'https://data.whicdn.com/images/171303775/large.jpg'
-SET n.quotes = 'The supreme art of war is to subdue the enemy without fighting.'
-```
-```
-MATCH (n:Person {name:'AngelinaGibbs'}) 
-SET n.image = 'https://i.etsystatic.com/6249353/r/il/32a5ac/1128672477/il_570xN.1128672477_d7sn.jpg'
-SET n.quotes = 'There is only one corner of the universe you can be certain of improving, and thats your own self.'
-```
-```
-MATCH (n:Person {name:'JohanLitwick'}) 
-SET n.image = 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/nearly-burnt-down-burning-candle-on-old-candle-holder-stefan-rotter.jpg'
-SET n.quotes = 'Trees are poems the earth writes upon the sky, We fell them down and turn them into paper, That we may record our emptiness.'
-```
-```
-MATCH (n:Person {name:'VelmaGarcia'}) 
-SET n.image = 'https://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/velma-dinkley-scooby-doo-mystery-inc-1.17.jpg'
-SET n.quotes = 'There is nothing on this earth more to be prized than true friendship.'
-```
-```
-MATCH (n:Person {name:'PamelaSelzer'}) 
-SET n.image = 'https://ubisafe.org/images/candy-transparent-cute-1.png'
-SET n.quotes = 'All our dreams can come true, if we have the courage to pursue them.'
-```
-```
-MATCH (n:Person {name:'BobFlinstone'}) 
-SET n.image = 'https://www.picclickimg.com/d/w1600/pict/332416334055_/Antique-18-grinding-stone-wheel.jpg'
-SET n.quotes = 'Always remember that you are absolutely unique. Just like everyone else.'
-```
-```
-MATCH (n:Person {name:'RajeshBishnoi'}) 
-SET n.image = 'https://i.ebayimg.com/images/g/wv4AAOSwGIRXaoE5/s-l300.jpg'
-SET n.quotes = 'Still round the corner there may wait / A new road or a secret gate / And though I oft have passed them by / A day will come at last when I / Shall take the hidden paths that run / West of the Moon, East of the Sun.'
-```
+First we MATCH "n" to the node with name "UserName". Then we use SET to add these two new fields.<br>
+<br>
   Phew! And we're done.
   
 </details>
