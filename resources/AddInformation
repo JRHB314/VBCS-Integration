@@ -1,0 +1,55 @@
+  MATCH (n:Person {name:'AprilGold'}) 
+  SET n.image = 'https://www.babysense.com/wp-content/uploads/2015/07/colostrum.jpg'
+  SET n.quotes = 'If you are a dreamer come in. If you are a dreamer a wisher a liar A hoper a pray-er a magic-bean-buyer. If youre a pretender come sit by my fire. For we have some flax golden tales to spin. Come in! Come in!'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'RachelWebb'}) 
+  SET n.image = 'https://ridgwaydvm.files.wordpress.com/2014/01/spider_web_windows_7_wallpapers.jpg'
+  SET n.quotes = 'When you reach the end of your rope, tie a knot in it and hang on.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'SamArcher'}) 
+  SET n.image = 'https://i.pinimg.com/originals/5e/8b/8a/5e8b8a14a3e77bea5ab077e761616f0d.jpg'
+  SET n.quotes = 'The most difficult thing is the decision to act, the rest is merely tenacity. The fears are paper tigers. You can do anything you decide to do. You can act to change and control your life; and the procedure, the process is its own reward.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'JacqueNoir'}) 
+  SET n.image = 'https://render.fineartamerica.com/images/rendered/search/print/images-medium-5/black-cat-mariusz-szmerdt.jpg'
+  SET n.quotes = 'Though my soul may set in darkness, it will rise in perfect light; I have loved the stars too fondly to be fearful of the night.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'BradHillman'}) 
+  SET n.image = 'https://d3d00swyhr67nd.cloudfront.net/w800h800/GMI/GMI_OLD_2015_223.jpg'
+  SET n.quotes = 'Work like you dont need the money. Love like youve never been hurt. Dance like nobodys watching.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'MariaGomez'}) 
+  SET n.image = 'https://kids.nationalgeographic.com/content/dam/kids/photos/articles/Nature/H-P/Habitats/Ocean/wave.ngsversion.1500050062134.adapt.1900.1.jpg'
+  SET n.quotes = 'All that is gold does not glitter / Not all those who wander are lost; / The old that is strong does not wither / Deep roots are not reached by the frost.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'YukiTsukino'}) 
+  SET n.image = 'https://inhabitat.com/wp-content/blogs.dir/1/files/2013/12/snowflake10.jpg'
+  SET n.quotes = 'If youre reading this... Congratulations, youre alive. If thats not something to smile about, then I dont know what is.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'JaneDoe'}) 
+  SET n.image = 'https://data.whicdn.com/images/171303775/large.jpg'
+  SET n.quotes = 'The supreme art of war is to subdue the enemy without fighting.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'AngelinaGibbs'}) 
+  SET n.image = 'https://i.etsystatic.com/6249353/r/il/32a5ac/1128672477/il_570xN.1128672477_d7sn.jpg'
+  SET n.quotes = 'There is only one corner of the universe you can be certain of improving, and thats your own self.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'JohanLitwick'}) 
+  SET n.image = 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/nearly-burnt-down-burning-candle-on-old-candle-holder-stefan-rotter.jpg'
+  SET n.quotes = 'Trees are poems the earth writes upon the sky, We fell them down and turn them into paper, That we may record our emptiness.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'VelmaGarcia'}) 
+  SET n.image = 'https://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/velma-dinkley-scooby-doo-mystery-inc-1.17.jpg'
+  SET n.quotes = 'There is nothing on this earth more to be prized than true friendship.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'PamelaSelzer'}) 
+  SET n.image = 'https://ubisafe.org/images/candy-transparent-cute-1.png'
+  SET n.quotes = 'All our dreams can come true, if we have the courage to pursue them.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'BobFlinstone'}) 
+  SET n.image = 'https://www.picclickimg.com/d/w1600/pict/332416334055_/Antique-18-grinding-stone-wheel.jpg'
+  SET n.quotes = 'Always remember that you are absolutely unique. Just like everyone else.'
+WITH count(*) as dummy
+  MATCH (n:Person {name:'RajeshBishnoi'}) 
+  SET n.image = 'https://i.ebayimg.com/images/g/wv4AAOSwGIRXaoE5/s-l300.jpg'
+  SET n.quotes = 'Still round the corner there may wait / A new road or a secret gate / And though I oft have passed them by / A day will come at last when I / Shall take the hidden paths that run / West of the Moon, East of the Sun.'
