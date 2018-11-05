@@ -797,11 +797,13 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   
   <b>Explanation</b>: In this code snippet, we are creating two users, referenced by userA and userB, of type "Person", with an attribute called "name". After we have the two nodes created, we create a relationship referenced by "rel" of type "FOLLOWS" between userA and userB.<br>
   
-  <img><br>
+  ![](/images/david-gdb-9.png)<br>
+<br>
   
   Notice that all nodes have a unique ID field (similar to primary keys in the relational database model).<br>
   
-  <img><br>
+  ![](/images/david-gdb-10.png)<br>
+<br>
   
   With 2 nodes and a relationship successfully created, let's create a 3rd node and relationship. Enter the following code snippet in the console:
   
@@ -811,8 +813,12 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   return userA, userC, rel
   ```
   
+  ![](/images/david-gdb-11.png)<br>
+<br>
+  
   Uh oh, it looks like the A node showed up blank. Why is that? We created userA in the previous Cypher statement, but because we are writing a separate Cypher statement, it has no idea how to reference that userA. That is, the references we create to nodes only last one statement, and can be changed in the next; "userA" is not stored as a property of "A". We could call it "N", "nodeA", or whatver we want, and it only has to be consistent within the query. <br>
-  Now, we have to first find A, as well as C since we just created them, using `MATCH`. This is similar to a SELECT statement in SQL. This allows us to use "userA" and "userC" as references.
+  
+  Now, we have to first find A, as well as C since we just created them using `MATCH`. This is similar to a SELECT statement in SQL, and this allows us to use "userA" and "userC" as references.
   
 ```
   MATCH (userA:Person {name:"A"})
@@ -820,8 +826,18 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   CREATE (userA)-[rel:FOLLOWS]->(userC)
   return userA, userC, rel
 ```
+
   Great! A is now properly following C.<br>
-However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that there's still that empty node following C. To get rid of it, hover over the invisible node, grab its id and run `MATCH (n) where id(n) = # DETACH DELETE n` where # is the ID of the node.<br>
+  
+  ![](/images/david-gdb-12.png)<br>
+<br>
+  
+However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that there's still that empty node following C: 
+
+![](/images/david-gdb-13.png)<br>
+<br>
+
+To get rid of it, hover over the invisible node, grab its id and run `MATCH (n) where id(n) = # DETACH DELETE n` where # is the ID of the node.<br>
   Also note that `MATCH (n) RETURN (n)` simply returns all nodes; it doesn't technically return their relationships. The Graph visualizer will show these relationships anyway, but the JSON returned (look at the `Table` tab) does not. To return all nodes and their relationships, run `MATCH (n)-[r]->(m) RETURN n,r,m;`.
   
   <img><br>
