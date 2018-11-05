@@ -856,6 +856,12 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
 <details>
   <summary>3. Populating Our Graph Database </summary>
   
-  Test
+  Let's create a user temporarily identified by userA named RachelWebb. Then, let's create 6 people that follow her:
+  
+  ```
+  CREATE (userA:Person {name:"RachelWebb"})
+  FOREACH (followerName in ["SamArcher", "AprilGold", "JacqueNoir", "BradHillman", "JaneDoe", "AngelinaGibbs",   "YukiTsukino","JohanLitwick","VelmaGarcia","PamelaSelzer"] |
+  CREATE (:Person {name:followerName})-[:FOLLOWS]->(userA))
+  ```
   
 </details>
