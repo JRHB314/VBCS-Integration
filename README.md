@@ -940,6 +940,10 @@ Great! Everything looks correct. Now let's say that we want userC to be followed
   Also note that there is no command for userH (BobFlinstone). Bob has no followers, so we don't need to create any. Poor Bob.<br>
   
   Next, we'll want to add a little more detail to these users. We'll add a profile picture and a quote for each user. Again, go to the resources folder in this directory, this time copying and pasting the code from the AddInformation file.<br>
+  
+  ![](/images/david-gdb-22.png)<br>
+<br>
+  
   Each follows this basic format:
   
 ```
@@ -948,8 +952,8 @@ SET n.image = 'https://some-image-url.jpg'
 SET n.quotes = 'Here is a really meaningful quote!'
 ```
 
-First we MATCH "n" to the node with name "UserName". Then we use SET to add these two new fields.<br>
-<br>
-  Phew! And we're done. To recap, we added a Person named Rachel Webb, gave her followers, and then added some more followers to Rachel Webb's followers through our createFollowers resource. Then, we added two more attributes to each person, their image and a quote that they display. Awesome!
+First we MATCH "n" to the node with name "UserName". Then we use SET to add these two new fields.<br><br>
+
+  Phew! And we're done. To recap, we added a Person named Rachel Webb, gave her followers, and then added some more followers to Rachel Webb's followers through our createFollowers resource. Then, we added two more attributes to the person with the name "UserName": their image and a quote that they display. Awesome!
   
 </details>
