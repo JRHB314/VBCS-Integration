@@ -918,7 +918,7 @@ Great! Everything looks correct. Now let's say that we want userC to be followed
 <br> 
   
 <br>
-  Let's take a moment to review a few things. First of all, the large chunk of code that we just placed had a line that said
+  Let's take a moment to review a few things. First of all, the large chunk of code that we just placed had a line that said:<br>
   
   ```
   WITH count(*) as dummy
