@@ -952,7 +952,7 @@ SET n.image = 'https://some-image-url.jpg'
 SET n.quotes = 'Here is a really meaningful quote!'
 ```
 
-First we MATCH "n" to the node with name "UserName". Then we use SET to add these two new fields.<br><br>
+First we MATCH "n" to the node with name "UserName". Then we use SET to add these two new fields.<br>
 
   Phew! And we're done. To recap, we added a Person named Rachel Webb, gave her followers, and then added some more followers to Rachel Webb's followers through our createFollowers resource. Then, we added two more attributes to the person with the name "UserName": their image and a quote that they display. Awesome!
   
