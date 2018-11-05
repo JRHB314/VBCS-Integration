@@ -782,13 +782,13 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   In graph databases, there are `Nodes` and `Relationships`. Nodes are enclosed in parantheses to resemble circles, and relationships are described using arrows. Copy and paste this code in the top console bar:
   
   ```
-  CREATE (userA:Person {name:"A"}) // here, we create a node that is a "Person" with an attribute called name
-  CREATE (userB:Person {name:"B"}) // create another node that represents a "Person" with an attribute called name
-  CREATE (userA)-[rel:FOLLOWS]->(userB) // create a relationship between the 2 nodes. In this case, userA FOLLOWS userB
+  CREATE (userA:Person {name:"A"}) 
+  CREATE (userB:Person {name:"B"}) 
+  CREATE (userA)-[rel:FOLLOWS]->(userB) 
   return userA, userB, rel
   ```
   
-  In this code snippet, we are creating two users, identified by userA and userB, of type person with an attribute called "name". After we have the two nodes created, we creat a relationship identified by "rel" of type "FOLLOWS" between userA and userB.<br>
+  Explanation: In this code snippet, we are creating two users, identified by userA and userB, of type "Person" with an attribute called "name". After we have the two nodes created, we create a relationship identified by "rel" of type "FOLLOWS" between userA and userB.<br>
   
   Some helpful commands: 
   - `MATCH (n) RETURN (n)` to view all nodes and relationships<br> 
