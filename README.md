@@ -727,3 +727,9 @@ Try loading the page again. It works! We have now successfully implemented the s
 </details>
 
 <h2> Lab 400: Connecting VBCS to a Graph Database (Neo4j) </h2>
+
+In this part of the lab, we'll learn a bit about how Graph Databases work, and see how to integrate them with VBCS.
+
+<details>
+  
+</details>
