@@ -1025,19 +1025,19 @@ SET n.image = 'https://statici.behindthevoiceactors.com/behindthevoiceactors/_im
 SET n.quotes = 'There is nothing on this earth more to be prized than true friendship.'
 ```
 ```
-MATCH (n:Person {name:'AprilGold'}) 
-SET n.image = 'https://www.babysense.com/wp-content/uploads/2015/07/colostrum.jpg'
-SET n.quotes = 'If you are a dreamer come in. If you are a dreamer a wisher a liar A hoper a pray-er a magic-bean-buyer. If youre a pretender come sit by my fire. For we have some flax golden tales to spin. Come in! Come in!'
+MATCH (n:Person {name:'PamelaSelzer'}) 
+SET n.image = 'https://ubisafe.org/images/candy-transparent-cute-1.png'
+SET n.quotes = 'All our dreams can come true, if we have the courage to pursue them.'
 ```
 ```
-MATCH (n:Person {name:'AprilGold'}) 
-SET n.image = 'https://www.babysense.com/wp-content/uploads/2015/07/colostrum.jpg'
-SET n.quotes = 'If you are a dreamer come in. If you are a dreamer a wisher a liar A hoper a pray-er a magic-bean-buyer. If youre a pretender come sit by my fire. For we have some flax golden tales to spin. Come in! Come in!'
+MATCH (n:Person {name:'BobFlinstone'}) 
+SET n.image = 'https://www.picclickimg.com/d/w1600/pict/332416334055_/Antique-18-grinding-stone-wheel.jpg'
+SET n.quotes = 'Always remember that you are absolutely unique. Just like everyone else.'
 ```
 ```
-MATCH (n:Person {name:'AprilGold'}) 
-SET n.image = 'https://www.babysense.com/wp-content/uploads/2015/07/colostrum.jpg'
-SET n.quotes = 'If you are a dreamer come in. If you are a dreamer a wisher a liar A hoper a pray-er a magic-bean-buyer. If youre a pretender come sit by my fire. For we have some flax golden tales to spin. Come in! Come in!'
+MATCH (n:Person {name:'RajeshBishnoi'}) 
+SET n.image = 'https://i.ebayimg.com/images/g/wv4AAOSwGIRXaoE5/s-l300.jpg'
+SET n.quotes = 'Still round the corner there may wait / A new road or a secret gate / And though I oft have passed them by / A day will come at last when I / Shall take the hidden paths that run / West of the Moon, East of the Sun.'
 ```
   Phew! And we're done.
   
