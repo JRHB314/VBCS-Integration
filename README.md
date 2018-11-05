@@ -915,9 +915,15 @@ Great! Everything looks correct. Now let's say that we want userC to be followed
 <br> 
   
 <br>
-  Let's take a moment to review a few things. First of all, the large chunk of code that we just placed had a line that said: `WITH count(*) as dummy`. What is this? This simply allows us to run multiple Cypher commands at once. Cypher doesn't like to run unrelated queries; the WITH statement links the queries, but essentially does nothing. Think of this as a workaround to make it easier to share the code.<br>
+  Let's take a moment to review a few things. First of all, the large chunk of code that we just placed had a line that said
   
-  Here's another thing to note. In the code that we just pasted, take a close look at userE:
+  ```
+  WITH count(*) as dummy
+  ```
+  
+  What is this? This line simply allows us to run multiple Cypher commands at once. Cypher doesn't like to run unrelated queries; the `WITH` statement links the queries together, but essentially does nothing. Think of this as a workaround to make it easier to share the code.<br>
+  
+  Here's another thing to note. In the code that we just pasted, take a close look at userE:<br>
   
   ```
   MATCH (userE:Person {name:"MariaGomez"})
