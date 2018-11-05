@@ -865,7 +865,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   CREATE (:Person {name:followerName})-[:FOLLOWS]->(userA))
   ```
   
-  View all the current nodes/relationships: `MATCH (n) RETURN (n)`
+  View all the current nodes/relationships: `MATCH (n) RETURN (n)`.
   
   Now that we have a person named Rachel Webb along with some people that follower her, let's give some of her followers their own followers: 
   
@@ -915,7 +915,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   CREATE (userID)-[:FOLLOWS]->(userG))
   ```
   
-  This is plenty to work with, so let's assume that the rest of Rachel Webb's followers in the list have no followers of their own. Now let's run `MATCH (n) RETURN (n)` to see our graph.
+  This is plenty to work with, so let's assume that the rest of Rachel Webb's followers in the list have no followers of their own. Now let's run `MATCH (n) RETURN (n)` to see our graph:
   
   <img>
   
