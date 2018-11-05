@@ -782,7 +782,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
 </details>
 
 <details>
-  <summary>1. (Optional) Getting Familiar with Graph Databases </summary>
+  <summary>1. <b>(Optional)</b> Getting Familiar with Graph Databases </summary>
   
   <b>Note</b>: You can skip this section and jump to the next if you are already know how graph databases work.
   
