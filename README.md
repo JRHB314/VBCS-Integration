@@ -725,3 +725,5 @@ Now go back to the `Designer` view, click the submit button, and bind this actio
 Try loading the page again. It works! We have now successfully implemented the search functionality.
 
 </details>
+
+<h2> Lab 400: Connecting VBCS to a Graph Database (Neo4j) </h2>
