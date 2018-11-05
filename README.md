@@ -854,7 +854,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
 </details>
 
 <details>
-  <summary>3. Populating Our Graph Database </summary>
+  <summary>3. Populating Our Graph Database </summary><br>
   
   Let's create a user temporarily identified by userA named RachelWebb. Then, let's create 6 people that follow her:
   
