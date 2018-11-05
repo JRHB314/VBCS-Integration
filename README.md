@@ -750,21 +750,32 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   ![](/images/david-gdb-3.png)<br>
 <br>
 
-  On the next page, a pop up should appear asking you to create a user. Click `Create user now`.
+  On the next page, a pop up should appear asking you to create a user. Click `Create user now`.<br>
   
   ![](/images/david-gdb-4.png)<br>
 <br>
 
-  Give your user a Label with no expiration date and click `Create User`.
+  Give your user a Label with no expiration date and click `Create User`.<br>
   
   ![](/images/david-gdb-5.png)<br>
 <br>
 
-  <b>Copy down your credentials. This is the only time you'll be able to see the password, so make a note of it.</b>
+  <b>Copy down your credentials. This is the only time you'll be able to see the password, so make a note of it.</b><br>
   
   ![](/images/david-gdb-6.png)<br>
 <br>
 
   <h3>Populate the Database </h3>
+  
+  Under the main dashboard's Overview tab, under the Tools section, hit `Launch`. This will open a Neo4j Browser in another tab.<br>
+  
+  ![](/images/david-gdb-7.png)<br>
+<br>
+
+  On the top section of the page, we can write console commands to begin populating our database.<br>
+
+  ![](/images/david-gdb-8.png)<br>
+<br>
+
   
 </details>
