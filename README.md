@@ -785,7 +785,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   <summary>2. <b>(Optional)</b> Getting Familiar with Graph Databases </summary><br>
   
   <b>Note</b>: You can skip this section and jump to the next if you are already know how graph databases work.<br>
-<br>  
+
   In graph databases, there are `Nodes` and `Relationships`. Neo4j uses a language called Cypher to interact with its databases, rather than the SQL statements of relational databases. Nodes are enclosed in parantheses to resemble circles, and relationships are described using arrows. For this example, we'll create a database of users, where each user can "follow" another user (think Instagram). Copy and paste this Cypher statement in the top console bar:
   
   ```
