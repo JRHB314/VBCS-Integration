@@ -782,11 +782,11 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
 </details>
 
 <details>
-  <summary>1. Getting Familiar with Graph Databases </summary>
+  <summary>1. (Optional) Getting Familiar with Graph Databases </summary>
   
-  <h3><b>Note: You can skip this section and jump to the next if you are already know how graph databases work.</b></h3>
+  <b>Note: You can skip this section and jump to the next if you are already know how graph databases work.</b>
   
-  In graph databases, there are `Nodes` and `Relationships`. Nodes are enclosed in parantheses to resemble circles, and relationships are described using arrows. Copy and paste this cypher statement (the graph database equivalent of sql statements in relational databases) in the top console bar:
+  In graph databases, there are `Nodes` and `Relationships`. Nodes are enclosed in parantheses to resemble circles, and relationships are described using arrows. For this example, we'll create a database of users, where each user can "follow" another user (think Instagram). Copy and paste this cypher statement (the graph database equivalent of sql statements in relational databases) in the top console bar:
   
   ```
   CREATE (userA:Person {name:"A"}) 
@@ -820,11 +820,42 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   return userA, userC, rel
   ```
   
-  Great! userA is now properly following userC. However, if we run `MATCH (n) RETURN (n)`, we'll see that there's an empty node following userC. To get rid of it, hover over the invisible node, grab it's id and run `MATCH (n) where id(n) = # DETACH DELETE n` where # is the ID of the node.<br>
+  Great! userA is now properly following userC. However, if we run `MATCH (n) RETURN (n)`, we'll see that there's an empty node following userC. To get rid of it, hover over the invisible node, grab its id and run `MATCH (n) where id(n) = # DETACH DELETE n` where # is the ID of the node.<br>
   
   <img><br>
   
   Now run this line of code to see all of our nodes/relationships so far: `MATCH (n) RETURN (n)`.
+  
+  Great! Everything looks correct. Now let's say we want userC to be followed by 5 other users. We could create 5 followers and then define their relationship with userC, but the easier approach would be to use a `FOREACH` loop:
+  
+  ```
+  MATCH (userC:Person {name:"C"})
+  FOREACH (followerName in ["follower1","follower2","follower3","follower4","follower5"] |
+  CREATE (:Person {name: followerName})-[:FOLLOWS]->(userC))
+  ```
+  
+  Notice that here in the relationship, we don't need to write `[rel:FOLLOWS]` because we don't need to return the relationship identifier.<br>
+  
+  If we want to view who follows userC:
+  
+  ```
+  MATCH (cFollowers)-[:FOLLOWS]->(userC:Person {name:"C"})
+  RETURN userC, cFollowers
+  ```
+  
+  <img>
+  
+  Now that we've had a little practice with Neo4j and graph databases, let's jump into creating the actual data we'll use to mimic our "Instagram model". Reset the database with:
+  
+  ```
+    MATCH (n) DETACH DELETE n
+  ```
+  
+</details>
 
+<details>
+  <summary>1. Populating Our Graph Database </summary>
+  
+  Test
   
 </details>
