@@ -797,11 +797,13 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   
   <b>Explanation</b>: In this code snippet, we are creating two users, identified by userA and userB, of type "Person" with an attribute called "name". After we have the two nodes created, we create a relationship identified by "rel" of type "FOLLOWS" between userA and userB.<br>
   
-  <img><br>
+  ![](/images/david-gdb-9.png)<br>
+<br>
   
   Notice that all nodes have a unique ID field (similar to primary keys in the relational database model).<br>
   
-  <img><br>
+  ![](/images/david-gdb-10.png)<br>
+<br>
   
   With 2 nodes and a relationship successfully created, let's create a 3rd node/relationship. Enter the following code snippet in the console:
   
@@ -866,6 +868,8 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   ```
   
   View all the current nodes/relationships: `MATCH (n) RETURN (n)`.
+  
+  <img>
   
   Now that we have a person named Rachel Webb along with some people that follower her, let's give some of her followers their own followers: 
   
