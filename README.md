@@ -944,7 +944,7 @@ Great! Everything looks correct. Now let's say that we want userC to be followed
   ![](/images/david-gdb-22.png)<br>
 <br>
   
-  Each follows this basic format:
+  Each statement follows this basic format:
   
 ```
 MATCH (n:Person {name:'UserName'}) 
@@ -952,8 +952,8 @@ SET n.image = 'https://some-image-url.jpg'
 SET n.quotes = 'Here is a really meaningful quote!'
 ```
 
-First we MATCH "n" to the node with name "UserName". Then we use SET to add these two new fields.<br>
+First we MATCH "n" to the node with name "UserName". Then we use SET to add these two new fields. The AddInformation file runs a bunch of these Cypher statements for each respective user.<br>
 
-  Phew! And we're done. To recap, we added a Person named Rachel Webb, gave her followers, and then added some more followers to Rachel Webb's followers through our createFollowers resource. Then, we added two more attributes to the person with the name "UserName": their image and a quote that they display. Awesome!
+  Phew! And we're done. To recap, we added a Person named Rachel Webb, gave her followers, and then added some more followers to Rachel Webb's followers through our createFollowers resource. Then, we added two more attributes to each person: their image URL, and a quote that they display. Awesome!
   
 </details>
