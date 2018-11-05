@@ -782,7 +782,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
 </details>
 
 <details>
-  <summary>2. <b>(Optional)</b> Getting Familiar with Graph Databases </summary>
+  <summary>2. <b>(Optional)</b> Getting Familiar with Graph Databases </summary><br>
   
   <b>Note</b>: You can skip this section and jump to the next if you are already know how graph databases work.
   
@@ -856,12 +856,67 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
 <details>
   <summary>3. Populating Our Graph Database </summary><br>
   
-  Let's create a user temporarily identified by userA named RachelWebb. Then, let's create 6 people that follow her:
+  Let's create a user temporarily identified by userA named Rachel Webb. Then, let's create some people that follow her:
   
   ```
   CREATE (userA:Person {name:"RachelWebb"})
   FOREACH (followerName in ["SamArcher", "AprilGold", "JacqueNoir", "BradHillman", "JaneDoe", "AngelinaGibbs",   "YukiTsukino","JohanLitwick","VelmaGarcia","PamelaSelzer"] |
   CREATE (:Person {name:followerName})-[:FOLLOWS]->(userA))
   ```
+  
+  View all the current nodes/relationships: `MATCH (n) RETURN (n)`
+  
+  Now that we have a person named Rachel Webb along with some people that follower her, let's give some of her followers their own followers: 
+  
+  ```
+  MATCH (userB:Person {name:"SamArcher"})
+  FOREACH (userName in ["BradHillman", "BobFlinstone", "JaneDoe"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userB))
+  ```
+  
+  We just gave Sam Archer 3 more followers. In this code snippet, we use `MERGE` instead of `CREATE` since we want to create a relationship for an existing node. We would also use `MERGE` when our node doesn't exist yet and we need to create it at the time we run the cypher statement. userID is an arbitrary identifier we give to the creation of these new nodes when using the `MERGE` function.<br>
+  
+  Let's give a couple of Rachel Webb's followers more followers for a slightly more complex graph. Run these:
+  
+  ```
+  MATCH (userC:Person {name:"AprilGold"})
+  FOREACH (userName in ["RachelWebb", "BobFlinstone", "JaneDoe", "RajeshBishnoi", "JohanLitwick", "PamelaSelzer"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userC))
+  ```
+  
+  ```
+  MATCH (userD:Person {name:"JacqueNoir"})
+  FOREACH (userName in ["MariaGomez", "JohanLitwick"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userD))
+  ```
+  
+  ```
+  MATCH (userE:Person {name:"MariaGomez"}) // MariaGomez isn't one of Rachel Webb's followers in the defined list
+  FOREACH (userName in ["JacqueNoir"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userE))
+  ```
+ 
+  ```
+  MATCH (userF:Person {name:"BradHillman"})
+  FOREACH (userName in ["JaneDoe", "RajeshBishnoi"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userF))
+  ```
+ 
+  ```
+  MATCH (userG:Person {name:"JaneDoe"})
+  FOREACH (userName in ["BradHillman"] |
+  MERGE (userID:Person {name:userName})
+  CREATE (userID)-[:FOLLOWS]->(userG))
+  ```
+  
+  This is plenty to work with, so let's assume that the rest of Rachel Webb's followers in the list have no followers of their own. Now let's run `MATCH (n) RETURN (n)` to see our graph.
+  
+  <img>
+  
   
 </details>
