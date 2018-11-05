@@ -794,12 +794,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   CREATE (userA)-[rel:FOLLOWS]->(userB) 
   return userA, userB, rel
   ```
-  <b>Explanation</b>: In this code snippet, we are creating two users, referenced by userA and userB, of type "Person", with an attribute called "name". After we have the two nodes created, we create a relationship referenced by "rel" of type "FOLLOWS" between userA and userB.<br>
-  
-  ![](/images/david-gdb-9.png)<br>
-<br>
-  
-  Notice that all nodes have a unique ID field (similar to primary keys in the relational database model).<br>
+  <b>Explanation</b>: In this code snippet, we are creating two users, referenced by userA and userB, of type "Person", with an attribute called "name". After we have the two nodes created, we create a relationship referenced by "rel" of type "FOLLOWS" between userA and userB. Notice that all nodes have a unique ID field (similar to primary keys in the relational database model).<br>
   
   ![](/images/david-gdb-10.png)<br>
 <br>
@@ -817,7 +812,7 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   
   Uh oh, it looks like the A node showed up blank. Why is that? We created userA in the previous Cypher statement, but because we are writing a separate Cypher statement, it has no idea how to reference that userA. That is, the references we create to nodes only last one statement, and can be changed in the next; "userA" is not stored as a property of "A". We could call it "N", "nodeA", or whatver we want, and it only has to be consistent within the query. <br>
   
-  Now, we have to first find A, as well as C since we just created them using `MATCH`. This is similar to a SELECT statement in SQL, and this allows us to use "userA" and "userC" as references.
+  Now we have to first find A and C since we just created them using `MATCH`. This is similar to a SELECT statement in SQL, and this allows us to use "userA" and "userC" as references.
   
 ```
   MATCH (userA:Person {name:"A"})
@@ -826,10 +821,10 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
   return userA, userC, rel
 ```
 
-  Great! A is now properly following C.<br>
-  
   ![](/images/david-gdb-12.png)<br>
 <br>
+
+  Great! A is now properly following C.<br>
   
 However, if we run `MATCH (n) RETURN (n)` to return all nodes, we'll see that there's still that empty node following C: 
 
@@ -846,7 +841,7 @@ Also note that `MATCH (n) RETURN (n)` simply returns all nodes; it doesn't <i>te
 ![](/images/david-gdb-15.png)<br>
 <br>
   
-Great! Everything looks correct. Now let's say we want userC to be followed by 5 other users. We could create 5 followers and then define their relationship with userC, but the easier approach would be to use a `FOREACH` loop:
+Great! Everything looks correct. Now let's say that we want userC to be followed by 5 other users. We could create 5 followers and then define their relationship with userC, but the easier approach would be to use a `FOREACH` loop:
   
   ```
   MATCH (userC:Person {name:"C"})
