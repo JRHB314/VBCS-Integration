@@ -9,9 +9,25 @@ The first thing to do is drag and drop an Input Text component into the top left
 In the next row, drag a Panel. By default, it fills the page horizontally, but this isn't what we want. We also can't drag the component to resize it the way we can most components. Go to the Code view and find the `oj-panel` div. You'll see something that says "oj-sm-12 oj-md-12". These indicate the how many columns the component should take up for "small" and "medium" views of the page. For this we will be working with medium screens, so change oj-md to oj-md-5. <br>
 {img}
 <br>
-Now let's add a picture. This will be the searched user's profile picture. Drag and drop an Image component into the left side of the panel. Drag an edge so it becomes four columns wide. In the General tab on the right, set width and height to 100. Next to the image we want to have three rows, so drag on a Flex Container object. Make sure it is only three columns wide. Drag and drop three Text components inside this container so that they are stack vertically. Name the first "Followers:", the second "Following:", and the third "Mutuals:". <br>
+Inside the panel, at the very left, drag on a Heading component. Drag the slider bar under the General tab so that it is only H4. Call this "Username".
+Now let's add a picture. This will be the searched user's profile picture. Drag and drop an Image component into the left side of the panel underneath Username. Drag an edge so it becomes four columns wide. In the General tab on the right, set width and height to 100. Next to the image we want to have three rows, so drag on a Flex Container object. Make sure it is only three columns wide. Drag and drop three Text components inside this container so that they are stack vertically. Name the first "Followers:", the second "Following:", and the third "Mutuals:". <br>
 {img}
 <br>
-To the left of these, we want to have three more Text components that will be filled with the follower, following, and mutual counts. Drag and drop another Flex Container to the right of the first, and add three Text components, each named "count". We will replace these with variables in a moment.
+To the left of these, we want to have three more Text components that will be filled with the follower, following, and mutual counts. Drag and drop another Flex Container to the right of the first, and add three Text components, each named "count". We will replace these with variables in a moment.<br>
+{img}
+<br>
+Keep in mind, if you lose track of a component or have trouble clicking on something to customize it, you can open up the Page Structure.<br>
+{img}
+<br>
+Click the icon again to close it.<br>
+<br>
+Next we need to create some String variables to be bound to our components.<br>
+-searchUsername: the username that will be searched. Put this in the Data field for the topmost Text field. 
+-username: the returned username. Put this variable in place of the "Username" heading we had before.
+-imageURL: will hold the returned source image url. Set the default value to `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png`. Then put this for the source url of the Image component.
+-followerCount: will hold the returned follower count. Put this in the Data field of the top "count" text.
+-followingCount: will hold the returned following count. Put this in the Data field of the middle "count" text.
+-mutualCount: will hold the returned mutuals count. Put this in the Data field of the bottom "count" text.
+
 
 need to set image url variable and all variables
