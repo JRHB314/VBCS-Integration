@@ -90,4 +90,26 @@ The response should look like this:
 }
 ```
 In the top right of the response, hit `Copy to Response Body`. Now hit Create.<br>
-<br>Action Chain. Click the button and go to the Events tab; hit `New Event`, then `QuickStart: click`. 
+
+<br>This means we are ready to set up an Action Chain. Back on our web page, click the button to go to its Events tab; hit `New Event`, then `QuickStart: click`. Drag a Call REST Endpoint action onto the plus sign in the chain, then click `Select Endpoint`.<br>
+{img}
+<br>
+Expand `Service Connections` and select the endpoint we just created. <br>
+{img}
+<br>
+Now we are going to append three string variables to create the request body. The first and last variables do not change; they are the main part of the request. The middle string is the searchUsername we already made. By appending all three we can change out which user we are searching for. <br>
+Go back to the main page's variables. Create two Strings, getDataPt1 and getDataPt2. <br>
+For getDataPt1, set this default value: `{  "statements": [   {    "statement": "MATCH (user:Person {name:  '`<br>
+For getDataPt2, set this default value: `'}) return user"   }  ] }`<br>
+Together with the searchUsername, it will be `{  "statements": [   {    "statement": "MATCH (user:Person {name: 'searchusername'}) return user"   }  ] }`. <br>
+Go back to the action chain. Click on the REST Call action, and then click on the body paramater. <br>
+{img}
+<br>
+Drag getDataPt1, then searchUsername, then getDataPt2, onto body. <br>
+{img}
+<br>
+Great! The request should be correctly formatted. Now, to display the response, we need to do one more action. Drag a Assign Variables action onto the next step in the chain, then hit `Assign` next to `Variables`. <br>
+On the left, expand callRestEndpoint1 -> body -> results -> item[0] -> data -> item[o] -> row -> item[0], until it looks like this:<br>
+{img}
+<br>
+Drag image on the left to imageURL on the right, name on the left to username on the left, and quotes on the left to quotes on the right. <br>
