@@ -37,8 +37,12 @@ This means we are ready to set up our Service Connection. On the far left, hit t
 Now, we need our REST endpoint URL. Reopen your GrapheneDB Database, and go to the Connection tab. There you will find your HTTP REST endpoint.<br>
 {img}
 <br>
-Copy and paste that URL on VBCS, then change Method to POST. <br>
+Copy and paste that URL on VBCS, then add `/transaction/commit` to the end of it. Change Method to POST. <br>
 {img}
 <br>
+Hit next. Change Service Name to "Neo4j Get User Data". <br>
+{img}
+<br>
+Go to the Authentication tab, and choose `Basic` from the dropdown. You should have already made a database user in GrapheneDB; if not, review part 1 of this lab. Enter in the username and password for this user. <b>This is not the same as your GrapheneDB account.</b>
 
 <br>Action Chain. Click the button and go to the Events tab; hit `New Event`, then `QuickStart: click`. 
