@@ -1,12 +1,12 @@
 
 ![](images/100/Picture100-lab.png)  
-Updated: February 10, 2017
+Updated: November 6, 2018
 
 ## Introduction
 
-This is the first of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the first of several labs that will show how to integrate different kinds of databases with VBCS. It will lead you through customizing your Web App, creating different kinds of databases, and finally, connecting them with your web page.
 
-You will take on 3 Personas during the workshop. The **Project Manager Persona** will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The **JavaScript Developer** persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
+This lab will start with creating your first Web App in VBCS. 
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -20,7 +20,7 @@ You will take on 3 Personas during the workshop. The **Project Manager Persona*
 - Add Issues to Sprint
 
 ## Required Artifacts
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
+- The following lab requires an Oracle Public Cloud account; you can sign up for a trial account [here](https://cloud.oracle.com/tryit). 
 
 
 # Create Twitter Feed Marketing Project
