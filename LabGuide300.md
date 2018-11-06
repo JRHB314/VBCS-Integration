@@ -9,8 +9,10 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 
 ## Objectives
 
-- Objective 1
-- Objective 2
+- Learn how to set up a Firebase Database
+- Connect to VBCs
+  - Display information from Database
+  - Request specific data
 
 ## Required Artifacts
 
