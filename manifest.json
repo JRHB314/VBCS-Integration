@@ -1,13 +1,13 @@
 {
     "workshop": {
-        "title": "Workshop Title",
-        "description": "Description of this workshop.",
+        "title": "VBCS Integration with Cloud Databases",
+        "description": "Connecting both Oracle and non-Oracle Databases, including relational, NoSQL, and graph databases, to VBCS.",
         "theme": "default",
         "interactive":"https://launch.oracle.com/?",
         "labs": [
             {
                 "number": "0",
-                "filename": "Intro.md",
+                "filename": "README.md",
                 "title": "Workshop Introduction",
                 "description": "Step-by-step workshop instructions"
 
@@ -15,29 +15,29 @@
             {
                 "number": "100",
                 "filename": "LabGuide100.md",
-                "title": "Lab 100: Agile Project Management, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage.",
-                "description": "Use Developer Cloud Service to create issues, tasks, and sprints, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage."
+                "title": "Lab 100: Creating Your First Web App",
+                "description": "This lab will start with creating your first Web App in VBCS."
 
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200:  Title of Lab 200",
-                "description": "Short description of lab 200"
+                "title": "Lab 200:  Connecting VBCS to an Oracle Database",
+                "description": "Oracle offers quick tools to integrate Oracle Cloud Databases with VBCS."
 
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300:  Title of Lab 300",
-                "description": "Short description of lab 300"
+                "title": "Lab 300:  Connecting to Firebase Database",
+                "description": "Connecting VBCS to a Firebase Realtime Database."
 
             },
             {
                 "number": "400",
                 "filename": "LabGuide400.md",
-                "title": "Lab 400: Title of Lab 400",
-                "description": "Short description of lab 400"
+                "title": "Lab 400: Connecting VBCS to a Graph Database ",
+                "description": "Learning how Graph Databases work, specifically, a free Graph Database called Neo4j."
 
             }
 
