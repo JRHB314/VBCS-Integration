@@ -31,13 +31,13 @@ This lab will start with creating your first Web App in VBCS.
   Go to the [Cloud sign in page](https://cloud.oracle.com/en_US/sign-in).
 
   Sign in to your Cloud Account. <br>
-  ![](/images/1.png) <br>
-  ![](/images/2.png) <br>
+  ![](/images/lab100/100-1.png) <br>
+  ![](/images/lab100/100-2.png) <br>
   <br>
 
   Navigate to Cloud Dashboard, then open the Visual Builder Service Console. If Visual Builder is not visible, click `Customize Dashboard`, then scroll to Visual Builder in the list and hit `Show`.<br>
 
-  ![](/images/3.png) <br> <br>
+  ![](/images/lab100/100-3.png) <br> <br>
   
 </details>
 
@@ -48,26 +48,26 @@ This lab will start with creating your first Web App in VBCS.
 
   Alternatively, you can hit the `Customize` button on the top right. This would allow you to configure the database that is created. For the purpose of this lab, we'll stick to the default QuickStart configuration.
 
-  ![](/images/5.png)<br><br>
+  ![](/images/lab100/100-5.png)<br><br>
 
   Next, download the generated SSH key and credentials in order to continue, which will allow you to access your instance.
 
-  <br>![](/images/12.png)<br>
+  <br>![](/images/lab100/100-12.png)<br>
   <br>
 
   Your instance will take some time to provision. When it's ready, open the Visual Builder Home page.
 
-  <br>![](/images/8.png)<br>
+  <br>![](/images/lab100/100-8.png)<br>
   <br>
 
   Now, we need to create a Visual Application. A single Visual Application can hold many mobile and web apps. From the home page, hit `New` in the top right. 
 
-  <br>![](/images/9.png)<br>
+  <br>![](/images/lab100/100-9.png)<br>
   <br>
 
   Name the application whatever you like; the Description is optional. 
 
-  <br>![](/images/10.png)<br>
+  <br>![](/images/lab100/100-10.png)<br>
   <br>
 
   Your new Application should open automatically. 
@@ -80,12 +80,12 @@ This lab will start with creating your first Web App in VBCS.
 
   On the left, hit the computer icon for `Web Apps`, then the plus sign to create a new Web App. Name it, then hit `Create`. 
 
-  <br>![](/images/11.png)<br>
+  <br>![](/images/lab100/100-11.png)<br>
   <br>
 
   A blank page will open in the center, with a Components Bar to the left and a Customization Bar on the right.<br>
   
-  ![](/images/14.png)<br>
+  ![](/images/lab100/100-14.png)<br>
   <br>
   
   Click on the `Design` view tab in the top right. Drag on an image component into the very top left corner of the page.<br>
@@ -94,11 +94,11 @@ This lab will start with creating your first Web App in VBCS.
   
   As it is, the image size is bigger than what we'd expect for our logo, so let's resize it. 
   
-  <br>![](/images/15.png)<br><br>
+  <br>![](/images/lab100/100-15.png)<br><br>
   
   Go to the `General` tab and set the `width` property to 150. Now that the image is resized, it looks much more fitting to be   our website's logo.<br>
   
-  ![](/images/16.png)<br>
+  ![](/images/lab100/100-16.png)<br>
   <br>
   
   Next, drag on a `Heading` component one column to the right of the logo. Under the `General` tab inside the `Text` field,   
@@ -106,8 +106,8 @@ This lab will start with creating your first Web App in VBCS.
   
   In the row below, drag over a tab bar. The tab bar defaults to three tabs, but we only need two for now. Hover over `Tab 3`   in the General tab, then hit the trash can icon. Rename the tabs `Home` and `Second Page`.<br>
   
-  ![](/images/17.png)<br>
-  ![](/images/1-17.5.png)<br>
+  ![](/images/lab100/100-17.png)<br>
+  ![](/images/lab100/100-1-17.5.png)<br>
   
   Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text.<br>
   
@@ -115,12 +115,12 @@ This lab will start with creating your first Web App in VBCS.
   tab, then expand `General Attributes` and scroll down to the `Style` field. Enter in `color: #67aee5;`. The color 
   changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
   
-  ![](/images/1-18.png)<br>
+  ![](/images/lab100/100-1-18.png)<br>
   <br>
   
   In addition, we can also edit the HTML and CSS code directly. Near the top right, hit the `Code` view for the page. <br>
   
-  ![](/images/1-19.png)<br><br>
+  ![](/images/lab100/100-1-19.png)<br><br>
   
   To customize the tab bar, we'll first define some style. Simply paste this at the top of the Code page.<br>
   
@@ -141,11 +141,11 @@ This lab will start with creating your first Web App in VBCS.
   We will add this style as div classes to our tabs, with dull being for the tab we are currently on, and bright being for 
   tabs we are not on.<br>
 
-  ![](/images/1-20.png)<br><br>
+  ![](/images/lab100/100-1-20.png)<br><br>
   
   Back on the design tab, we can view changes we made to the tab bar. As demonstrated, you can code HTML and CSS for your web   app the way you would for any website, while also having the option to change it in the Design view, giving you much greater flexibility.<br>
   
-  ![](/images/1-21.png)<br>
+  ![](/images/lab100/100-1-21.png)<br>
   <br>
   
  </details>
@@ -154,15 +154,15 @@ This lab will start with creating your first Web App in VBCS.
   <summary>Add Navigation</summary>
 
   In order for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. We want to carry over the components from the first page to this home page (logo, title, navbar) so we'll go ahead and copy it. Go to the Web App heirarchy on the left, right click on main-start and hit `Duplicate`. Then rename the page `second-page`.<br>
-  ![](/images/1-33.png)<br>
+  ![](/images/lab100/100-1-33.png)<br>
   <br>
   
   Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
-  ![](/images/1-23.png)<br>
+  ![](/images/lab100/100-1-23.png)<br>
   <br>
   
   On the Design view, change "Welcome to the Home Page" to say "Welcome to the Second Page". It should look like this.<br>
-  ![](/images/1-24.png)<br>
+  ![](/images/lab100/100-1-24.png)<br>
   <br>
   
   Next, let's create some <i>events</i> and <i>action chains</i>. These will allow us to navigate to the second page and back 
@@ -171,19 +171,19 @@ This lab will start with creating your first Web App in VBCS.
   Click on flow `main`, and hit the flag icon near the left to open up `Actions`. Creating an action chain at the flow level 
   allows us to reuse these components on each page.<br>
   
-  ![](/images/25.png)<br>
+  ![](/images/lab100/100-25.png)<br>
   <br>
   
   Hit `+ Action Chain` to create a new action chain and call it something like `navigateHome`. <br>
   Drag and drop a Navigate component to the plus sign, then click `Select Target`.<br>
   
-  ![](/images/26.png)<br>
+  ![](/images/lab100/100-26.png)<br>
   <br>
  
   Choose `Peer Page`, and then `main-start`.<br>
   
-  ![](/images/27.png)<br>
-  ![](/images/28.png)<br>
+  ![](/images/lab100/100-27.png)<br>
+  ![](/images/lab100/100-28.png)<br>
   <br>
   
   Repeat this process for a navigateSecondPage action chain, this time selecting second-page as target.<br>
@@ -191,22 +191,22 @@ This lab will start with creating your first Web App in VBCS.
   
   Events need to be created at the page level, because the event that triggers your action happens on a particular page. Go     back to main-start and click on the bell icon near the left to go to Events. Hit `+ Event Listener`.
   
-  ![](/images/29.png)<br>
+  ![](/images/lab100/100-29.png)<br>
   <br>
   
   Scroll down to "Other Events" and hit the plus sign. Call this something like `clickHomeTab`. When done, hit `Select`.<br>
   
-  ![](/images/30.png)<br>
+  ![](/images/lab100/100-30.png)<br>
   <br>
   
   On the next page, select `navigateHome` for the action chain, then hit `Select`.<br>
-  ![](/images/31.png)<br>
+  ![](/images/lab100/100-31.png)<br>
   <br>
   
   Repeat this process for creating cxckSecondTab and having it trigger navigateSecondPage.<br>
   Then, create these same events for second-page.<br>
   
-  ![](/images/32.png)<br>
+  ![](/images/lab100/100-32.png)<br>
   <br>
   
   Last but not least, we want to connect these event listeners to be activated whenever our tabs are clicked. Go to Code view,   and add the onclick listener after the lid for both tabs. Enter
@@ -217,7 +217,7 @@ This lab will start with creating your first Web App in VBCS.
   
   where eventName is the name of your event for each tab (i.e., clickHomeTab and clickSecondTab). <br>
   
-  ![](/images/1-34.png)<br>
+  ![](/images/lab100/100-1-34.png)<br>
   <br>
   
   Note that many components have an Events tab that allows you to create an event and action chain all in one click, but    
@@ -230,6 +230,6 @@ This lab will start with creating your first Web App in VBCS.
   
   Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
   
-  ![](/images/1-7.png)<br>
+  ![](/images/lab100/100-1-7.png)<br>
   <br>
 </details>
