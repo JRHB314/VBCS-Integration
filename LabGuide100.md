@@ -70,6 +70,7 @@ This lab will start with creating your first Web App in VBCS.
   <br>
 
   Your new Application should open automatically. 
+</details>
 
 ### **STEP 2**: Creating a Web App
 
