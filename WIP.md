@@ -5,7 +5,8 @@ Create two variables:
 -title, which will hold the heading for our list
 -relationsList, which will hold the returned list
 On page designer, drag and drop a Heading component below the panel, and set its Text value to `title`. Right below that, drag and drop a Paragraph component. Make it only one column wide. This will force the line to wrap, so that each listed user appears on a new line. Set its Text value to `relationsList`. <br>
-{img}<br}
+{img}<br>
 <br>
+Next we need three onClick listeners for our three labels. Create three actionchains, called "loadFollowers", "loadFollowing", and "loadMutuals". Leave them blank for right now. 
 
 # rels listed
