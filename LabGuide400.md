@@ -487,7 +487,14 @@ Test your webpage: it should be working!<br>
 </details>
 
 <details>
-  <summary> Follower, Following, and Mutuals Listed </summary>
+  <summary> Set Up Page for Listing Relationships </summary>
+  <br>
+  
+  
+</details>
+
+<details>
+  <summary> Followers, Following, and Mutuals Listed </summary>
   <br>
   
   
