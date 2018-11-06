@@ -367,7 +367,7 @@ Great job!
 ### **STEP 2**: Searching Books on VBCS
 
 <details>
-  <summary>Set Up Search Page </summary>
+  <summary> Set Up Search Page </summary>
   <br>
   
     Let's review what we've done until this point. So far, we've built our web application, created a Firebase database and populated it with information, and wrote custom Javascript to extract data from our database URL. We invoked those functions and had them run at page load time, and we were able to display book images and descriptions on our catalog page. Great! But what if we want to display books based on a user search? That takes a bit of extra work. We'll need to first capture the user's input, and then parse our JSON object accordingly.<br>
