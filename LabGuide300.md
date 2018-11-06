@@ -36,20 +36,20 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   <br>
   
   Go to the [Firebase Website](https://firebase.google.com/products). Select Realtime Database.<br>
-  ![](/images/3-1.png)<br>
+  ![](/images/lab300/300-3-1.png)<br>
   <br>
   Click "Visit Console" then "Add Project".
-  ![](/images/3-2.png)<br>
-  ![](/images/3-3.png)<br>
+  ![](/images/lab300/300-3-2.png)<br>
+  ![](/images/lab300/300-3-3.png)<br>
   <br>
   Choose a name, leave the default settings for location, make sure all three boxes are checked, then hit Create Project.<br>
-  ![](/images/3-4.png)<br>
+  ![](/images/lab300/300-3-4.png)<br>
   <br>
   It will take 10 seconds or so to create, then the page should redirect you to your Database home page. Note that currently, there is no data in our database.<br>
-  ![](/images/3-5.png)<br>
+  ![](/images/lab300/300-3-5.png)<br>
   <br>
   First thing we need to do is edit the security rules to allow read write access. Since this is just a test database, it doesn't need to be secure. Go to the Rules tab and simply change read and write to "true". For a real project, you would want more specific rules. Google has documentation on how to create more complex rules [here](https://firebase.google.com/docs/database/security). <br>
-  ![](/images/3-12.png)<br>
+  ![](/images/lab300/300-3-12.png)<br>
   
 </details>
 
@@ -58,24 +58,24 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   <br>
   
   Now, inside this GitHub repository, navigate to the "resources" directory and download the bookList.json file. Open it inside VCode or your preferred text editor. Note the structure is of several book objects identified by ISBN. <br>
-  ![](/images/3-6.png)<br>
+  ![](/images/lab300/300-3-6.png)<br>
   <br>
   Go back to the Data tab of your Database. Near the top right, hit the three dots dropdown, then "Import JSON".<br>
-  ![](/images/3-7.png)<br>
+  ![](/images/lab300/300-3-7.png)<br>
   <br>
   Import the bookList.json file.<br>
-  ![](/images/3-8.png)<br>
+  ![](/images/lab300/300-3-8.png)<br>
   <br>
   Your database should populate with the information from the file.<br>
-  ![](/images/3-9.png)<br>
+  ![](/images/lab300/300-3-9.png)<br>
   <br>
   To test that everything is set up correctly, enter the shown url for the Database /books.json into a browser.<br>
-  ![](/images/3-10.png)<br>
+  ![](/images/lab300/300-3-10.png)<br>
   ```
   https://projectname-XXXXX.firebaseio.com/books.json
   ```
   A list of the books and all their info should be shown. <br>
-  ![](/images/3-11.png)<br>
+  ![](/images/lab300/300-3-11.png)<br>
   <br>
 
   Sidenote: If the formatting of your data looks different, add the JSON Viewer extension to your Chrome browser: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=en-US.
@@ -90,15 +90,15 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   <br>
   
   First thing we want to do is create another page, this one called book-catalog, on which we will display our book descriptions and images. Right click on main-start and hit `Duplicate`, then right click on the copy to rename it `book-catalog`. On the Design view of the page, click on the "Welcome to the Home Page" heading, then hit the trash can icon in the bottom left of the right bar to delete the component.<br>
-![](/images/3-25.png)<br>
+![](/images/lab300/300-3-25.png)<br>
 <br>
 Now we have to update the tab bar to include this new page. Go to the code view for the page and look for the "oj-tab-bar-XXXXXXXXX-X" item. Inside that you should see two oj-tab-bar-XXXXXXXXX-X-tab-X items. Copy the code for the first tab (the one with dull formatting) and paste it right below the code for the second tab. Rename the tab "Catalog" and change the listener to clickCatalogTab (though this event does not yet exist. Finally, change the first tab's style to bright, so only the third tab is dull.<br>
-![](/images/3-26.png)<br>
+![](/images/lab300/300-3-26.png)<br>
 <br>
 You could have gone to customize the tab bar on the Design view and hit the plus sign to the right of the title `Tabs` in the customization bar, but this would not have copied the style or the listener.<br>
 <br>
 Repeat this process for the other pages, but on the other pages, the Catalog tab should have bright styling. <br>
-![](/images/3-27.png)<br>
+![](/images/lab300/300-3-27.png)<br>
 <br>  
 Now we just need to create our action chain navigateCatalogPage (created at the flow level) and our event clickCatalogTab (created for each page) and we are good to go. Double check that you can navigate between all three pages.<br>
   
@@ -134,7 +134,7 @@ Now we just need to create our action chain navigateCatalogPage (created at the 
       clear: both;
   }
   ```
-  ![](/images/3-d1.png)<br>
+  ![](/images/lab300/300-3-d1.png)<br>
   <br>
   
   With these 2 div objects properly set up, we'll be able to identify where the javascript should populate the images and descriptions. Let's move on to the actual function.<br>
@@ -146,7 +146,7 @@ Now we just need to create our action chain navigateCatalogPage (created at the 
   <br>
   VBCS requires that functions be written in a very particular way. You will see the base outline for this already here.<br>
 
-![](/images/3-14.png)<br>
+![](/images/lab300/300-3-14.png)<br>
 <br>
 
 The outermost function will return a PageModule object to VBCS; it sends all of the module functions we create to VBCS so we can more easily access them in other components. Each module can be treated like a separate Javascript file.<br>
@@ -304,22 +304,22 @@ Careful with your brackets here; it's easy to get one too many or one too few. <
   
   We want this function to be called whenever the page loads. Go to `Events` on the left sidebar for the Catalog page.<br>
 Click `Create Event Listener`, then under `Lifecycle Events`, select `vbEnter`. This will be an event that runs whenever the page loads.<br>
-![](/images/3-15.png)<br>
+![](/images/lab300/300-3-15.png)<br>
 <br>
 Hit the + sign next to Page Action Chains to create a new action chain. Name this runLoadDescriptions.<br>
-![](/images/3-16.png)<br>
+![](/images/lab300/300-3-16.png)<br>
 <br>
 Click on the name of your event, then on the right side hit the link to open the action chain editor.<br>
-![](/images/3-17.png)<br>
+![](/images/lab300/300-3-17.png)<br>
 <br>
 Drag "Call Module Function" onto the plus sign.<br>
-![](/images/3-18.png)<br>
+![](/images/lab300/300-3-18.png)<br>
 <br>
 Select Module Function. You should see a Page Function named loadDescriptions in the list. Select it, and you should be good to go.<br>
-![](/images/3-19.png)<br>
+![](/images/lab300/300-3-19.png)<br>
 <br>
 Test the page, and the books should appear on the Catalog page. <br>
-![](/images/3-20.png)<br>
+![](/images/lab300/300-3-20.png)<br>
 <br>
 Now we are going to create our other module, loadImages. The process is basically the same, except we are appending images instead of text.<br>
 Insert this code alongside the first module:
@@ -359,7 +359,7 @@ Insert this code alongside the first module:
 Add another action change under vbEnter, this one called `runLoadImages`. Set it up the same as runLoadDescriptions, with this one calling the loadImages module.<br>
 <br>
 Test the page one more time, and we should see the book covers to the left of the book descriptions. <br>
-![](/images/3-21.png)<br>
+![](/images/lab300/300-3-21.png)<br>
 <br>
 Great job!
 </details>
@@ -375,7 +375,7 @@ Great job!
   First create a third page for this website's search functionality. We'll call it "search". Duplicate `main-start` and rename the copy `search`.<br> 
 Change "Welcome to the Home page." to say "Search". Drag and drop a `user input` box for the user to type in their search term, followed by a `button` for running that search. Click on the `Input Text` label and change it to say "Genre:". Let's also drag over a button to the right of the input text. Change the text of the button to "search".<br> 
  
- ![](/images/3-ds3.png)<br>
+ ![](/images/lab300/300-3-ds3.png)<br>
 <br>
 
 Note, however, that we only have three tabs; we need to make one more tab for the new page.<br>
@@ -386,17 +386,17 @@ Briefly,<br>
 -Create an event listener on each page called clickSearchTab.<br>
 Review Step 2. if you want more specific instructions. 
 
- ![](/images/3-30.png)<br>
+ ![](/images/lab300/300-3-30.png)<br>
 <br>
  
   Now that we've finished our simple layout, we need to save the user's input into a variable. On the left side click the (x) icon to open up `Variables` page. Create a new variable and call it "genre".<br>
  
- ![](/images/david-search-5.png)<br>
+ ![](/images/lab300/300-david-search-5.png)<br>
 <br>
  
  Go back to the search page and click on the text input box. Under `Data`, enter `{{ $page.variables.genre }}`. This saves the value that the user types into our genre variable.
  
- ![](/images/david-search-6.png)<br>
+ ![](/images/lab300/300-david-search-6.png)<br>
 <br>
 </details>
 
@@ -492,7 +492,7 @@ Review Step 2. if you want more specific instructions.
       };
  ```
  
- ![](/images/david-search-7.png)<br>
+ ![](/images/lab300/300-david-search-7.png)<br>
 <br>
 </details>
 
@@ -502,32 +502,32 @@ Review Step 2. if you want more specific instructions.
   
   Now that we have our logic, let's bind this logic to an action. Under Designer view, click the Search button. Under the `Events` tab, click `New Event -> Quick Start Click`. 
  
- ![](/images/david-search-8.png)<br>
+ ![](/images/lab300/300-david-search-8.png)<br>
 <br>
  
  An action chain window has popped up. Drag over a `Call Module Function`. Click `Select Module Function`. Under "Page Functions", select our `loadImages` function.<br>
  
- ![](/images/david-search-9.png)<br>
+ ![](/images/lab300/300-david-search-9.png)<br>
 <br>
 
 Recall that our function now takes in a paramter, so on the right side under `Input Paramters`, map `inputGenre` to our `Genre` variable. Click `save`.<br> 
 
-![](/images/david-search-10.png)<br>
+![](/images/lab300/300-david-search-10.png)<br>
 <br>
 
  Now perform the same steps for the `loadDescriptions` function (drag another module function in for the loadDescriptions function, and bind the paramters to the function). The end action chain should look like this: <br>
 
- ![](/images/david-search-11.png)<br>
+ ![](/images/lab300/300-david-search-11.png)<br>
 <br>
 
  Let's test our page out. Click the `Live` button at the top right corner. Enter in `Fantasy` and hit search. Our website now loads all the books with the fantasy genre! <i>(If the search button displays at the bottom of the page instead of the top, re-order the left-column and right-column HTML divs to the end of your page HTML code).</i>
  
- ![](/images/3-ds12.png)<br>
+ ![](/images/lab300/300-3-ds12.png)<br>
 <br>
  
 Try hitting the search button again. Uh oh, looks like the page is getting populated with the same books every time someone hits search. 
 
-![](/images/david-search-13.png)<br>
+![](/images/lab300/300-david-search-13.png)<br>
 <br>
 
 We'll fix this by first removing the book images/descriptions every time someone hits search before loading the new images/descriptions.<br>
@@ -546,23 +546,23 @@ We'll fix this by first removing the book images/descriptions every time someone
       }
     };
  ```
-![](/images/david-search-14.png)<br>
+![](/images/lab300/300-david-search-14.png)<br>
 <br>
 
 With this new function added, navigate to our action chain that invokes the loadImage and loadDescription functions. Add a new `module function` that calls on the resetPage function. 
 
-![](/images/david-search-15.png)<br>
+![](/images/lab300/300-david-search-15.png)<br>
 <br>
 
-![](/images/david-search-16.png)<br>
+![](/images/lab300/300-david-search-16.png)<br>
 <br>
 
-![](/images/david-search-21.png)<br>
+![](/images/lab300/300-david-search-21.png)<br>
 <br>
 
 Now go back to the `Designer` view, click the submit button, and bind this action chain to whenever someone clicks the search button. There are now three actions within this action chain. One to remove any previous search results, one to load descriptions, and the last to load images.
 
-![](/images/david-search-17.png)<br>
+![](/images/lab300/300-david-search-17.png)<br>
 <br>
 
 Try loading the page again. It works! We have now successfully implemented the search functionality.
