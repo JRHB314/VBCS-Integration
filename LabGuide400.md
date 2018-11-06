@@ -410,7 +410,7 @@ Test your website! Enter in AprilGold for the username, then hit search. You sho
 ### **STEP 4**: Show User's Follower, Following, and Mutuals Lists
 
 <details>
-  <summary> Set up the Neo4j Database </summary>
+  <summary> SOME STEPS </summary>
   <br>
   
   ADD STEPS HERE
