@@ -1,5 +1,5 @@
-![](images/200/Picture-lab.png)  
-Updated: Date
+![](images/Picture-lab200.png)  
+Updated: November 6, 2018
 
 ## Introduction
 
