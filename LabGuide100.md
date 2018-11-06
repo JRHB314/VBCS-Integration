@@ -19,6 +19,10 @@ This lab will start with creating your first Web App in VBCS.
 ## Required Artifacts
 - The following lab requires an Oracle Public Cloud account; you can sign up for a trial account [here](https://cloud.oracle.com/tryit). 
 
+# Lab 100
+
+## VBCS: Creating Your First Web App
+
 ### **STEP 1**: Getting Started
 
 <details>
