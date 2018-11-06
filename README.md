@@ -1065,11 +1065,15 @@ Drag a Call REST Endpoint action onto the plus sign in the chain, then click `Se
 Expand `Service Connections` and select the endpoint we just created. <br>
 ![](/images/4-24.png)<br>
 <br>
+Note, the service connection above has a slightly different name than the one suggested. This should not make a difference.<br>
+<br>
 Now we are going to append three string variables to create the request body. The first and last variables do not change; they are the main part of the request. The middle string is the searchUsername we already made. By appending all three we can change out which user we are searching for. <br>
 Go back to the main page's variables. Create two Strings, getDataPt1 and getDataPt2. <br>
 For getDataPt1, set this default value: `{  "statements": [   {    "statement": "MATCH (user:Person {name:  '`<br>
 For getDataPt2, set this default value: `'}) return user"   }  ] }`<br>
-Together with the searchUsername, it will be `{  "statements": [   {    "statement": "MATCH (user:Person {name: 'searchusername'}) return user"   }  ] }`. <br>
+Together with the searchUsername, it will be <br>
+`{  "statements": [   {    "statement": "MATCH (user:Person {name: 'searchUsername'}) return user"   }  ] }`. <br>
+<br>
 Go back to the action chain. Click on the REST Call action, and then click on the body paramater. <br>
 ![](/images/4-25.png)<br>
 <br>
