@@ -193,3 +193,6 @@ However, you'll notice it only lists the first element in the returned row. For 
 Do the same thing for mutualCount, but this time chaging `row[0]` to be `row[2]`. <br>
 {img}
 <br> 
+Test your webpage: it should be working!<br>
+{img}
+<br> 
