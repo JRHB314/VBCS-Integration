@@ -549,7 +549,7 @@ We'll fix this by first removing the book images/descriptions every time someone
 ![](/images/david-search-14.png)<br>
 <br>
 
-With this new function added, navigate to our action chain that invokes the loadImage and loadDescription functions. Add a new `module function` that calls on the resetPage function.
+With this new function added, navigate to our action chain that invokes the loadImage and loadDescription functions. Add a new `module function` that calls on the resetPage function. 
 
 ![](/images/david-search-15.png)<br>
 <br>
