@@ -170,3 +170,20 @@ Go to Test and hit Send. The response should look like this:
 Finally, hit Copy to Response Body, and you're done with the connection.<br>
 {img}
 <br>
+
+# Break
+
+Now we will add another two variables to our page `relCountPt1` and `relCountPt2`. <br>
+relCountPt1: `{  "statements": [   {    "statement": "MATCH (user:Person {name: '`<br>
+relCountPt2: `'}) RETURN size((user)<--()) as in, size((user)-->()) as out, size((user)-->()-->(user)) as mutuals"   }  ] } `<br>
+Again, searchUsername will go in the middle. You can see that the Cypher statement is returning three things: ingoing relationships (followers of user), outgoing relationships (people who the user is following), and people who the the user follows, that also follow the user (mutual follow). <br>
+Go to our ButtonClickAction, and drag and drop a Call REST Endpoint action. Choose the `Neo4j Realtionship Count` connection we just made.<br>
+{img}
+<br>
+Body:<br>
+{img}
+<br>
+Drag and drop an Assign Variables action. <br>
+Assign followerCount with a simple drag and drop like so:<br>
+{img}
+<br> 
