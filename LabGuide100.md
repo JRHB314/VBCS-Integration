@@ -109,11 +109,9 @@ This lab will start with creating your first Web App in VBCS.
   ![](/images/lab100/100-17.png)<br>
   ![](/images/lab100/100-1-17.5.png)<br>
   
-  Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text.<br>
-  
-  Let's say that we want to customize the color of the text that we just entered. Click on the Heading, go to the `All` 
-  tab, then expand `General Attributes` and scroll down to the `Style` field. Enter in `color: #67aee5;`. The color 
-  changes to a light blue. This is an easy way to customize the CSS for a specific component. <br>
+  Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text. While we're at it, let's customize the color of the text that we just entered. Click on the Heading, go to the `All` 
+  tab, then expand `General Attributes` and scroll down to the `Style` field. Enter in `color: #67aee5;`. The heading color 
+  changes to a light blue, as shown below. This is an easy way to customize the CSS for a specific component. <br>
   
   ![](/images/lab100/100-1-18.png)<br>
   <br>
@@ -153,11 +151,12 @@ This lab will start with creating your first Web App in VBCS.
 <details>
   <summary>Add Navigation</summary>
 
-  In order for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. We want to carry over the components from the first page to this home page (logo, title, navbar) so we'll go ahead and copy it. Go to the Web App heirarchy on the left, right click on main-start and hit `Duplicate`. Then rename the page `second-page`.<br>
+  <br>In order for this tab bar to actually navigate the website, we need a second page to navigate <i>to</i>. We want to carry over the components from the first page to this home page (logo, title, navbar) so we'll go ahead and copy it. Go to the Web App heirarchy on the left, right click on main-start and hit `Duplicate`. Then rename the page `second-page`. On the `Code` view, paste the code we copied.<br>
+  
   ![](/images/lab100/100-1-33.png)<br>
   <br>
   
-  Switch which tab is dull and which tab is bright. Dull tabs represent the current page we're on. <br><br>
+  Switch which tab is dull and which tab is bright in the code section of this second page. Dull tabs represent the current page we're on. <br><br>
   ![](/images/lab100/100-1-23.png)<br>
   <br>
   
@@ -186,8 +185,7 @@ This lab will start with creating your first Web App in VBCS.
   ![](/images/lab100/100-28.png)<br>
   <br>
   
-  Repeat this process for a navigateSecondPage action chain, this time selecting second-page as target.<br>
-  <br>
+  Create this process for a navigateSecondPage action chain, this time selecting second-page as target.<br>
   
   Events need to be created at the page level, because the event that triggers your action happens on a particular page. Go     back to main-start and click on the bell icon near the left to go to Events. Hit `+ Event Listener`.
   
