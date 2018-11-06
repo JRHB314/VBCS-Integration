@@ -1,11 +1,6 @@
-# Name Of The Workshop
+# VBCS Integration with Cloud Databases
 
-Welcome to the ...workshop. This workshop will walk you through the process of... 
-To learn more about this workshop please watch the video below.
-
-![](images/oraclecode/youtube.png)
-
-<a href="https://youtu.be/" target="_video">Workshop Overview</a>
+Welcome to the VBCS Integration workshop. This will walk you through the process of connecting both Oracle and non-Oracle Databases, including relational, NoSQL, and graph databases.
 
 ### **Step 1**: Acquire an Oracle Cloud Trial or Workshop Account
 
@@ -13,7 +8,7 @@ To learn more about this workshop please watch the video below.
 
 - Please click on the following link to create your <a href="link.to.the.trial.signup.page" target="_trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
 
-  - Soon after requesting your trial you will receive the following email. _You may begin working on Lab 100 before you receive this email_, but you will not be able to start Lab 200 until you have received it.
+  - Soon after requesting your trial you will receive the following email. You will not be able to begin the workshop until you have received it.
 
   ![](images/oraclecode/code_9.png)
 
