@@ -32,6 +32,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 <details>
   <summary>Creat Realtime Database</summary>
   <br>
+  
   Go to the [Firebase Website](https://firebase.google.com/products). Select Realtime Database.<br>
   ![](/images/3-1.png)<br>
   <br>
@@ -53,6 +54,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 <details>
   <summary>Populate Database</summary>
   <br>
+  
   Now, inside this GitHub repository, navigate to the "resources" directory and download the bookList.json file. Open it inside VCode or your preferred text editor. Note the structure is of several book objects identified by ISBN. <br>
   ![](/images/3-6.png)<br>
   <br>
@@ -84,6 +86,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 <details>
   <summary>Create New Page</summary>
   <br>
+  
   First thing we want to do is create another page, this one called book-catalog, on which we will display our book descriptions and images. Right click on main-start and hit `Duplicate`, then right click on the copy to rename it `book-catalog`. On the Design view of the page, click on the "Welcome to the Home Page" heading, then hit the trash can icon in the bottom left of the right bar to delete the component.<br>
 ![](/images/3-25.png)<br>
 <br>
@@ -102,6 +105,7 @@ Now we just need to create our action chain navigateCatalogPage (created at the 
 <details>
   <summary>Add HTML/CSS</summary>
   <br>
+  
     Now that our database has been set up, we'll need to connect it to VBCS. We'll be using this database information to populate one of our pages with images and descriptions of books, so the first thing we need to do is to come up with a layout of how we want our page to look. For this lab, we'll format the page with a left-side column to display book images and a right-side column to display the book information.<br>
   
   Let's create this layout by adding the HTML structure to our new book-catalog page. Navigate to the `Code` view of the page, and copy and paste this HTML code and add it at the very end:<br>
@@ -295,6 +299,7 @@ Careful with your brackets here; it's easy to get one too many or one too few. <
 <details>
   <summary>Calling Function on Page</summary>
   <br>
+  
   We want this function to be called whenever the page loads. Go to `Events` on the left sidebar for the Catalog page.<br>
 Click `Create Event Listener`, then under `Lifecycle Events`, select `vbEnter`. This will be an event that runs whenever the page loads.<br>
 ![](/images/3-15.png)<br>
