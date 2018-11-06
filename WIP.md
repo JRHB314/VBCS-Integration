@@ -187,3 +187,9 @@ Drag and drop an Assign Variables action. <br>
 Assign followerCount with a simple drag and drop like so:<br>
 {img}
 <br> 
+However, you'll notice it only lists the first element in the returned row. For followingCount and mutualCount, we need the second and third elements respectively. Go ahead and drag `item[0]` over to following count, but change the `row[0]` to be `row[1]`. <br>
+{img}
+<br> 
+Do the same thing for mutualCount, but this time chaging `row[0]` to be `row[2]`. <br>
+{img}
+<br> 
