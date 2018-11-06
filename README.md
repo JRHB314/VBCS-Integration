@@ -1056,7 +1056,10 @@ The response should look like this:
 ```
 In the top right of the response, hit `Copy to Response Body`. Now hit Create.<br>
 
-<br>This means we are ready to set up an Action Chain. Back on our web page, click the button to go to its Events tab; hit `New Event`, then `QuickStart: click`. Drag a Call REST Endpoint action onto the plus sign in the chain, then click `Select Endpoint`.<br>
+<br>This means we are ready to set up an Action Chain. Back on our web page, click the search button to go to its Events tab; hit `New Event`, then `QuickStart: click`. <br>
+![](/images/4-22.5.png)<br>
+<br>
+Drag a Call REST Endpoint action onto the plus sign in the chain, then click `Select Endpoint`.<br>
 ![](/images/4-23.png)<br>
 <br>
 Expand `Service Connections` and select the endpoint we just created. <br>
