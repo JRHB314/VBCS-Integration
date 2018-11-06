@@ -56,11 +56,11 @@ Go to our ButtonClickAction, and drag and drop a Call REST Endpoint action. Choo
 ![](images/4-33.png) 
 <br>
 Body:<br>
-![](images/4-34.png) 
+![](images/4-33.5.png) 
 <br>
 Drag and drop an Assign Variables action. <br>
 Assign followerCount with a simple drag and drop like so:<br>
-![](images/4-35.png) 
+![](images/4-34.png) 
 <br> 
 However, you'll notice it only lists the first element in the returned row. For followingCount and mutualCount, we need the second and third elements respectively. Go ahead and drag `item[0]` over to following count, but change the `row[0]` to be `row[1]`. <br>
 ![](images/4-35.png) 
