@@ -121,3 +121,52 @@ Drag `image` on the left to `imageURL` on the right, `name` on the left to `user
 Test your website! Enter in AprilGold for the username, then hit search. You should see this:<br>
 {img}
 <br>
+
+<br>
+
+## Next part idk
+
+Now we want to be able to return a) the count of followers/following/mutuals and b) the list of followers/following/mutuals. <br>
+Let's start with the count. We're going to have to make another Service Connection, even though we are using the same URL, because our request and response bodies will be formatted differently. Make a new Service Connection, copy and paste your Database REST endpoint URL /transaction/commit into the URL, set method to POST, and hit next. <br>
+{img}
+<br>
+Name it Neo4j Relations Count and set up Authentication the same way as before. <br>
+{img} {img}
+<br>
+As mentioned, our request will be a bit different:
+```
+{
+  "statements" : [ {
+    "statement" : "MATCH (user:Person {name:'YukiTsukino'}) RETURN size((user)-->()) as out, size((user)<--()) as in"
+  } ]
+}
+```
+Go to Test and hit Send. The response should look like this:
+```
+{
+    "results": [
+        {
+            "columns": [
+                "out",
+                "in"
+            ],
+            "data": [
+                {
+                    "row": [
+                        4,
+                        2
+                    ],
+                    "meta": [
+                        null,
+                        null
+                    ]
+                }
+            ]
+        }
+    ],
+    "errors": []
+}
+```
+Finally, hit Copy to Response Body, and you're done with the connection.<br>
+{img}
+<br>
