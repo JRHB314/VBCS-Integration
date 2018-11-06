@@ -23,10 +23,18 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
 
 ## Connecting VBCS to a Graph Database (Neo4j)
 
-### **STEP 1**: Title of Step 1
+### **STEP 1**: Set Up Neo4j Database
 
 - Instructions for Step 1
 
-### **STEP 2**: Title of Step 2
+### **STEP 2**: Working with Neo4j
 
 - Instructions for Step 2
+
+### **STEP 3**: Show User Profile Info on VBCS
+
+- Instructions for Step 3
+
+### **STEP 4**: Show User's Follower, Following, and Mutuals Lists
+
+- Instructions for Step 4
