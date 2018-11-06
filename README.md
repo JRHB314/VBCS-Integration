@@ -963,25 +963,24 @@ First we MATCH "n" to the node with name "UserName". Then we use SET to add thes
   <h3>Showing User Info</h3>
   
   Let's go ahead and create an entirely new web app, as this lab does not relate to our Library website. Click the computer icon on the far left, then hit the plus sign next to Web Apps. Name it whatever you like.<br>
-![](/images/4-10.png)<br>
 <br>
 The first thing to do is drag and drop an Input Text component into the top left of the page. Change the label to be one column big by clicking on it, then draging the little box on the edge. Change its text to say "Search Name". Move over the text field to be right next to the label, and change it to be two columns wide. To the right of that, drag on a button, and have it say "Search". <br>
-![](/images/4-11.png)<br>
+![](/images/4-10.png)<br>
 <br>
 In the next row, drag a Panel. By default, it fills the page horizontally, but this isn't what we want. We also can't drag the component to resize it the way we can most components. Go to the Code view and find the `oj-panel` div. You'll see something that says "oj-sm-12 oj-md-12". These indicate the how many columns the component should take up for "small" and "medium" views of the page. For this we will be working with medium screens, so change oj-md to oj-md-5. <br>
-![](/images/4-12.png)<br>
+![](/images/4-11.png)<br>
 <br>
 Inside the panel, at the very left, drag on a Heading component. Drag the slider bar under the General tab so that it is only H4. Call this "Username".
-![](/images/4-13.png)<br>
+![](/images/4-12.png)<br>
 <br>
 Now let's add a picture. This will be the searched user's profile picture. Drag and drop an Image component into the left side of the panel underneath Username. Drag an edge so it becomes four columns wide. In the General tab on the right, set width and height to 100. Next to the image we want to have three rows, so drag on a Flex Container object. Make sure it is only three columns wide. Drag and drop three Text components inside this container so that they are stack vertically. Name the first "Followers:", the second "Following:", and the third "Mutuals:". <br>
-![](/images/4-14.png)<br>
+![](/images/4-13.png)<br>
 <br>
 To the left of these, we want to have three more Text components that will be filled with the follower, following, and mutual counts. Drag and drop another Flex Container to the right of the first, and add three Text components, each named "count". We will replace these with variables in a moment. Below the image, drag and drop one last Text component. Fill in "quote" for this field.<br>
-![](/images/4-15.png)<br>
+![](/images/4-14.png)<br>
 <br>
 Keep in mind, if you lose track of a component or have trouble clicking on something to customize it, you can open up the Page Structure.<br>
-![](/images/4-16.png)<br>
+![](/images/4-15.png)<br>
 <br>
 Click the icon again to close it.<br>
 <br>
@@ -993,17 +992,17 @@ Next we need to create some String variables to be bound to our components.<br>
 -followingCount: will hold the returned following count. Put this in the Data field of the middle "count" text.<br>
 -mutualCount: will hold the returned mutuals count. Put this in the Data field of the bottom "count" text.<br>
 -favoriteQuote: will hold the returned quote. Put this in the Data field of the "Quote" text. Set default value to "Favorite Quote".
+![](/images/4-16.png)<br>
 ![](/images/4-17.png)<br>
-![](/images/4-18.png)<br>
 <br>
 This means we are ready to set up our Service Connection. In Lab 300 we called the REST endpoint in our Javascript, but VBCS actually offers a nice feature to make REST calls without (much) coding. On the far left, hit the icon that looks like a wire with a bump in it (the third from the top) and then hit the plus sign to create a new Service Connection. Choose Define by Endpoint.<br>
-![](/images/4-19.png)<br>
+![](/images/4-18.png)<br>
 <br>
 Now, we need our REST endpoint URL. Reopen your GrapheneDB Database, and go to the Connection tab. There you will find your HTTP REST endpoint.<br>
-![](/images/4-20.png)<br>
+![](/images/4-19.png)<br>
 <br>
 Copy and paste that URL on VBCS, then add `/transaction/commit` to the end of it. Change Method to POST. <br>
-![](/images/4-21.png)<br>
+![](/images/4-20.png)<br>
 <br>
 Hit next. Change Service Name to "Neo4j Get User Data". <br>
 ![](/images/4-22.png)<br>
