@@ -10,10 +10,12 @@ In the next row, drag a Panel. By default, it fills the page horizontally, but t
 {img}
 <br>
 Inside the panel, at the very left, drag on a Heading component. Drag the slider bar under the General tab so that it is only H4. Call this "Username".
+{img}
+<br>
 Now let's add a picture. This will be the searched user's profile picture. Drag and drop an Image component into the left side of the panel underneath Username. Drag an edge so it becomes four columns wide. In the General tab on the right, set width and height to 100. Next to the image we want to have three rows, so drag on a Flex Container object. Make sure it is only three columns wide. Drag and drop three Text components inside this container so that they are stack vertically. Name the first "Followers:", the second "Following:", and the third "Mutuals:". <br>
 {img}
 <br>
-To the left of these, we want to have three more Text components that will be filled with the follower, following, and mutual counts. Drag and drop another Flex Container to the right of the first, and add three Text components, each named "count". We will replace these with variables in a moment.<br>
+To the left of these, we want to have three more Text components that will be filled with the follower, following, and mutual counts. Drag and drop another Flex Container to the right of the first, and add three Text components, each named "count". We will replace these with variables in a moment. Below the image, drag and drop one last Text component. Fill in "quote" for this field.<br>
 {img}
 <br>
 Keep in mind, if you lose track of a component or have trouble clicking on something to customize it, you can open up the Page Structure.<br>
@@ -28,6 +30,7 @@ Next we need to create some String variables to be bound to our components.<br>
 -followerCount: will hold the returned follower count. Put this in the Data field of the top "count" text.<br>
 -followingCount: will hold the returned following count. Put this in the Data field of the middle "count" text.<br>
 -mutualCount: will hold the returned mutuals count. Put this in the Data field of the bottom "count" text.<br>
+-favoriteQuote: will hold the returned quote. Put this in the Data field of the "Quote" text. Set default value to "Favorite Quote".
 {img}
 {img}
 <br>
@@ -112,4 +115,9 @@ Great! The request should be correctly formatted. Now, to display the response, 
 On the left, expand callRestEndpoint1 -> body -> results -> item[0] -> data -> item[o] -> row -> item[0], until it looks like this:<br>
 {img}
 <br>
-Drag image on the left to imageURL on the right, name on the left to username on the left, and quotes on the left to quotes on the right. <br>
+Drag `image` on the left to `imageURL` on the right, `name` on the left to `username` on the left, and `quotes` on the left to `favoriteQuote` on the right. Then hit `Save`. <br>
+{img}
+<br>
+Test your website! Enter in AprilGold for the username, then hit search. You should see this:<br>
+{img}
+<br>
