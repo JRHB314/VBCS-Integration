@@ -10,7 +10,7 @@ Welcome to the VBCS Integration workshop. This will walk you through the process
 
   - Soon after requesting your trial you will receive the following email. You will not be able to begin the workshop until you have received it.
 
-  ![](images/oraclecode/code_9.png)
+{img}
 
 
 
@@ -18,4 +18,4 @@ Welcome to the VBCS Integration workshop. This will walk you through the process
 
 - _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window. You're now ready to continue with **Lab 100**.
 
-  ![](images/LabMenuIcon.png)
+ {labmenu icon}
