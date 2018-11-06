@@ -3,7 +3,8 @@ Updated: November 6, 2018
 
 ## Introduction
 
-Introductory Text
+
+Oracle offers quick tools to integrate Oracle Cloud Databases with VBCS.
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -16,9 +17,9 @@ Introductory Text
 
 - List of Prerequisites
 
-# Main Heading 1
+# Lab 200
 
-## Sub Heading 1
+## Connecting VBCS to an Oracle Database
 
 ### **STEP 1**: Title of Step 1
 
