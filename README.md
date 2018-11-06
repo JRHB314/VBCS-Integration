@@ -1006,10 +1006,10 @@ Copy and paste that URL on VBCS, then add `/transaction/commit` to the end of it
 ![](/images/4-20.png)<br>
 <br>
 Hit next. Change Service Name to "Neo4j Get User Data". <br>
-![](/images/4-22.png)<br>
+![](/images/4-21.png)<br>
 <br>
 Go to the Authentication tab, and choose `Basic` from the dropdown. You should have already made a database user in GrapheneDB; if not, review part 1 of this lab. Enter in the username and password for this user. <b>This is not the same as your GrapheneDB account.</b> <br>
-![](/images/4-23.png)<br>
+![](/images/4-22.png)<br>
 <br>
 On the Request tab, copy and paste this code:
 ```
@@ -1057,10 +1057,10 @@ The response should look like this:
 In the top right of the response, hit `Copy to Response Body`. Now hit Create.<br>
 
 <br>This means we are ready to set up an Action Chain. Back on our web page, click the button to go to its Events tab; hit `New Event`, then `QuickStart: click`. Drag a Call REST Endpoint action onto the plus sign in the chain, then click `Select Endpoint`.<br>
-![](/images/4-24.png)<br>
+![](/images/4-23.png)<br>
 <br>
 Expand `Service Connections` and select the endpoint we just created. <br>
-![](/images/4-25.png)<br>
+![](/images/4-24.png)<br>
 <br>
 Now we are going to append three string variables to create the request body. The first and last variables do not change; they are the main part of the request. The middle string is the searchUsername we already made. By appending all three we can change out which user we are searching for. <br>
 Go back to the main page's variables. Create two Strings, getDataPt1 and getDataPt2. <br>
@@ -1068,17 +1068,17 @@ For getDataPt1, set this default value: `{  "statements": [   {    "statement": 
 For getDataPt2, set this default value: `'}) return user"   }  ] }`<br>
 Together with the searchUsername, it will be `{  "statements": [   {    "statement": "MATCH (user:Person {name: 'searchusername'}) return user"   }  ] }`. <br>
 Go back to the action chain. Click on the REST Call action, and then click on the body paramater. <br>
-![](/images/4-26.png)<br>
+![](/images/4-25.png)<br>
 <br>
 Drag getDataPt1, then searchUsername, then getDataPt2, onto body. <br>
-![](/images/4-27.png)<br>
+![](/images/4-26.png)<br>
 <br>
 Great! The request should be correctly formatted. Now, to display the response, we need to do one more action. Drag a Assign Variables action onto the next step in the chain, then hit `Assign` next to `Variables`. <br>
 On the left, expand callRestEndpoint1 -> body -> results -> item[0] -> data -> item[o] -> row -> item[0], until it looks like this:<br>
-![](/images/4-28.png)<br>
+![](/images/4-27.png)<br>
 <br>
 Drag `image` on the left to `imageURL` on the right, `name` on the left to `username` on the left, and `quotes` on the left to `favoriteQuote` on the right. Then hit `Save`. <br>
-![](/images/4-29.png)<br>
+![](/images/4-28.png)<br>
 <br>
 Test your website! Enter in AprilGold for the username, then hit search. You should see this:<br>
 ![](/images/4-29.png)<br>
