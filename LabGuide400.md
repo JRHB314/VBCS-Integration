@@ -25,16 +25,107 @@ In this part of the lab, we'll learn a bit about how Graph Databases work, and s
 
 ### **STEP 1**: Set Up Neo4j Database
 
-- Instructions for Step 1
+<details>
+  <summary> Make a GrapheneDB Account and Database </summary>
+  <br>
+  
+  GrapheneDB is an easy way to get up and running with Neo4j, with a free sandbox trial. <br> Visit [Graphene DB](https://app.graphenedb.com/) and sign up for an account. Login to the dashboard, then click `Create Database`.
+  
+  ![](/images/david-gdb-1.png)<br>
+<br>
+  
+  Select the free "Sandbox" tier.<br>
+  
+  ![](/images/david-gdb-2.png)<br>
+<br>
+
+  Give your database a name. Leave the default Neo4j Version as 3.4.9 and click `Create Database`.<br>
+
+  ![](/images/david-gdb-3.png)<br>
+<br>
+
+  On the next page, a pop up should appear asking you to create a user. Click `Create user now`.<br>
+  
+  ![](/images/david-gdb-4.png)<br>
+<br>
+
+  Give your user a Label with no expiration date and click `Create User`.<br>
+  
+  ![](/images/david-gdb-5.png)<br>
+<br>
+
+  <b>Copy down your credentials. This is the only time you'll be able to see the password, so make a note of it.</b><br>
+  
+  ![](/images/david-gdb-6.png)<br>
+<br>
+  
+  
+</details>
+
+
+<details>
+  <summary> (optional) GrapheneDB Interface </summary>
+  <br>
+  ADD A RUN DOWN OF GRAPHENEDB TABS etc
+  
+</details>
 
 ### **STEP 2**: Working with Neo4j
 
-- Instructions for Step 2
+
+<details>
+  <summary> (optional) Getting Familiar with Cypher Statements </summary>
+  <br>
+  
+  
+</details>
+
+
+<details>
+  <summary> Create User Relationships </summary>
+  <br>
+  
+  
+</details>
+
+
+<details>
+  <summary> Add Additional User Information </summary>
+  <br>
+  
+  
+</details>
 
 ### **STEP 3**: Show User Profile Info on VBCS
 
-- Instructions for Step 3
+
+<details>
+  <summary> Set up the Neo4j Database </summary>
+  <br>
+  
+  
+</details>
+
+
+<details>
+  <summary> Set up the Neo4j Database </summary>
+  <br>
+ 
+  
+</details>
+
+<details>
+  <summary> Set up the Neo4j Database </summary>
+  <br>
+  
+  
+</details>
 
 ### **STEP 4**: Show User's Follower, Following, and Mutuals Lists
 
-- Instructions for Step 4
+<details>
+  <summary> Set up the Neo4j Database </summary>
+  <br>
+  
+  
+</details>
