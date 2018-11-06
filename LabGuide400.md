@@ -1,24 +1,27 @@
-![](images/400/Picture-lab.png)  
-Updated: Date
+![](images/Picture-lab400.png)  
+Updated: November 6, 2018
 
 ## Introduction
 
-Introductory Text
+In this part of the lab, we'll learn a bit about how Graph Databases work, and see how to integrate them with VBCS. Specifically, we'll be using a free Graph Database called Neo4j.
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
-- Objective 1
-- Objective 2
+- Seting up a Neo4j Database
+  - Using GrapheneDB
+- Getting Familiar with Graph Databases
+  - Cypher statements
+- Showing User Data on VBCS
 
 ## Required Artifacts
 
-- List of Prerequisites
+- A Cloud trial account
 
-# Main Heading 1
+# Lab 400
 
-## Sub Heading 1
+## Connecting VBCS to a Graph Database (Neo4j)
 
 ### **STEP 1**: Title of Step 1
 
