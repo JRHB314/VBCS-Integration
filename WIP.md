@@ -59,6 +59,7 @@ Body:<br>
 ![](images/4-33.5.png) <br>
 <br>
 Drag and drop an Assign Variables action. <br>
+<br>
 Assign followerCount with a simple drag and drop like so:<br>
 ![](images/4-34.png) <br>
 <br> 
