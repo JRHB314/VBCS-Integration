@@ -122,3 +122,7 @@ The whole expression should look like this: `{{$page.variables.relationsList + "
 All together, the action chain should look like this:<br>
 {img}<br>
 <br>
+The set up for loadFollowing and loadMutuals is very similar. Only changes are:
+- For `Assign Vaiables title` change the text to "Following" and "Mutuals" respectively.
+- For the REST Endpoint, use getFollowingPt1 and Pt2, and getMutualsPt1 and Pt2.
+To speed up the process, you can actually go to your actions and duplicate loadFollowers twice, delete loadFollowing and loadMutuals, then rename the copies accordingly. If you use the exact same name, you shouldn't have to reconnect them to the Event listeners. 
