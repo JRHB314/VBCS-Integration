@@ -139,8 +139,7 @@ This lab will start with creating your first Web App in VBCS.
   ```
   
   <br>
-  We will add this style as div classes to our tabs, with dull being for the tab we are currently on, and bright being for 
-  tabs we are not on.<br>
+  We will add this code to help style to our tabs. `.dull` shows the tab that we are currently on, and `.bright` shows the tabs we are not on.<br>
 
   ![](/images/lab100/100-1-20.png)<br><br>
   
