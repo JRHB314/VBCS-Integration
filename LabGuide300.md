@@ -116,8 +116,7 @@ Repeat this process for the other pages. On the other pages, the Catalog tab sho
 ![](/images/lab300/300-3-27.png)<br>
 <br>  
 
-Now we just need to create our action chain `navigateCatalogPage` (created at the flow level) and our event `clickCatalogTab` (created for each page) and we are good to go. Double check that you can navigate between all three pages.<br>
-  
+Now we just need to create our action chain `navigateCatalogPage` (created at the flow level) and our event `clickCatalogTab` (created for each page) and we are good to go. Double check that you can navigate between all three pages.
 </details>
 
 <details>
@@ -159,8 +158,9 @@ Now that our database has been set up, we'll need to connect it to VBCS. We'll b
 <details>
   <summary>Create Javascript Function</summary>
   <br>
-  VBCS requires that functions be written in a very particular way. You will see the base outline for this already here.<br>
+  VBCS requires that functions be written in a very particular way. You will see the base outline for this already here.
 
+<br>
 ![](/images/lab300/300-3-14.png)<br>
 <br>
 
