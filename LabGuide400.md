@@ -523,6 +523,11 @@ The HTML for the three words will have to be replaced; simply surrounding the oj
 Back on Design view:<br>
 ![](/images/lab400/4-44.png)<br>
 <br>
+
+Back to Code view once more, let's add our onClickListeners. <br>
+![](/images/lab400/4-45.png)<br>
+<br>
+
 </details>
 
 <details>
