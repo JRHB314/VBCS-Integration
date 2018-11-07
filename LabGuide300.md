@@ -10,7 +10,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 ## Objectives
 
 - Learn how to set up a Firebase Database
-- Connect to VBCs
+- Connect to VBCS
   - Display information from Database
   - Request specific data
 
