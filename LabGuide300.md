@@ -158,9 +158,8 @@ Now that our database has been set up, we'll need to connect it to VBCS. We'll b
 <details>
   <summary>Create Javascript Function</summary>
   <br>
-  VBCS requires that functions be written in a very particular way. You will see the base outline for this already here.
+  VBCS requires that functions be written in a very particular way. You will see the base outline for this already here.<br>
 
-<br>
 ![](/images/lab300/300-3-14.png)<br>
 <br>
 
