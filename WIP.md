@@ -13,7 +13,7 @@ Next we need three onClick listeners for our three labels. Create three action c
 Similarly, create three Other Events, `followersClick`, `followingClick`, and `mutualsClick`. Select their corresponding action chain.<br>
 ![](/images/lab400/4-42.png)<br>
 <br>
-First, to make it more obvious that the words are clickable, we are going to style them. Go to the Code view of the page and insert this code at the top:
+To make it more obvious that the words are clickable, we are going to style them. Go to the Code view of the page and insert this code at the top:
 ```
 <style>
 
