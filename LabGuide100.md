@@ -110,8 +110,11 @@ This lab will start with creating your first Web App in VBCS.
   ![](/images/lab100/100-1-17.5.png)<br>
   
   Drag and drop another Heading component, and fill in "Welcome to the Home page" for the text. While we're at it, let's customize the color of the text that we just entered. Click on the Heading, go to the `All` 
-  tab, then expand `General Attributes` and scroll down to the `Style` field. Enter in `color: #67aee5;`. The heading color 
-  changes to a light blue, as shown below. This is an easy way to customize the CSS for a specific component. <br>
+  tab, then expand `General Attributes` and scroll down to the `Style` field. Enter in `color: #67aee5;`. 
+  
+  ![](/images/lab100/100-18.png)<br>
+  
+  The heading color changes to a light blue, as shown below. This is an easy way to customize the CSS for a specific component. <br>
   
   ![](/images/lab100/100-1-18.png)<br>
   <br>
