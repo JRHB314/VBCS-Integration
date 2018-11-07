@@ -161,7 +161,7 @@ This lab will start with creating your first Web App in VBCS.
   <br>
   
   On the Design view, change "Welcome to the Home Page" to say "Welcome to the Second Page". It should look like this.<br>
-  ![](/images/lab100/100-1-24.png)<br>
+  ![](/images/lab100/100-7.png)<br>
   <br>
   
   Next, let's create some <i>events</i> and <i>action chains</i>. These will allow us to navigate to the second page and back 
