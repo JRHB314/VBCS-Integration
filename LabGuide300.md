@@ -87,7 +87,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   ![](/images/lab300/300-3-11.png)<br>
   <br>
 
-  <b>Side Note<b>: If the formatting of your data looks different, add the JSON Viewer extension to your Chrome browser: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=en-US.
+  <b>Side Note</b>: If the formatting of your data looks different, add the JSON Viewer extension to your Chrome browser: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=en-US.
 
 </details>
   
