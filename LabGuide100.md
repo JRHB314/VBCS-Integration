@@ -226,7 +226,6 @@ This lab will start with creating your first Web App in VBCS.
   clicked.<br><br>
   
   Finally, add the onclick listeners for the second page, and you should be good to go! You now have a functional website.<br>
-  <br>
   
   Click on the play button in the top right to test your website, seeing that you can navigate between the two pages.<br>
   
