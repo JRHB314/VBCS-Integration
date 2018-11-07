@@ -96,4 +96,7 @@ Let's start with `loadFollowers`. First action will be Assign Variables. Click o
 Next, Call REST Endpoint. Select  `Neo4j Relations List`, then map the request body:<br>
 {img}<br>
 <br>
-
+Drag and Drop a For Each action. Map its `items` array to the REST endpoint's `data` array. <br>
+{img}<br>
+<br>
+For each element in `data` the loop will run. 
