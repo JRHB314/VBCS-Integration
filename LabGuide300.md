@@ -78,7 +78,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   Your database should populate with the information from the file.<br>
   ![](/images/lab300/300-3-9.png)<br>
   <br>
-  To test that everything is set up correctly, enter the shown url for the Database /books.json into a browser.<br>
+  To test that everything is set up correctly, enter the shown url for the Database /books.json into a browser with `/books.json` appended to the end of the URL.<br>
   ![](/images/lab300/300-3-10.png)<br>
   ```
   https://projectname-XXXXX.firebaseio.com/books.json
