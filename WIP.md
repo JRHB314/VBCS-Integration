@@ -116,8 +116,8 @@ Then, inside the editor, simply put `$current.index == 0`.<br>
 Drag two Assign Variables actions onto the Action Chain; one under **true**, and one under **false**. For under **true**,  simply assign the returned `name` to `relationsList.` <br>
 {img}<br>
 <br>
-For under **false**, drag and drop `relationsList` on the left to `relationsList` on the right. Then drag and drop `name` onto `relationsList`, but this time we will make a slight change. In the box below, change `data[0]` to say `data[$current.index]`. Finally, append a space to the beginning of the string by typing `" " + ` at the beginning of the expression. <br>
-The whole expression should look like this: `{{" " + $page.variables.relationsList + $chain.results.callRestEndpoint1.body.results[0].data[$current.index].row[0].name }}` <br>
+For under **false**, drag and drop `relationsList` on the left to `relationsList` on the right. Then drag and drop `name` onto `relationsList`, but this time we will make a slight change. In the box below, change `data[0]` to say `data[$current.index]`. Finally, append a space between each name by adding `" " + ` right after the middle plus sign. <br>
+The whole expression should look like this: `{{$page.variables.relationsList + "  " + $chain.results.callRestEndpoint1.body.results[0].data[$current.index].row[0].name }}` <br>
 <br>
 All together, the action chain should look like this:<br>
 {img}<br>
