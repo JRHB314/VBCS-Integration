@@ -80,10 +80,11 @@ And this should be the Response:
 ```
 
 Now, our final set of variables.<br>
--getFollowersPt1 `{ "statements": [ { "statement": "MATCH (followers)-[:FOLLOWS]->(user:Person {name: '`
--getFollowersPt2 `' }) return followers"  } ]}`
--getFollowingPt1 `{  "statements": [   {    "statement": "MATCH (following)<-[:FOLLOWS]-(user:Person {name:'`
--getFollowingPt2 `'}) return following"   }  ] }`
--getMutualsPt1 `{  "statements": [   {    "statement": "MATCH (user:Person {name:'`
--getMutualsPt2 `'})-->(mutuals)-->(user) return mutuals"   }  ] }`
+
+- getFollowersPt1 `{ "statements": [ { "statement": "MATCH (followers)-[:FOLLOWS]->(user:Person {name: '`
+- getFollowersPt2 `' }) return followers"  } ]}`
+- getFollowingPt1 `{  "statements": [   {    "statement": "MATCH (following)<-[:FOLLOWS]-(user:Person {name:'`
+- getFollowingPt2 `'}) return following"   }  ] }`
+- getMutualsPt1 `{  "statements": [   {    "statement": "MATCH (user:Person {name:'`
+- getMutualsPt2 `'})-->(mutuals)-->(user) return mutuals"   }  ] }`
 
