@@ -134,7 +134,6 @@ Now that our database has been set up, we'll need to connect it to VBCS. We'll b
      <div class="column"> <div id="rightColumn"></div> </div>
 </div>
   ```
-  <br>
   
   With the HTML in place, we can next add the css for the two columns to style them properly:
   
