@@ -99,4 +99,11 @@ Next, Call REST Endpoint. Select  `Neo4j Relations List`, then map the request b
 Drag and Drop a For Each action. Map its `items` array to the REST endpoint's `data` array. <br>
 {img}<br>
 <br>
-For each element in `data` the loop will run. 
+For each element in `data` the loop will run. <br>
+<br> Now we need to add one more piece of logic, an If action to check whether or not we are on the first element in data. This is because what we will do next is append each follower name to our `relationsList` string. That is,<br>
+relationsList = follower1 + follower2 + follower3...<br>
+But if we simply always append to the end of relationsList, when we pull up the next list, say of mutuals, it'll display:<br>
+relationsList = follower1 + follower2 + follower3... + mutual1 + mutual2...<br>
+Instead of what we want,<br>
+relationsList = mutual1 + mutual2...<br>
+So, for the first element of the list, we should overwrite the `relationsList` variable, rather than append to the end of it.<br>
