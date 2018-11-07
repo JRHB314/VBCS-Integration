@@ -49,13 +49,13 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   <summary>Create Realtime Database</summary>
   <br>
   
-  Click "Add Project".
+  Click "Add Project". 
   
-  ![](/images/lab300/300-3-3.png)<br>
-  <br>
-  Choose a name, leave the default settings for location, make sure all three boxes are checked, then hit Create Project.<br>
+  ![](/images/lab300/300-3-3.png)<br> Choose a name, leave the default settings for location, make sure all three boxes are checked, then hit Create Project.<br>
+  
   ![](/images/lab300/300-3-4.png)<br>
   <br>
+  
   It will take 10 seconds or so to create, then the page should redirect you to your Database home page. Note that currently, there is no data in our database.<br>
   ![](/images/lab300/300-3-5.png)<br>
   <br>
