@@ -108,10 +108,10 @@ Now, we have to update our tab bar to include this new page we just made. Go to 
 ![](/images/lab300/300-3-26.png)<br>
 <br>
 
-<b>Note:</b> You could have gone to customize the tab bar on the Design view and hit the plus sign to the right of the title `Tabs` in the customization bar, but this would not have copied the style or the listener. For this reason, we decided to manually copy the code in ourselves.<br>
+<b>Note:</b> You could have gone to customize the tab bar on the Design view and hit the plus sign to the right of the title `Tabs` in the customization bar, but this would not have copied the style or the listener. For this reason, we decided to manually copy the code in ourselves.
 
 <br>
-Repeat this process for the other pages, but on the other pages, the Catalog tab should have bright styling.<br>
+Repeat this process for the other pages. On the other pages, the Catalog tab should have bright styling.<br>
 
 ![](/images/lab300/300-3-27.png)<br>
 <br>  
