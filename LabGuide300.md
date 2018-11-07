@@ -98,7 +98,7 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   <summary>Create New Page</summary>
   <br>
   
-  First thing we want to do is create another page, this one called book-catalog, on which we will display our book descriptions and images. Right click on main-start and hit `Duplicate`, then right click on the copy to rename it `book-catalog`. On the Design view of the page, click on the "Welcome to the Home Page" heading, then hit the trash can icon in the bottom left of the right bar to delete the component.<br>
+  The first thing we want to do is create another page on which we'll display our book descriptions/images. Let's call this page `book-catalog`. To make this page, right click on main-start and hit `Duplicate`. Then, right click on the copy page to rename it `book-catalog`. On the Design view of the page, click on the "Welcome to the Home Page" heading, then hit the trash can icon in the bottom left corner of the right-side bar to delete the component.<br>
 ![](/images/lab300/300-3-25.png)<br>
 <br>
 Now we have to update the tab bar to include this new page. Go to the code view for the page and look for the "oj-tab-bar-XXXXXXXXX-X" item. Inside that you should see two oj-tab-bar-XXXXXXXXX-X-tab-X items. Copy the code for the first tab (the one with dull formatting) and paste it right below the code for the second tab. Rename the tab "Catalog" and change the listener to clickCatalogTab (though this event does not yet exist. Finally, change the first tab's style to bright, so only the third tab is dull.<br>
