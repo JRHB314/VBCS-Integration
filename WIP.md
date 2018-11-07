@@ -127,3 +127,7 @@ The set up for loadFollowing and loadMutuals is very similar. Only changes are:
 - For the REST Endpoint, use getFollowingPt1 and Pt2, and getMutualsPt1 and Pt2.
 
 To speed up the process, you can actually go to your actions and duplicate loadFollowers twice, delete loadFollowing and loadMutuals, then rename the copies accordingly. If you use the exact same name, you shouldn't have to reconnect them to the Event listeners. 
+<br>
+All right, let's test it out. Enter in a username and hit search. Then try clicking on each word: "Followers", "Following", and "Mutuals". <br>
+{img}<br>
+<br>
