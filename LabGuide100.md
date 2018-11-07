@@ -201,7 +201,7 @@ This lab will start with creating your first Web App in VBCS.
   ![](/images/lab100/100-31.png)<br>
   <br>
   
-  Repeat this process for creating cxckSecondTab and having it trigger navigateSecondPage.<br>
+  Repeat this process for creating clickSecondTab and having it trigger navigateSecondPage.<br>
   Then, create these same events for second-page.<br>
   
   ![](/images/lab100/100-32.png)<br>
