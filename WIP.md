@@ -7,6 +7,33 @@ Create two variables:
 On page designer, drag and drop a Heading component below the panel, and set its Text value to `title`. Right below that, drag and drop a Paragraph component. Make it only one column wide. This will force the line to wrap, so that each listed user appears on a new line. Set its Text value to `relationsList`. <br>
 {img}<br>
 <br>
-Next we need three onClick listeners for our three labels. Create three actionchains, called "loadFollowers", "loadFollowing", and "loadMutuals". Leave them blank for right now. 
+Next we need three onClick listeners for our three labels. Create three action chains, called `loadFollowers`, `loadFollowing`, and `loadMutuals`. Leave them blank for right now. <br>
+{img}<br>
+<br>
+Similarly, create three Other Events, `followersClick`, `followingClick`, and `mutualsClick`. Select their corresponding action chain.<br>
+{img}<br>
+<br>
+First, to make it more obvious that the words are clickable, we are going to style them. Go to the Code view of the page and insert this code at the top:
+```
+<style>
+
+.clickableText {
+color: #35e3ed;
+text-decoration: underline;
+cursor: pointer;
+}
+
+</style>
+```
+We set the color to a nice aqua; underline it; and have the cursor turn into a pointer when it hovers over the text.<br>
+<br>
+The HTML for the three words will have to be replaced; simply surrounding the oj-bind-text in a div class will not work here. Instead we'll turn it into plain text surround by our clickableText div class.<br>
+{img}<br>
+<br>
+Back on Design view:<br>
+{img}<br>
+<br>
 
 # rels listed
+
+
