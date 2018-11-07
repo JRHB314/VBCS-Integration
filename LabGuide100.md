@@ -26,7 +26,7 @@ This lab will start with creating your first Web App in VBCS.
 ### **STEP 1**: Getting Started
 
 <details>
-  <summary>Sign in to your Cloud Account</summary>
+  Sign in to your Cloud Account
 
   Go to the [Cloud sign in page](https://cloud.oracle.com/en_US/sign-in).
 
