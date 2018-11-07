@@ -98,22 +98,25 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   <summary>Create New Page</summary>
   <br>
   
-  The first thing we want to do is create another page on which we'll display our book descriptions/images. Let's call this page `book-catalog`. To make this page, right click on main-start and hit `Duplicate`. Then, right click on the copy page to rename it `book-catalog`. On the Design view of the page, click on the "Welcome to the Home Page" heading, then hit the trash can icon in the bottom left corner of the right-side bar to delete the component.<br>
+  The first thing we want to do is create another page on which we'll display our book descriptions/images. Let's call this page `book-catalog`. To make this page, right click on main-start and hit `Duplicate`. Then, right click on the copy page to rename it `book-catalog`. On the Design view of the page, click on the "Welcome to the Home Page" heading, then hit the trash can icon in the bottom left corner of the right-side bar to delete the component. Your page should look like:<br>
 
 <br>![](/images/lab300/300-3-25.png)<br>
 <br>
 
-Now we have to update the tab bar to include this new page. Go to the code view for the page and look for the "oj-tab-bar-XXXXXXXXX-X" item. Inside that you should see two oj-tab-bar-XXXXXXXXX-X-tab-X items. Copy the code for the first tab (the one with dull formatting) and paste it right below the code for the second tab. Rename the tab "Catalog" and change the listener to clickCatalogTab (though this event does not yet exist. Finally, change the first tab's style to bright, so only the third tab is dull.<br>
+Now, we have to update our tab bar to include this new page we just made. Go to the code view for the page, and look for the `"oj-tab-bar-XXXXXXXXX-X"` item. Inside that, you should see two `oj-tab-bar-XXXXXXXXX-X-tab-X` items. Copy the code for the first tab (the one with dull formatting) and paste it right below the code for the second tab. Rename the tab `Catalog` and change the listener to `clickCatalogTab` (this event doesn't exist yet, but we'll make it soon). Finally, change the first tab's style to bright, so only the third tab is dull.<br>
 
 ![](/images/lab300/300-3-26.png)<br>
 <br>
 
-You could have gone to customize the tab bar on the Design view and hit the plus sign to the right of the title `Tabs` in the customization bar, but this would not have copied the style or the listener.<br>
+<b>Note:</b> You could have gone to customize the tab bar on the Design view and hit the plus sign to the right of the title `Tabs` in the customization bar, but this would not have copied the style or the listener. For this reason, we decided to manually copy the code in ourselves.<br>
+
 <br>
-Repeat this process for the other pages, but on the other pages, the Catalog tab should have bright styling. <br>
+Repeat this process for the other pages, but on the other pages, the Catalog tab should have bright styling.<br>
+
 ![](/images/lab300/300-3-27.png)<br>
 <br>  
-Now we just need to create our action chain navigateCatalogPage (created at the flow level) and our event clickCatalogTab (created for each page) and we are good to go. Double check that you can navigate between all three pages.<br>
+
+Now we just need to create our action chain `navigateCatalogPage` (created at the flow level) and our event `clickCatalogTab` (created for each page) and we are good to go. Double check that you can navigate between all three pages.<br>
   
 </details>
 
