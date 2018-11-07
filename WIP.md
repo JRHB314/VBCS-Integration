@@ -107,3 +107,9 @@ But if we simply always append to the end of relationsList, when we pull up the 
 Instead of what we want,<br>
 `relationsList = mutual1 + mutual2...`<br>
 So, for the first element of the list, we should overwrite the `relationsList` variable, rather than append to the end of it.<br>
+Drag and drop an If action under the **do** side of the For Each loop. Then set the condition using the Expression Editor.<br>
+{img}<br>
+<br>
+Then, inside the editor, simply put `$current.index == 0`.<br>
+{img}<br>
+<br>
