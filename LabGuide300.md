@@ -27,18 +27,30 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
 <details>
   <summary>Create Firebase Account</summary>
   <br>
-  STEPS NEEDED
+  
+  Visit [Firebase's website](https://firebase.google.com/). On the top right corner, click `Sign in`.
+  
+  ![](/images/lab300/300-1.png)<br>
+  <br>
+  
+  Your Firebase account is automatically linked with your google account, so you can sign in with your gmail account credentials to get started. If you don't have one, sign up for one and then revisit the Firebase website. Once logged in, click `Get Started`.
+  
+  ![](/images/lab300/300-2.png)<br>
+  <br>
+  
+  You are now on the main dashboard page and can move onto the next section.
+  
+  ![](/images/lab300/300-3.png)<br>
+  <br>
   
 </details>
 
 <details>
-  <summary>Creat Realtime Database</summary>
+  <summary>Create Realtime Database</summary>
   <br>
   
-  Go to the [Firebase Website](https://firebase.google.com/products). Select Realtime Database.<br>
-  ![](/images/lab300/300-3-1.png)<br>
-  <br>
-  Click "Visit Console" then "Add Project".
+  Click "Add Project".
+  
   ![](/images/lab300/300-3-2.png)<br>
   ![](/images/lab300/300-3-3.png)<br>
   <br>
