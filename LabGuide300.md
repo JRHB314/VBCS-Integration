@@ -51,8 +51,8 @@ Now we will try connecting to a non-Oracle Cloud Database; in this case, Google'
   
   Click "Add Project". 
   
-  ![](/images/lab300/300-3-3.png)<br> Choose a name, leave the default settings for location, make sure all three boxes are checked, then hit Create Project.<br>
-  
+  Choose a name, leave the default settings for location, make sure all three boxes are checked, then hit Create Project.<br>
+ 
   ![](/images/lab300/300-3-4.png)<br>
   <br>
   
