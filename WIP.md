@@ -88,3 +88,12 @@ Now, our final set of variables.<br>
 - getMutualsPt1 `{  "statements": [   {    "statement": "MATCH (user:Person {name:'`
 - getMutualsPt2 `'})-->(mutuals)-->(user) return mutuals"   }  ] }`
 
+We're almost there, we just need to set up our Action Chains.<br>
+<br>
+Let's start with `loadFollowers`. First action will be Assign Variables. Click on `title` on the right. Fill in the bottom box with `"Followers"`. It will automatically add double curly brackets around the value.<br>
+{img}<br>
+<br>
+Next, Call REST Endpoint. Select  `Neo4j Relations List`, then map the request body:<br>
+{img}<br>
+<br>
+
